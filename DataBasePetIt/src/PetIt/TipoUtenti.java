@@ -4,9 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Razza {
+public class TipoUtenti {
 	@Id
-	private String idRazza;
-	private String nomeRazza;
-
+	private String idTipo;
+	private String nomeTipo;
 }

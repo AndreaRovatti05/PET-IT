@@ -5,18 +5,17 @@ import javax.persistence.Id;
 
 @Entity
 public class Specie {
-	
+
 	@Id
-	private Integer id;
-	
+	private String idSpecie;
 	private String nomeSpecie;
 
-	public Integer getId() {
-		return id;
+	public String getIdSpecie() {
+		return idSpecie;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdSpecie(String idSpecie) {
+		this.idSpecie = idSpecie;
 	}
 
 	public String getNomeSpecie() {
@@ -26,6 +25,5 @@ public class Specie {
 	public void setNomeSpecie(String nomeSpecie) {
 		this.nomeSpecie = nomeSpecie;
 	}
-	
-	
+
 }
