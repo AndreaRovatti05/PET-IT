@@ -3,9 +3,8 @@
 	<persistence-unit name="DataBasePetIt" transaction-type="RESOURCE_LOCAL">
 		<class>PetIt.Razza</class>
 		<class>PetIt.Specie</class>
-		<class>PetIt.Animale</class>
-		<class>PetIt.Utenti</class>
-		<class>PetIt.TipoUtenti</class>
+		<class>PetIt.AnimaleSegnalato</class>
+		<class>PetIt.PosizioniRilevamentiSegnalazioni</class>
 		<properties>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.password" value=""/>
