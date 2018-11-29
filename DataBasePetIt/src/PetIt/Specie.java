@@ -1,7 +1,10 @@
 package PetIt;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Specie {
@@ -9,6 +12,9 @@ public class Specie {
 	@Id
 	private String idSpecie;
 	private String nomeSpecie;
+	
+	@OneToMany(mappedBy="specie")
+	private List<Razza> razze;
 
 	public String getIdSpecie() {
 		return idSpecie;
@@ -25,5 +31,14 @@ public class Specie {
 	public void setNomeSpecie(String nomeSpecie) {
 		this.nomeSpecie = nomeSpecie;
 	}
+
+	public List<Razza> getRazze() {
+		return razze;
+	}
+
+	public void setRazze(List<Razza> razze) {
+		this.razze = razze;
+	}
+	
 
 }
