@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class AnimaleSegnalato {
@@ -20,6 +21,9 @@ public class AnimaleSegnalato {
 	private String statoFisico;
 	private String statoMentale;
 	private String commento;
+	
+	@OneToMany(mappedBy="animale")
+	private List<Segnalazione> segnalazioni;
 	
 	@ManyToMany(mappedBy="animaliSegnalati")
 	private List<PosizioniRilevamentiSegnalazioni> posizioni;
@@ -94,6 +98,14 @@ public class AnimaleSegnalato {
 
 	public void setPosizioni(List<PosizioniRilevamentiSegnalazioni> posizioni) {
 		this.posizioni = posizioni;
+	}
+
+	public List<Segnalazione> getSegnalazioni() {
+		return segnalazioni;
+	}
+
+	public void setSegnalazioni(List<Segnalazione> segnalazioni) {
+		this.segnalazioni = segnalazioni;
 	}
 
 	

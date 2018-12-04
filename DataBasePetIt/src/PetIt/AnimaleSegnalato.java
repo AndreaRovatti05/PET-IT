@@ -100,6 +100,14 @@ public class AnimaleSegnalato {
 		this.posizioni = posizioni;
 	}
 
+	public List<Segnalazione> getSegnalazioni() {
+		return segnalazioni;
+	}
+
+	public void setSegnalazioni(List<Segnalazione> segnalazioni) {
+		this.segnalazioni = segnalazioni;
+	}
+
 	
 
 }
