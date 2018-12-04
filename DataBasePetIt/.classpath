@@ -13,5 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.datatools.connectivity.jdt.DRIVERLIBRARY/MySQL JDBC Driver"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/Andrea/Documents/ProgrammazioneJava/mariadb-tx-3.0-10.3.10-windows/mariadb-java-client-2.3.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
