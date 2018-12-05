@@ -24,7 +24,7 @@
   </dependencies>
   <properties>
   	<failOnMissingWebXml>false</failOnMissingWebXml>
-  	<maven.compiler.souce>1.8</maven.compiler.souce>
+  	<maven.compiler.source>1.8</maven.compiler.source>
   	<maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 </project>
