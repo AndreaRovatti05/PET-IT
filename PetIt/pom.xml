@@ -4,4 +4,25 @@
   <artifactId>PetIt</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  <dependencies>
+  	<dependency>
+  		<groupId>petit-itsrizzoli</groupId>
+  		<artifactId>PetItDataBase</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>javax</groupId>
+  		<artifactId>javaee-api</artifactId>
+  		<version>8.0</version>
+  		<scope>provided</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>jstl</groupId>
+  		<artifactId>jstl</artifactId>
+  		<version>1.2</version>
+  	</dependency>
+  </dependencies>
+  <properties>
+  	<failOnMissingWebXml>false</failOnMissingWebXml>
+  </properties>
 </project>
