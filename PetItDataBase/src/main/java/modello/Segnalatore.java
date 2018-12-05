@@ -1,4 +1,4 @@
-package PetIt;
+package modello;
 
 import java.util.Date;
 import java.util.List;
