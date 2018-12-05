@@ -23,8 +23,26 @@
 				<th>Stato Fisico</th>
 				<th>Stato Mentale</th>
 				<th>Note</th>
-				
 			</tr>
+			<tbody>
+			
+			<c:forEach var="a" items="${elencoAnimaliSegnalati}">
+				<tr>
+					<td>
+						
+					</td>
+					<td>&nbsp; </td>
+					<td>nulla </td>
+					<td> nulla </td>
+					<td>${a.animalesegnalato.taglia }</td>
+						<td>${ a.animalesegnalato.tipoPelo }</td>
+					<td>${ a.animalesegnalato.statoFisico }</td>
+						<td>${ a.animalesegnalato.statoMentale }</td>
+				</tr>
+				<%-- } --%>
+			</c:forEach>
+		</tbody>
 		</thead>
+		
 </body>
 </html>
