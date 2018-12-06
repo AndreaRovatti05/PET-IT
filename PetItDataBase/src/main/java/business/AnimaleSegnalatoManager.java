@@ -1,5 +1,6 @@
 package business;
 
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -7,6 +8,10 @@ import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 
 import modello.AnimaleSegnalato;
+import modello.Presenza;
+import modello.Registro;
+import modello.Studente;
+import utility.JPAUtility;
 import utility.Programma;
 
 
@@ -31,6 +36,20 @@ private static Logger log = Logger.getLogger("petit-business");
 	public static List<AnimaleSegnalato> elencoAnimaliSegnalati() {
 		EntityManager em = Programma.getEm();
 		return em.createQuery("select a from AnimaleSegnalato a", AnimaleSegnalato.class).getResultList();
+	}
+	public static void aggiungiAnimaleSegnalato(String colorePelo,String tipoPelo,String taglia,
+			String statoFisico, String statoMentale,String commento) {
+		EntityManager em = Programma.getEm();
+		/*
+		if (r != null && s != null) {
+			Presenza p  = new Presenza();
+			p.setStudente(s);
+			p.setRegistro(r);
+			p.setDataOraEntrata(entrata);
+			aggiungiPresenza(p);
+		} else {
+			log.log(Level.WARNING, "studente o registro inesistenti");
+		}*/
 	}
 	
 	

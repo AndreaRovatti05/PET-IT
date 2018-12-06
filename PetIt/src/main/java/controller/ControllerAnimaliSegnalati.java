@@ -16,8 +16,6 @@ import modello.AnimaleSegnalato;
 
 @WebServlet("/elencoPresenze")
 public class ControllerAnimaliSegnalati extends HttpServlet {
-	
-	
 		private static final long serialVersionUID = 1L;
 
 	    /**
