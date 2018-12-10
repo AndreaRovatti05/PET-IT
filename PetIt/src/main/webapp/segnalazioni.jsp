@@ -41,9 +41,9 @@
 					<td>&nbsp; </td>
 					<td>${ s.idSegnalazione } </td>
 					<td> ${ s.segnalatore.nome}  ${s.segnalatore.cognome } </td>
-					<td>${ s.segnalatore.utente}</td>
-					<td>${s.animale}</td>
-					<td>${ s.animalesegnalato.commento}</td>
+					<td>${ s.segnalatore.utente.idUtente}</td>
+					<td>${s.animale.idAnimale}</td>
+					<td>${ s.animale.commento}</td>
 				</tr>
 			
 			</c:forEach>
