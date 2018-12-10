@@ -17,18 +17,11 @@
   margin-left: ($spacer * .25) !important;
   margin-right:($spacer * .25) !important;
 }
-.bg-dark {
-    background-color: #169a34!important;
-}
-.btn-outline-success {
-    color: #125d23;
-    background-color: transparent;
-    background-image: none;
-    border-color: #145222;
-}
-.table {
-    background-color: #4865591c;
-}
+ 	<jsp:include page="frammenti/nawbarstyle.frammenti"></jsp:include>
+ 
+	<jsp:include page="frammenti/tablestyle.frammenti"></jsp:include>
+
+	<jsp:include page="frammenti/boxstyle.frammenti"></jsp:include>
 
 </style>
 </head>

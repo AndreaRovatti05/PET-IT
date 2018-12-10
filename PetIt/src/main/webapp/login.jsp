@@ -26,10 +26,8 @@ body {
     padding-bottom: 40px;
     background-color: #f5f5f5;
 }
-.form-control:focus {
-	border-color: #1e7e34;
-	box-shadow: 0 0 0 0.2rem rgba(0, 255, 8, 0.25);
-}
+	<jsp:include page="frammenti/boxstyle.frammenti"></jsp:include>
+
 
 .form-signin {
     width: 100%;
