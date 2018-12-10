@@ -8,10 +8,6 @@ import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 
 import modello.AnimaleSegnalato;
-import modello.Presenza;
-import modello.Registro;
-import modello.Studente;
-import utility.JPAUtility;
 import utility.Programma;
 
 

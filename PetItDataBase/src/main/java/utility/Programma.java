@@ -11,11 +11,11 @@ public class Programma {
 
 		private static EntityManagerFactory emf;
 		
-		private static Logger log = Logger.getLogger("registro-business");
+		private static Logger log = Logger.getLogger("DataBasePetIt");
 		
 		public static EntityManager getEm() {
 			if(emf == null) {
-				emf = Persistence.createEntityManagerFactory("registro-business");
+				emf = Persistence.createEntityManagerFactory("DataBasePetIt");
 			}
 			log.log(Level.FINE, "richiesto nuovo entitymanager");
 			return emf.createEntityManager();
