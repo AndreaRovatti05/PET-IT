@@ -30,10 +30,12 @@
 
 .list-group-item {
 max-height: 170px;
+background-color: #ececec6b;
 }
 
 .rounded-circle {
 float: left;
+box-shadow: 5px 5px 10px #c3c3c3f2;
 }
 
 .elemento-segnalazione {
@@ -42,6 +44,7 @@ margin-top: 20px;
 margin-left: 20px;
 position: relative;
 max-width: 500px;
+
 
 }
 </style>
