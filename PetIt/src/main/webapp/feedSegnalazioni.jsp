@@ -77,6 +77,17 @@ max-width: 500px;
 		<li class="list-group-item"><img class="rounded-circle"
 			src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
 			alt="Generic placeholder image" width="140" height="140">
+			
+			<!-- TESTO INTERNO AGLI ELEMENTI DELLA FEED -->
+			
+				<div class="elemento-segnalazione">
+				<p class="font-weight-bold">Nome segnalazione: <br>
+				Colore pelo: <br>
+				Data Aggiunta: <br>
+				Stato segnalazione: <br>
+				</p>
+				</div>
+			
 			<button type="button" class="btn btn-outline-success btn-visualizza">Visualizza</button>
 		</li>
 
