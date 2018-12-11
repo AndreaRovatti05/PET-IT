@@ -25,7 +25,7 @@
 .btn-visualizza {
 	float: right;
 	margin-top: 50px;
-	box-shadow: 5px 5px 5px #dededef2;
+	box-shadow: 5px 5px 5px #c3c3c3f2;
 }
 
 .list-group-item {
