@@ -14,7 +14,7 @@
   margin-left: ($spacer * .25) !important;
   margin-right:($spacer * .25) !important;
 }
- 	<jsp:include page="frammenti/nawbarstyle.frammenti"></jsp:include>
+ 	<jsp:include page="frammenti/navbarstyle.frammenti"></jsp:include>
  
 	<jsp:include page="frammenti/tablestyle.frammenti"></jsp:include>
 
@@ -24,6 +24,7 @@
 </head>
 <body class="bg-light">
 	<jsp:include page="frammenti/navbar.frammenti"></jsp:include>
+	
 <h2 class="text-center text-success"> Animali segnalati</h2>
 <div class ="mx-3" class="border border-success">
 <table class="table table-hover table-striped">
