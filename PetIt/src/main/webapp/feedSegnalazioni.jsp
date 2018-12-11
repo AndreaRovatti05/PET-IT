@@ -13,17 +13,33 @@
 	crossorigin="anonymous">
 
 <title>Feed Segnalazioni</title>
+<style type="text/css">
+.btn-visualizza {
+float: right;
+margin-top: 50px;
+}
+</style>
 </head>
 <body>
 
 	<!-- NAVBAR -->
 
-	<jsp:include page="frammenti/nawbar.frammenti"></jsp:include>
+	<jsp:include page="frammenti/navbar.frammenti"></jsp:include>
 
 	<!-- FEED SEGNALAZIONI -->
 
 	<ul class="list-group list-group-flush">
-		<li class="list-group-item"></li>
+		<li class="list-group-item"><img class="rounded-circle"
+			src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+			alt="Generic placeholder image" width="140" height="140">
+			<button type="button" class="btn btn-outline-success btn-visualizza">Visualizza</button>
+			</li>
+
+		<li class="list-group-item"><img class="rounded-circle"
+			src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+			alt="Generic placeholder image" width="140" height="140">
+			<button type="button" class="btn btn-outline-success btn-visualizza">Visualizza</button>
+			</li>
 
 	</ul>
 
