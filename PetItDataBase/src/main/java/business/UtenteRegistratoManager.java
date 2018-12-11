@@ -1,12 +1,13 @@
 package business;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.persistence.EntityManager;
 
-import modello.AnimaleSegnalato;
 import modello.UtenteRegistrato;
+
 import utility.Programma;
 
 public class UtenteRegistratoManager {
@@ -14,11 +15,11 @@ private static Logger log = Logger.getLogger("petit-business");
 	
 	public static void aggiungiUtenteRegistrato(UtenteRegistrato u) {
 		EntityManager em = Programma.getEm();
-		AnimaleSegnalato aDb = null;
+		UtenteRegistrato uDb = null;
 		if(u.getIdUtente() != null) {
-			aDb = em.find(AnimaleSegnalato.class, u.getIdUtente());
+			uDb = em.find(UtenteRegistrato.class, u.getIdUtente());
 		}
-		if (aDb == null) {
+		if (uDb == null) {
 			em.getTransaction().begin();
 			em.persist(u); 
 			em.getTransaction().commit();
@@ -27,4 +28,18 @@ private static Logger log = Logger.getLogger("petit-business");
 			log.log(Level.WARNING, "presenza esiste già");
 		}
 	}
+	
+	
+	public static List<UtenteRegistrato> elencoUtenti() {
+		EntityManager em = Programma.getEm();
+		return em.createQuery("select u from utenteregistrato u", UtenteRegistrato.class).getResultList();
+	}
+	public static void aggiungiUtenteRegistrato(String email, String nomeUtente) {
+		EntityManager em = Programma.getEm();
+	}
+	
+	
 }
+
+
+

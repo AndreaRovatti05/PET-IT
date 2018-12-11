@@ -10,10 +10,25 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+
+<jsp:include page="frammenti/boostrap.frammenti"></jsp:include>
+
 <title>PetIT</title>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+<style type="text/css">
+.mx-3 {
+  margin-left: ($spacer * .25) !important;
+  margin-right:($spacer * .25) !important;
+}
+ 	<jsp:include page="frammenti/nawbarstyle.frammenti"></jsp:include>
+ 
+	<jsp:include page="frammenti/tablestyle.frammenti"></jsp:include>
+
+	<jsp:include page="frammenti/boxstyle.frammenti"></jsp:include>
+
+</style>
 </head>
 <body>
 
@@ -33,6 +48,7 @@
 						      <th scope="col">Nome</th>
 						      <th scope="col">Cognome</th>
 						      <th scope="col">Data di nascita</th>
+						      <th scope="col">Email</th>
 						    </tr>
 						  </thead>
 						  <tbody>
@@ -42,8 +58,10 @@
 							    <td>${s.nome}</td><br/>
 							    <td>${s.cognome}</td><br/>
 							    <td>${s.dataNascita}</td><br/>
-							   </tr> 
+							    <td> ${s.utente.email}</td>
+							     </tr> 
 						</c:forEach>
+						   
 						    
 						 </tbody>
 						</table>
