@@ -14,9 +14,35 @@
 
 <title>Feed Segnalazioni</title>
 <style type="text/css">
+
+ /*---FRAMMENTO NAVBAR STYLE---*/
+
+<jsp:include page="frammenti/navbarstyle.frammenti"></jsp:include>
+
+/*---CSS STYLING---*/
+
+
 .btn-visualizza {
-float: right;
-margin-top: 50px;
+	float: right;
+	margin-top: 50px;
+	box-shadow: 5px 5px 5px #dededef2;
+}
+
+.list-group-item {
+max-height: 170px;
+}
+
+.rounded-circle {
+float: left;
+}
+
+.elemento-segnalazione {
+float: left;
+margin-top: 20px;
+margin-left: 20px;
+position: relative;
+max-width: 500px;
+
 }
 </style>
 </head>
@@ -25,21 +51,34 @@ margin-top: 50px;
 	<!-- NAVBAR -->
 
 	<jsp:include page="frammenti/navbar.frammenti"></jsp:include>
-
+	
 	<!-- FEED SEGNALAZIONI -->
-
 	<ul class="list-group list-group-flush">
+
+	
 		<li class="list-group-item"><img class="rounded-circle"
 			src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
 			alt="Generic placeholder image" width="140" height="140">
+			
+			<!-- TESTO INTERNO AGLI ELEMENTI DELLA FEED -->
+			
+				<div class="elemento-segnalazione">
+				<p class="font-weight-bold">Nome segnalazione: <br>
+				Colore pelo: <br>
+				Data Aggiunta: <br>
+				Stato segnalazione: <br>
+				</p>
+				</div>
+			
 			<button type="button" class="btn btn-outline-success btn-visualizza">Visualizza</button>
-			</li>
+		</li>
+		
 
 		<li class="list-group-item"><img class="rounded-circle"
 			src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
 			alt="Generic placeholder image" width="140" height="140">
 			<button type="button" class="btn btn-outline-success btn-visualizza">Visualizza</button>
-			</li>
+		</li>
 
 	</ul>
 
