@@ -18,7 +18,7 @@
 
 	<!-- NAVBAR -->
 
-	<jsp:include page="frammenti/nawbar.frammenti"></jsp:include>
+	<jsp:include page="frammenti/navbar.frammenti"></jsp:include>
 
 	<!-- FEED SEGNALAZIONI -->
 
