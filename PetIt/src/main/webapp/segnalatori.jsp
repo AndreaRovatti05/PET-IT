@@ -22,7 +22,7 @@
   margin-left: ($spacer * .25) !important;
   margin-right:($spacer * .25) !important;
 }
- 	<jsp:include page="frammenti/nawbarstyle.frammenti"></jsp:include>
+ 	<jsp:include page="frammenti/navbarstyle.frammenti"></jsp:include>
  
 	<jsp:include page="frammenti/tablestyle.frammenti"></jsp:include>
 
@@ -31,7 +31,7 @@
 </style>
 </head>
 <body>
-
+<jsp:include page="frammenti/navbar.frammenti"></jsp:include>
 <header>
 			<h1>Elenco utenti</h1>
 			<p>Oggi è <%= (new java.util.Date()).toLocaleString()%> </p>
