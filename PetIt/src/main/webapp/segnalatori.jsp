@@ -32,16 +32,17 @@
 </head>
 <body>
 <jsp:include page="frammenti/navbar.frammenti"></jsp:include>
-<header>
-			<h1>Elenco utenti</h1>
-			<p>Oggi è <%= (new java.util.Date()).toLocaleString()%> </p>
+<header class="text-center">
+
+			<h1 style="color:yellowgreen;"> Elenco segnalatori</h1>
+			<p style="color:darkgoldenrod">Oggi è <%= (new java.util.Date()).toLocaleString()%> </p>
 		</header>
 		<main class="container">
 		<div class="row">
 			<div id="tblSegnalatore" class="col-12 row">
 				
 				
-				<table class="table table-sm">
+				<table class="table table-hover", style="background-color: wheat">
 						  <thead>
 						    <tr>
 						      <th scope="col">Codice Fiscale</th>
@@ -51,6 +52,7 @@
 						      <th scope="col">Email</th>
 						    </tr>
 						  </thead>
+						  
 						  <tbody>
 						    <tr>
 						     <c:forEach items="${elencoSegnalatori}" var="s">
