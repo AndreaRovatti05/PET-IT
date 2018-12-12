@@ -9,3 +9,29 @@ margin-bottom: 5px;
 .logo {
 margin-bottom: 10px;
 }
+
+
+/* CONTROLLA IL COLORE DELLA CASELLA SEARCH QUANDO SELEZIONATA */
+
+.form-control:focus {
+  border-color: #00c71bd1;
+  box-shadow:  2px 4px 15px #003808e3;
+}
+
+/* STYLING MENU' DROPDOWN */
+
+.dropdown-item {
+padding-top: 2,5px;
+padding-bottom: 2,5px;
+}
+
+
+
+/*
+1.) Modifcare colore contorno search in verde v
+2.) Aggiungere voce menu "feed segnalazione" v
+3.) Cambiare colore tasto search in verde quando hover
+4.) Aggiungere tasto logout alto dx
+5.) aggiungere menù hamburger quando si riduce la finestra
+
+*/
