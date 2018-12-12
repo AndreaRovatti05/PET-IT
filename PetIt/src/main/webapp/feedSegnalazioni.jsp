@@ -25,15 +25,17 @@
 .btn-visualizza {
 	float: right;
 	margin-top: 50px;
-	box-shadow: 5px 5px 5px #dededef2;
+	box-shadow: 5px 5px 5px #c3c3c3f2;
 }
 
 .list-group-item {
 max-height: 170px;
+background-color: #ececec6b;
 }
 
 .rounded-circle {
 float: left;
+box-shadow: 5px 5px 10px #c3c3c3f2;
 }
 
 .elemento-segnalazione {
@@ -42,6 +44,7 @@ margin-top: 20px;
 margin-left: 20px;
 position: relative;
 max-width: 500px;
+
 
 }
 </style>
@@ -77,6 +80,17 @@ max-width: 500px;
 		<li class="list-group-item"><img class="rounded-circle"
 			src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
 			alt="Generic placeholder image" width="140" height="140">
+			
+			<!-- TESTO INTERNO AGLI ELEMENTI DELLA FEED -->
+			
+				<div class="elemento-segnalazione">
+				<p class="font-weight-bold">Nome segnalazione: <br>
+				Colore pelo: <br>
+				Data Aggiunta: <br>
+				Stato segnalazione: <br>
+				</p>
+				</div>
+			
 			<button type="button" class="btn btn-outline-success btn-visualizza">Visualizza</button>
 		</li>
 
