@@ -43,7 +43,7 @@ color: #169a34;
 
     border-color: white;
 }
-<!-- RENDE PIU' TONDO IL MENU' HAMBURGER--> 
+/* RENDE PIU' TONDO IL MENU' HAMBURGER */
 
 .navbar-toggler {
     border-radius: .5rem !important;
@@ -59,9 +59,13 @@ background-color: transparent !important;
 
 
 
+/* USER LOGO */
 
+.user-logo {
+margin-left: 7px;
+}
 
-
+/* TRASFORMA HAMBURGER MENU IN UNA X */
 
 .container {
   display: inline-block;

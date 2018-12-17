@@ -5,6 +5,8 @@
    Pet It
   </a>
   
+  
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <div class="container" onclick="myFunction(this)">
   		<div class="bar1"></div>
@@ -40,6 +42,20 @@ function myFunction(x) {
      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
     </form>
+    
+    <div class="user-logo">
+     <a href="#">
+    <img class="user" src="user.png" width="30" height="30"
+    class="d-inline-block align-top" alt="">
+  </a>
   </div>
+  
+  
+  </div>
+  
+  
+  
+  
+  
 </nav> 
 
