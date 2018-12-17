@@ -47,6 +47,7 @@ color: #169a34;
 
 .navbar-toggler {
     border-radius: .5rem !important;
+    
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -59,10 +60,14 @@ background-color: transparent !important;
 
 
 
+
 /* USER LOGO */
 
 .user-logo {
 margin-left: 7px;
+margin-top: 5px;
+float:right!important;
+
 }
 
 /* TRASFORMA HAMBURGER MENU IN UNA X */
