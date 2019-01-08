@@ -45,7 +45,16 @@
 		
 			<c:forEach var="a" items= "${elencoAnimaliSegnalati}">
 				<tr>
-					<td>&nbsp; </td>
+					<td>
+						<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+							<div class="btn-group mr-2" role="group" aria-label="First group">
+								<jsp:include page="frammenti/cancella.frammenti"></jsp:include>
+							</div>
+							<div class="btn-group mr-2" role="group" aria-label="Second group">
+								<jsp:include page="frammenti/modifica.frammenti"></jsp:include>
+							</div>
+						</div>
+					</td>
 					<td>${ a.razza.specie.nomeSpecie } </td>
 					<td> ${ a.razza.nomeRazza } </td>
 					<td>${ a.taglia }</td>
