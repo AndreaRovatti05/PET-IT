@@ -35,10 +35,9 @@ body {
     padding: 15px;
     margin: auto;
 }
-.btn-outline-success {
-    color: #1d7d33;
-    background-color: rgba(123, 241, 109, 0.9490196078431372);
-}
+
+<jsp:include page="frammenti/bottone.frammenti"></jsp:include>
+
 </style>
 </head>
 <body class="text-center">
