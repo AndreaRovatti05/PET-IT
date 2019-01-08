@@ -53,14 +53,22 @@
 	</div>
 	
 	<!-- LOGO PROFILO -->
+	 
+	<div class="dropdown">
+  <button class="user-logo btn btn-success btand dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <img class="user" src="user.png" width="30" height="30"
+	    			class="d-inline-block align-top" alt="">
+  </button>
+	      	 <div class="dropdown-menu dropdown-menu-right">
+    <a class="dropdown-item" href="#">Profilo</a>
+    <a class="dropdown-item" href="#">Impostazioni</a>
+    <a class="dropdown-item" href="#">Log out</a>
+  </div>
+</div>
+	        	
+	       
 	
-	<div class="user-logo" id="prova2">
-		<a href="#">
-			<img class="user" src="user.png" width="30" height="30"
-	    	class="d-inline-block align-top" alt="">
-	  	</a>
-	</div> 
-	  
+	 
 </nav> 
 
 

@@ -5,7 +5,10 @@
 max-height: 42px;
 margin-bottom: 5px;
 }
-
+.btand{
+ background-color: #169a34 !important;
+ border-color: #169a34 !important;
+}
 .logo {
 margin-bottom: 10px;
 }
