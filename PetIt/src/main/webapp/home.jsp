@@ -22,11 +22,14 @@
 /*---CSS---*/
 
 #container py-5 {
-   position: relative;
+   position: absolute;
    bottom:0;
-   width:100%;
    height:30px;   
    background:#6cf;
+}
+
+.container {
+    max-width: 100%;
 }
 
 #bg-img {
