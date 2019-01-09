@@ -12,6 +12,7 @@ public class UtenteRegistrato {
 	private String email;
 	private String nomeUtente;
 	private String password;
+	private String stato;
 	
 	@OneToOne(mappedBy="utente")
 	private Segnalatore segnalatore;
@@ -54,5 +55,13 @@ public class UtenteRegistrato {
 
 	public void setSegnalatore(Segnalatore segnalatore) {
 		this.segnalatore = segnalatore;
+	}
+
+	public String getStato() {
+		return stato;
+	}
+
+	public void setStato(String stato) {
+		this.stato = stato;
 	}
 }
