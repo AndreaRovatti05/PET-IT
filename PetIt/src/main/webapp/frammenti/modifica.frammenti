@@ -1,5 +1,89 @@
-	<button type="button" class="btn btn-secondary">
+	<button type="button" class="btn btn-secondary" data-toggle="modal" href="#dialogModifica" role="button" aria-expanded="false" aria-controls="dialogModifica">
 		<i class="fas fa-pencil-alt"></i>							    
 	</button>
+	
+            <div class="modal fade" id="dialogModifica">
+                <div class="modal-dialog modal-lg" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				      	<h5 class="modal-title">Modifica segnalazione</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+                     <form >
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                    <label for="inputState">Specie</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Cane</option> <!-- dal db-->
+                                        <option>Gatto</option>
+                                    </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                    <label for="inputState">Razza</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Labrador</option> <!-- dal db-->
+                                        <option>Boxer</option>
+                                        <option>Golden Retriver</option>
+                                    </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                    <label for="inputState">Taglia</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Piccola</option> 
+                                        <option>Media</option>
+                                        <option>Grande</option>
+                                    </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                    <label for="inputState">Tipo Pelo</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Lungo</option> 
+                                        <option>Medio</option>
+                                        <option>Corto</option>
+                                    </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                    <label for="inputState">Stato Fisico</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Ferito</option> 
+                                        <option>Deperito</option>
+                                        <option>In salute</option>
+                                        <option>Altro</option>
+                                    </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                    <label for="inputState">Stato Mentale</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Impaurito</option> 
+                                        <option>Agitato</option>
+                                        <option>Aggressivo</option>
+                                        <option>Amichevole</option>
+                                        <option>Altro</option>
+                                    </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                    <label for="inputcolore">Colore Pelo</label>
+                                    <input type="colorepelo" class="form-control" id="Inputcolore" placeholder="Colore Pelo">
+                                </div> 
+                            <div class="form-group col-md-4">
+                                <label for="inputnote">Note</label>
+                                <input type="note" class="form-control" id="Inputnote" placeholder="Note">
+                            </div> 
+                            
+                        </div>
+                        
+                   </form>  
+                   </div>
+                   <div class="modal-footer">
+			        <button type="submit" class="btn btn-primary" onclick="update('${a.idAnimale}')">Modifica</button>
+			      </div>          
+               </div>
+            </div>
+           </div>
+          </div>
+               
 
 					

@@ -47,6 +47,15 @@ private static Logger log = Logger.getLogger("petit-business");
 			log.log(Level.WARNING, "studente o registro inesistenti");
 		}*/
 	}
+	public static void eliminaAnimaleSegnalato(String idDaEliminare) {
+		EntityManager em = Programma.getEm();
+		AnimaleSegnalato as = em.find(AnimaleSegnalato.class, idDaEliminare);
+		if (as != null) {
+			em.getTransaction().begin();
+			em.remove(as);
+			em.getTransaction().commit();
+		}
+	}
 	
 	
 

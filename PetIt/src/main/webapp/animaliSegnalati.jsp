@@ -47,10 +47,10 @@
 				<tr>
 					<td>
 						<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-							<div class="btn-group mr-2" role="group" aria-label="First group">
+							<div class="btn-group mr-2" role="group" aria-label="First group" onclick="remove('${a.idAnimale}')">
 								<jsp:include page="frammenti/cancella.frammenti"></jsp:include>
 							</div>
-							<div class="btn-group mr-2" role="group" aria-label="Second group">
+							<div class="btn-group mr-2" role="group" aria-label="Second group" >
 								<jsp:include page="frammenti/modifica.frammenti"></jsp:include>
 							</div>
 						</div>
@@ -71,6 +71,17 @@
 </div> 
 
 	<jsp:include page="frammenti/script.frammenti"></jsp:include>
-
+	<script>
+	function remove(id) {
+		var ok = confirm('Sei sicuro di eliminare ' + id + '?');
+		if (ok) {
+			location.href = 'rimuoviAnimaleSegnalato?idAnimale=' + id;
+		}
+	}
+	
+	function update(id) {
+		alert('stai per modificare ' + id);
+	}
+	</script>
 </body>
 </html>
