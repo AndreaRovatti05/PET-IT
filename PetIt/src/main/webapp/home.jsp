@@ -78,7 +78,7 @@ background-image: url (provaSfondo.jpg);
     <div class="header">
 	 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
       <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 font-weight-normal">Altra funzione</h1>
+        <h1 class="display-4 font-weight-normal">Aggiungi Account</h1>
         <p class="lead font-weight-normal">Breve testo.</p>
         <a class="btn btn-outline-success" href="#">TASTO AZIONE</a>
       </div>
