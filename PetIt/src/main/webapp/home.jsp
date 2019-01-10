@@ -87,54 +87,10 @@ background-image: url (provaSfondo.jpg);
     </div>
     </div>
     	
+    	
  
     		
     	
-    <!-- FOOTER -->
-   
-     <footer class="container py-5">
-      <div class="row">
-        <div class="col-12 col-md">
-         <div class="user-logo" id="prova2">
-		<a href="#">
-			<img class="logo" src="logo.png" width="30" height="30"
-	    	class="d-inline-block align-top" alt="">
-	  	</a>
-	</div> 
-          <small class="d-block mb-3 text-muted">&copy; 2019-2020</small>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Features</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Funzione</a></li>
-            <li><a class="text-muted" href="#">Funzione 2</a></li>
-            <li><a class="text-muted" href="#">Funzione 3</a></li>
-            <li><a class="text-muted" href="#">Funzione 4</a></li>
-            <li><a class="text-muted" href="#">Funzione 5</a></li>
-            <li><a class="text-muted" href="#">Funzione 6</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Link Utili</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Informazioni</a></li>
-            <li><a class="text-muted" href="#">Business</a></li>
-            <li><a class="text-muted" href="#">...</a></li>
-            <li><a class="text-muted" href="#">...</a></li>
-          </ul>
-        </div>
-      
-        <div class="col-6 col-md">
-          <h5>About</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Team</a></li>
-            <li><a class="text-muted" href="#">Locations</a></li>
-            <li><a class="text-muted" href="#">Privacy</a></li>
-            <li><a class="text-muted" href="#">Terms</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
 
 
 	<!-- Optional JavaScript -->
