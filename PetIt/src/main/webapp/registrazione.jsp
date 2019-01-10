@@ -20,8 +20,6 @@
 
 	<jsp:include page="frammenti/navbar.frammenti"></jsp:include>
 
-
-
 <main class="my-form">
     <div class="container-fluid">
         <div class="row justify-content-center">
