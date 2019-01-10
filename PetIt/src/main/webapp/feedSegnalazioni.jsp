@@ -1,4 +1,8 @@
 <!doctype html>
+<%@page import="modello.Segnalazione"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="en">
 <head>
 <!-- Required meta tags -->
@@ -7,10 +11,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
+<jsp:include page="frammenti/boostrap.frammenti"></jsp:include>
 
 <title>Feed Segnalazioni</title>
 <style type="text/css">
@@ -67,7 +68,7 @@ max-width: 500px;
 			
 				<div class="elemento-segnalazione">
 				<p class="font-weight-bold">Segnalazione: ${ s.idSegnalazione } <br>
-				Colore pelo: <br>
+				Codice Animale segnalato : ${s.animale.idAnimale}<br>
 				Data Aggiunta: <br>
 				Stato segnalazione: <br>
 				</p>
