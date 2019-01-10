@@ -12,7 +12,7 @@
   margin-left: ($spacer * .25) !important;
   margin-right:($spacer * .25) !important;
 }
- 	<jsp:include page="frammenti/nawbarstyle.frammenti"></jsp:include>
+ 	<jsp:include page="frammenti/navbarstyle.frammenti"></jsp:include>
  
 	<jsp:include page="frammenti/tablestyle.frammenti"></jsp:include>
 
