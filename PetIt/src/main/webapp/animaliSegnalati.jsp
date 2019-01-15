@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<jsp:include page="frammenti/boostrap.frammenti"></jsp:include>
+<jsp:include page="/frammenti/boostrap.html"></jsp:include>
 <title>Animali Segnalati</title>
 <style type="text/css">
 .mx-3 {
@@ -18,7 +18,7 @@
  
 	<jsp:include page="frammenti/tablestyle.frammenti"></jsp:include>
 
-	<jsp:include page="frammenti/boxstyle.frammenti"></jsp:include>
+	<jsp:include page="frammenti/boxstyle.css"></jsp:include>
 
 </style>
 </head>

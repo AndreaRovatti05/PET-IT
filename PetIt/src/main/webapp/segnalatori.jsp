@@ -11,7 +11,7 @@
 <head>
 <meta charset="ISO-8859-1">
 
-<jsp:include page="frammenti/boostrap.frammenti"></jsp:include>
+<jsp:include page="frammenti/boostrap.html"></jsp:include>
 
 <title>PetIT</title>
 

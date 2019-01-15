@@ -11,7 +11,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<jsp:include page="frammenti/boostrap.frammenti"></jsp:include>
+<jsp:include page="frammenti/boostrap.html"></jsp:include>
 
 <title>Feed Segnalazioni</title>
 <style type="text/css">
@@ -58,7 +58,7 @@ max-width: 500px;
 	
 	<!-- FEED SEGNALAZIONI -->
 	<ul class="list-group list-group-flush">
-	<c:forEach var="s" items= "${elencoSegnalazioni}">
+	<c:forEach var="s" items= "${feedSegnalazioni}">
 	
 		<li class="list-group-item"><img class="rounded-circle"
 			src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="

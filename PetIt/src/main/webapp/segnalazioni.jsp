@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<jsp:include page="frammenti/boostrap.frammenti"></jsp:include>
+<jsp:include page="frammenti/boostrap.html"></jsp:include>
 <title>Segnalazioni</title>
 <style type="text/css">
 .mx-3 {
