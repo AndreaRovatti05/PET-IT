@@ -1,7 +1,7 @@
 <%@page import="modello.AnimaleSegnalato"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,7 @@
 <body class="bg-light">
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>	
 	<h2 class="text-center text-success"> Animali segnalati</h2>
-	<div class ="mx-3" class="border border-success">
+	<div class ="mx-3 border border-success">
 	<table class="table table-hover table-striped">
 			<thead class="thead-dark" >
 				<tr>
@@ -44,7 +44,12 @@
 			
 				<c:forEach var="a" items= "${elencoAnimaliSegnalati}">
 					<tr>
-						<td>&nbsp; </td>
+						<td>
+							<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">	
+								<jsp:include page="frammenti/html/tastocancella.html"></jsp:include>
+									
+							</div> 
+						</td>
 						<td>${ a.razza.specie.nomeSpecie } </td>
 						<td> ${ a.razza.nomeRazza } </td>
 						<td>${ a.taglia }</td>
