@@ -5,23 +5,23 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<jsp:include page="frammenti/boostrap.html"></jsp:include>
+<jsp:include page="frammenti/utility/boostrap.html"></jsp:include>
 <title>Segnalazioni</title>
 <style type="text/css">
 .mx-3 {
   margin-left: ($spacer * .25) !important;
   margin-right:($spacer * .25) !important;
 }
- 	<jsp:include page="frammenti/nawbarstyle.frammenti"></jsp:include>
+ 	<jsp:include page="frammenti/css/nawbarstyle.css"></jsp:include>
  
-	<jsp:include page="frammenti/tablestyle.frammenti"></jsp:include>
+	<jsp:include page="frammenti/css/tablestyle.css"></jsp:include>
 
-	<jsp:include page="frammenti/boxstyle.frammenti"></jsp:include>
+	<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
 
 </style>
 </head>
 <body>
-<jsp:include page="frammenti/navbar.frammenti"></jsp:include>
+<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 <h2 class="text-center text-success"> Segnalazioni</h2>
 <div class ="mx-3" class="border border-success">
 <table class="table table-hover table-striped">
@@ -50,7 +50,7 @@
 		</tbody>
 </table>
 </div> 
-<jsp:include page="frammenti/script.frammenti"></jsp:include>
+<jsp:include page="frammenti/utility/script.html"></jsp:include>
 
 </body>
 </html>

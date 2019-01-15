@@ -2,7 +2,7 @@
 <%@page import="modello.Segnalazione"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="en">
 <head>
 <!-- Required meta tags -->
@@ -11,14 +11,14 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<jsp:include page="frammenti/boostrap.html"></jsp:include>
+<jsp:include page="frammenti/utility/boostrap.html"></jsp:include>
 
 <title>Feed Segnalazioni</title>
 <style type="text/css">
 
  /*---FRAMMENTO NAVBAR STYLE---*/
 
-<jsp:include page="frammenti/navbarstyle.frammenti"></jsp:include>
+<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
 
 /*---CSS STYLING---*/
 
@@ -54,7 +54,7 @@ max-width: 500px;
 
 	<!-- NAVBAR -->
 
-	<jsp:include page="frammenti/navbar.frammenti"></jsp:include>
+	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 	
 	<!-- FEED SEGNALAZIONI -->
 	<ul class="list-group list-group-flush">
@@ -83,6 +83,6 @@ max-width: 500px;
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<jsp:include page="frammenti/script.frammenti"></jsp:include>
+<jsp:include page="frammenti/utility/script.html"></jsp:include>
 </body>
 </html>

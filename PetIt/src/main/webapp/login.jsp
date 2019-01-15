@@ -12,10 +12,8 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>PetIt Login</title>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
+	<jsp:include page="frammenti/utility/boostrap.html"></jsp:include>
+
 <style>
 body {
     display: -ms-flexbox;
@@ -26,7 +24,9 @@ body {
     padding-bottom: 40px;
     background-color: #f5f5f5;
 }
-	<jsp:include page="frammenti/boxstyle.frammenti"></jsp:include>
+	<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
+		<jsp:include page="frammenti/css/navbar.css"></jsp:include>
+	
 
 
 .form-signin {
@@ -42,6 +42,8 @@ body {
 </style>
 </head>
 <body class="text-center">
+	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
+
 	<div class="container">
 		<div class="row">
 			<div class=" col-md-4 offset-md-4"  >
