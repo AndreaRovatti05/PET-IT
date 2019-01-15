@@ -29,7 +29,7 @@
 	 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
-			<a class="nav-item nav-link" href="#">Home</a>
+			<a class="nav-item nav-link" href="home.jsp">Home</a>
 	      	<li class="nav-item dropdown">
 	        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
 	        	aria-haspopup="true" aria-expanded="false">Visualizza</a>
@@ -50,10 +50,17 @@
 	<!-- LOGO PROFILO -->
 	
 	<div class="user-logo" id="prova2">
-		<a href="#">
-			<img class="user" src="user.png" width="30" height="30"
-	    	class="d-inline-block align-top" alt="">
-	  	</a>
+		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+		data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	        	<img class="user" src="user.png" width="30" height="30" class="d-inline-block align-top" 
+	        	alt="">
+	     </a>
+		<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+		     <a class="dropdown-item" href="elencoAnimaliSegnalati">Profilo Utente</a>
+		     <a class="dropdown-item" href="elencoSegnalatori">Impostazioni</a>
+		     <a class="dropdown-item" href="home.jsp">Gestisci</a>
+		     <a class="dropdown-item" href="feedSegnalazioni.jsp">Log Out</a>
+		</div>
 	</div> 
 	  
 </nav> 
