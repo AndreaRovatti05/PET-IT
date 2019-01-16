@@ -23,7 +23,7 @@ text-align:center;}
 </head>
 <body>
 
- <jsp:include page="frammenti/navbar.frammenti"></jsp:include>
+ <jsp:include page="frammenti/html/navbar.html"></jsp:include>
  
  <div class="row">
   <div class="col-3">
