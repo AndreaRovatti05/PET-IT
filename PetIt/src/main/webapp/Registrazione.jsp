@@ -12,7 +12,7 @@
 	crossorigin="anonymous">
 <title>Babuzzi</title>
 <style type="text/css">
-<jsp:include page="frammenti/bottone.frammenti"></jsp:include>
+<jsp:include page="bottone.frammenti"></jsp:include>
   <jsp:include page="frammenti/navbar.frammenti"></jsp:include>
   
 </style>

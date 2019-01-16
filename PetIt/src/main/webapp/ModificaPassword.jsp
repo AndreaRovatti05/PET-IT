@@ -13,8 +13,7 @@
 <style type="text/css">
 <jsp:include page="bottone.frammenti"></jsp:include>
  <jsp:include page="frammenti/navbarstyle.frammenti"></jsp:include>
-.card-header{
-}
+
 </style>
 </head>
 <body>
