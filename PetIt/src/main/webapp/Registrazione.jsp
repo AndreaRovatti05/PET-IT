@@ -4,15 +4,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <jsp:include page="frammenti/utility/boostrap.html"></jsp:include>
+
 <title>Registrazione</title>
+
 <style type="text/css">
-<jsp:include page="bottone.frammenti"></jsp:include>
-  <jsp:include page="frammenti/css/navbar.css"></jsp:include>
+<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
+<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
   
 </style>
-
 </head>
 <body>
 
@@ -20,14 +21,15 @@
 
 
 
-<main class="my-form">
+
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header">Registrati</div>
+                        <div class="card-header">Registra nuovo utente</div>
                         <div class="card-body">
                             <form name="my-form" onsubmit="return validform()" action="success.php" method="">
+                          
                                 <div class="form-group row">
                                     <label for="nome" class="col-md-4 col-form-label text-md-right">Nome</label>
                                     <div class="col-md-6">
@@ -89,15 +91,13 @@
                                        <button class="btn btn-lg btn-outline-success btn-block"
 									type="submit">Registrati</button>
                                     </div>
+                                  </form>
                                 </div>
-                            </form>
+                         
                         </div>
                     </div>
             </div>
         </div>
-    </div>
-
-</main>
 	  
 
 <jsp:include page="frammenti/utility/script.html"></jsp:include>

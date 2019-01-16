@@ -4,33 +4,38 @@
 <html>
 <head>
 <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" 
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
-	crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" 
-integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" 
-crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<jsp:include page="frammenti/utility/boostrap.html"></jsp:include>
+
 <title>Modifica dati</title>
 <style type="text/css">
-<jsp:include page="bottone.frammenti"></jsp:include>
-<jsp:include page="frammenti/navbarstyle.frammenti"></jsp:include>
+.marginealto{
+margin-top: 20px
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff !important;
+    background-color: #029b2d !important;
+}
+.a{
+    color: #0f5f07 !important;
+}
 
+<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
+<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
 
 </style>
 </head>
 <body>
 
  <jsp:include page="frammenti/html/navbar.html"></jsp:include>
- 
+ <div class="marginealto">
  <div class="row">
   <div class="col-3">
     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="v-pills-impostazioni-tab" data-toggle="pill" href="#v-pills-impostazioni" role="tab" aria-controls="v-pills-impostazioni" aria-selected="true">Impostazioni</a>
-      <a class="nav-link" id="v-pills-blocco-tab" data-toggle="pill" href="#v-pills-blocco" role="tab" aria-controls="v-pills-blocco" aria-selected="false">Blocco</a>
-      <a class="nav-link" id="v-pills-messaggi-tab" data-toggle="pill" href="#v-pills-messaggi" role="tab" aria-controls="v-pills-messaggi" aria-selected="false">Messaggi</a>
-      <a class="nav-link" id="v-pills-assistenza-tab" data-toggle="pill" href="#v-pills-assistenza" role="tab" aria-controls="v-pills-assistenza" aria-selected="false">Assistenza</a>
+      <a class="nav-link active a" id="v-pills-impostazioni-tab" data-toggle="pill" href="#v-pills-impostazioni" role="tab" aria-controls="v-pills-impostazioni" aria-selected="true">Impostazioni</a>
+      <a class="nav-link a" id="v-pills-blocco-tab" data-toggle="pill" href="#v-pills-blocco" role="tab" aria-controls="v-pills-blocco" aria-selected="false">Utenti Bloccati</a>
+      <a class="nav-link a" id="v-pills-messaggi-tab" data-toggle="pill" href="#v-pills-messaggi" role="tab" aria-controls="v-pills-messaggi" aria-selected="false">Registra nuovo utente</a>
+      <a class="nav-link a" id="v-pills-assistenza-tab" data-toggle="pill" href="#v-pills-assistenza" role="tab" aria-controls="v-pills-assistenza" aria-selected="false">Assistenza</a>
     </div>
   </div>
   <div class="col-9">
@@ -112,14 +117,84 @@ crossorigin="anonymous">
       </div>
      
       <div class="tab-pane fade" id="v-pills-messaggi" role="tabpanel" aria-labelledby="v-pills-messaggi-tab">
-       <div class="col-3">
-        <div class="allineamento">Notifiche</div>
-    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="v-pills-nuove notifiche-tab" data-toggle="pill" href="#v-pills-nuove notifiche" role="tab" aria-controls="v-pills-nuove notifiche" aria-selected="true">Nuove</a>
-      <a class="nav-link" id="v-pills-elenco notifiche-tab" data-toggle="pill" href="#v-pills-elenco notifiche" role="tab" aria-controls="v-pills-elenco notifiche" aria-selected="false">Elenco</a>
-      <a class="nav-link" id="v-pills-notifiche eliminate-tab" data-toggle="pill" href="#v-pills-notifiche eliminate" role="tab" aria-controls="v-pills-notifiche eliminate" aria-selected="false">Eliminate</a>
-     
-    </div>
+       
+        <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Registra nuovo utente</div>
+                        <div class="card-body">
+                            <form name="my-form" onsubmit="return validform()" action="success.php" method="">
+                          
+                                <div class="form-group row">
+                                    <label for="nome" class="col-md-4 col-form-label text-md-right">Nome</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="nome" class="form-control" name="nome">
+                                    </div>
+                                </div>
+                                
+                                 <div class="form-group row">
+                                    <label for="cognome" class="col-md-4 col-form-label text-md-right">Cognome</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="cognome" class="form-control" name="cognome">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="email" class="form-control" name="email">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="user_name" class="col-md-4 col-form-label text-md-right">User Name</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="user_name" class="form-control" name="username">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="numero di telefono" class="col-md-4 col-form-label text-md-right">Numero di telefono</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="numero di telefono" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="indirizzo" class="col-md-4 col-form-label text-md-right">Indirizzo</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="indirizzo" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="inserisci_password" class="col-md-4 col-form-label text-md-right">Inserisci password</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="inserisci_password" class="form-control" name="inserisci-password">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group row">
+                                    <label for="conferma_password" class="col-md-4 col-form-label text-md-right">Conferma password</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="conferma_password" class="form-control" name="conferma-password">
+                                    </div>
+                                </div>
+
+           
+                                    <div class="col-md-6 offset-md-4">
+                                       <button class="btn btn-lg btn-outline-success btn-block"
+									type="submit">Registrati</button>
+                                    </div>
+                                  </form>
+                                </div>
+                         
+                        </div>
+                    </div>
+            </div>
+        </div>
+	  
   </div>
 
     </div>
