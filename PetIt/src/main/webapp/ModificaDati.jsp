@@ -15,9 +15,8 @@ crossorigin="anonymous">
 <title>Modifica dati</title>
 <style type="text/css">
 <jsp:include page="bottone.frammenti"></jsp:include>
- <jsp:include page="frammenti/navbarstyle.frammenti"></jsp:include>
-.allineamento{
-text-align:center;}
+<jsp:include page="frammenti/navbarstyle.frammenti"></jsp:include>
+
 
 </style>
 </head>
