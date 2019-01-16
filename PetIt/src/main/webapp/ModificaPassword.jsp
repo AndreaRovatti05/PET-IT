@@ -12,13 +12,13 @@
 <title>Modifica dati</title>
 <style type="text/css">
 <jsp:include page="bottone.frammenti"></jsp:include>
- <jsp:include page="frammenti/navbarstyle.frammenti"></jsp:include>
+ <jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
 
 </style>
 </head>
 <body>
 
- <jsp:include page="frammenti/navbar.frammenti"></jsp:include>
+ <jsp:include page="frammenti/html/navbar.html"></jsp:include>
  
  <main class="my-form">
     <div class="container-fluid">
