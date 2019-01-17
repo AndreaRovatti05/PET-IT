@@ -34,7 +34,7 @@ private static Logger log = Logger.getLogger("petit-business");
 		return em.createQuery("select a from AnimaleSegnalato a", AnimaleSegnalato.class).getResultList();
 	}
 	public static void aggiungiAnimaleSegnalato(String colorePelo,String tipoPelo,String taglia,
-			String statoFisico, String statoMentale,String commento) {
+			String statoFisico, String statoMentale) {
 		EntityManager em = Programma.getEm();
 		/*
 		if (r != null && s != null) {

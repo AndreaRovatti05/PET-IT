@@ -69,6 +69,7 @@ margin-top: 5px;
 float:right!important;
 
 }
+ 
 
 /* TRASFORMA HAMBURGER MENU IN UNA X */
 
@@ -98,7 +99,22 @@ float:right!important;
   transform: rotate(45deg) translate(-6px, -9px);
 }
 
+a {
+    color: #8bcd9a !important;
+}
 
+.b{
+	color: black
+	 !important;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff !important;
+}
+
+a: hover{
+	color: rgba(255,255,255,.5);
+}
 
 /*
 4.) Aggiungere tasto profilo alto dx

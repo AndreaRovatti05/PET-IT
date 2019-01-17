@@ -1,10 +1,15 @@
 package modello;
 
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.OneToOne;
 
 @Entity
+@DiscriminatorColumn(name="Utente_Registrato")
+@Inheritance(strategy =InheritanceType.JOINED)
 public class UtenteRegistrato {
 
 	@Id
@@ -12,6 +17,8 @@ public class UtenteRegistrato {
 	private String email;
 	private String nomeUtente;
 	private String password;
+	private String statoUtente;
+	private boolean Attivo;
 	
 	@OneToOne(mappedBy="utente")
 	private Segnalatore segnalatore;
@@ -54,5 +61,21 @@ public class UtenteRegistrato {
 
 	public void setSegnalatore(Segnalatore segnalatore) {
 		this.segnalatore = segnalatore;
+	}
+
+	public String getStatoUtente() {
+		return statoUtente;
+	}
+
+	public void setStatoUtente(String statoUtente) {
+		this.statoUtente = statoUtente;
+	}
+
+	public boolean getAttivo() {
+		return false;
+	}
+
+	public void setAttivo(boolean attivo) {
+		Attivo = attivo;
 	}
 }

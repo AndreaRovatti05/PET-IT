@@ -45,6 +45,8 @@
 					<th scope="col">Data di nascita</th>
 					<th scope="col">Email</th>
 					<th scope="col">Username</th>
+					<th scope="col">Stato Utente</th>
+					
 				</tr>
 			</thead>
 					  
@@ -63,6 +65,7 @@
 						<td>${s.dataNascita}</td>
 						<td> ${s.utente.email}</td>
 						<td> ${s.utente.nomeUtente}</td>
+						<td> ${s.utente.statoUtente}</td>
 					</tr> 
 				</c:forEach>						    
 			</tbody>

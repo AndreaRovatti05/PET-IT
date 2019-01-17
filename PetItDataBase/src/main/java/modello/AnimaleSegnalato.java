@@ -20,7 +20,7 @@ public class AnimaleSegnalato {
 	private String taglia;
 	private String statoFisico;
 	private String statoMentale;
-	private String commento;
+	
 	
 	@OneToMany(mappedBy="animale")
 	private List<Segnalazione> segnalazioni;
@@ -82,14 +82,6 @@ public class AnimaleSegnalato {
 
 	public void setStatoMentale(String statoMentale) {
 		this.statoMentale = statoMentale;
-	}
-
-	public String getCommento() {
-		return commento;
-	}
-
-	public void setCommento(String commento) {
-		this.commento = commento;
 	}
 
 	public List<PosizioniRilevamentiSegnalazioni> getPosizioni() {

@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 public class Razza {
 
 	@Id
-	private Integer id;
+	private String id;
 	private String nomeRazza;
 	
 	@ManyToOne
@@ -22,12 +22,12 @@ public class Razza {
 	private List<AnimaleSegnalato> animaliSegnalati;
 
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

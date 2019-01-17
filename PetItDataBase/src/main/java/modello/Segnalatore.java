@@ -21,6 +21,7 @@ public class Segnalatore {
 	private Date dataNascita;
 	
 	
+	
 	@OneToOne()
 	private UtenteRegistrato utente;
 	
@@ -74,5 +75,7 @@ public class Segnalatore {
 	public void setSegnalazioni(List<Segnalazione> segnalazioni) {
 		this.segnalazioni = segnalazioni;
 	}
+
+	
 	
 }

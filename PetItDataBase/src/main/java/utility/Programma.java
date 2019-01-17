@@ -7,6 +7,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import modello.Specie;
+
 public class Programma {
 
 		private static EntityManagerFactory emf;
@@ -20,6 +22,7 @@ public class Programma {
 			log.log(Level.FINE, "richiesto nuovo entitymanager");
 			return emf.createEntityManager();
 		}
+	
 	}
 
 

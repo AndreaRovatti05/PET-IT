@@ -1,5 +1,6 @@
 package modello;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -19,7 +20,7 @@ public class Specie {
 	public String getIdSpecie() {
 		return idSpecie;
 	}
-
+	 
 	public void setIdSpecie(String idSpecie) {
 		this.idSpecie = idSpecie;
 	}
@@ -40,5 +41,12 @@ public class Specie {
 		this.razze = razze;
 	}
 	
-
+	public void addRazza(Razza r) {
+		if (this.razze == null) {
+			this.razze = new ArrayList<Razza>();
+		}
+		this.razze.add(r);
+		r.setSpecie(this);
+	}
+	
 }
