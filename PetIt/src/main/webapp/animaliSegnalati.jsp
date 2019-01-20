@@ -24,8 +24,8 @@
 </head>
 <body class="bg-light">
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>	
-	<h2 class="text-center text-success"> Animali segnalati</h2>
-	<div class ="mx-3 border border-success">
+	<h2 class="text-center text-success">Animali segnalati</h2>
+	<div class ="mx-3 border">
 	<table class="table table-hover table-striped">
 			<thead class="thead-dark" >
 				<tr>
@@ -37,7 +37,6 @@
 					<th>Colore pelo</th>
 					<th>Stato Fisico</th>
 					<th>Stato Mentale</th>
-					<th>Note</th>
 				</tr>
 				</thead>
 				<tbody>
@@ -47,7 +46,7 @@
 						<td>
 							<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">	
 								<jsp:include page="frammenti/html/tastocancella.html"></jsp:include>
-									
+								<jsp:include page="frammenti/html/tastomodifica.html"></jsp:include>	
 							</div> 
 						</td>
 						<td>${ a.razza.specie.nomeSpecie } </td>
@@ -57,7 +56,6 @@
 						<td>${ a.colorePelo}</td>
 						<td>${ a.statoFisico }</td>
 						<td>${ a.statoMentale }</td>
-						<td>${ a.commento }</td>
 					</tr>
 				
 				</c:forEach>

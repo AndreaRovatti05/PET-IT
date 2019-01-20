@@ -14,7 +14,7 @@
   margin-left: ($spacer * .25) !important;
   margin-right:($spacer * .25) !important;
 }
- 	<jsp:include page="frammenti/css/nawbarstyle.css"></jsp:include>
+ 	<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
 	<jsp:include page="frammenti/css/tablestyle.css"></jsp:include>
 	<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
 
@@ -46,7 +46,7 @@
 						<td> ${ s.segnalatore.nome}  ${s.segnalatore.cognome } </td>
 						<td>${ s.segnalatore.utente.idUtente}</td>
 						<td>${s.animale.idAnimale}</td>
-						<td>${ s.animale.commento}</td>
+						<td>${ s.note}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

@@ -18,23 +18,18 @@
   margin-right:($spacer * .25) !important;
 }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: wheat;
-}
-
-.table {background-color: oldlace}
-
  	<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
 	<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
+	<jsp:include page="frammenti/css/tablestyle.css"></jsp:include>
 
 </style>
 </head>
-<body>
+<body class="bg-light">
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 
-	<h2 class="text-center text-success">  Elenco segnalatori</h2>
+	<h2 class="text-center text-success">Segnalatori</h2>
 	
-	<div class ="mx-3 border border-success">
+	<div class ="mx-3 border">
 		<table class="table table-hover table-striped">
 			<thead class="thead-dark" >
 				<tr>
