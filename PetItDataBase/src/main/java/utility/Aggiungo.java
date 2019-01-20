@@ -29,7 +29,6 @@ public class Aggiungo {
 		sp.addRazza(ra);
 		
 		
-		
 		Razza ra1 = new Razza();
 		ra1.setId("Ra01");
 		ra1.setNomeRazza("Pincer");
