@@ -1,5 +1,6 @@
 package modello;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -76,6 +77,12 @@ public class Segnalatore {
 		this.segnalazioni = segnalazioni;
 	}
 
-	
+	public void addSegnalazioni(Segnalazione s) {
+		if (this.segnalazioni == null) {
+			this.segnalazioni = new ArrayList<Segnalazione>();
+		}
+		this.segnalazioni.add(s);
+		s.setSegnalatore(this);
+	}
 	
 }

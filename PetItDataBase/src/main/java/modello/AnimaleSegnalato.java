@@ -1,5 +1,6 @@
 package modello;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -99,7 +100,14 @@ public class AnimaleSegnalato {
 	public void setSegnalazioni(List<Segnalazione> segnalazioni) {
 		this.segnalazioni = segnalazioni;
 	}
-
+	
+	public void addSegnalazione(Segnalazione sg) {
+		if (this.segnalazioni == null) {
+			this.segnalazioni = new ArrayList<Segnalazione>();
+		}
+		this.segnalazioni.add(sg);
+		sg.setAnimale(this);
+	}
 	
 
 }
