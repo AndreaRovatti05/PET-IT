@@ -47,6 +47,10 @@ private static Logger log = Logger.getLogger("petit-business");
 			log.log(Level.WARNING, "studente o registro inesistenti");
 		}*/
 	}
+	public static void eliminaAnimaleSegnalato(String idDaEliminare) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	

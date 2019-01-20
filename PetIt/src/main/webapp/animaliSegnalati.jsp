@@ -64,6 +64,18 @@
 	</div> 
 
 	<jsp:include page="frammenti/utility/script.html"></jsp:include>
+	<script>
+	function remove(id) {
+		var ok = confirm('Sei sicuro di eliminare ' + id + '?');
+		if (ok) {
+			location.href = 'rimuoviAnimaleSegnalato?idAnimale=' + id;
+		}
+	}
+	
+	function update(id) {
+		alert('stai per modificare ' + id);
+	}
+	</script>
 
 </body>
 </html>
