@@ -12,6 +12,7 @@
 
 <!-- Bootstrap CSS -->
 <jsp:include page="frammenti/utility/boostrap.html"></jsp:include>
+<jsp:include page="/frammenti/utility/utilitynavbar.html"></jsp:include>
 
 <title>Feed Segnalazioni</title>
 <style type="text/css">

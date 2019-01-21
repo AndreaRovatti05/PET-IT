@@ -9,6 +9,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <jsp:include page="frammenti/utility/boostrap.html"></jsp:include>
+<jsp:include page="/frammenti/utility/utilitynavbar.html"></jsp:include>
 
 <title>PetIT</title>
 

@@ -1,0 +1,73 @@
+
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark" >
+	<a class="navbar-brand" href="home.jsp">
+	<img src="logo.png" class="logo" width="30" height="30"
+	class="d-inline-block align-top" >
+	   Pet It
+	</a>
+	
+	 <!-- HAMBURGER BUTTON -->
+		
+		<div class="prova" id = "prova2">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <div class="container" onclick="myFunction(this)">
+		  		<div class="bar1"></div>
+		  		<div class="bar2"></div>
+		  		<div class="bar3"></div>
+		</div>
+		
+		<script>
+			function myFunction(x) {
+	  		x.classList.toggle("change");
+			}
+		</script>
+		</button>
+		</div>
+	  
+	  
+	 <!-- NAVBAR "INTERNA" --> 
+	 
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<a class="nav-item nav-link" href="home.jsp">Home</a>
+		<ul class="navbar-nav mr-auto">
+	      	<li class="nav-item dropdown ">
+	        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+	        	aria-haspopup="true" aria-expanded="false">Visualizza</a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item b" href="elencoAnimaliSegnalati">Animali segnalati</a>
+	          <a class="dropdown-item b" href="elencoSegnalatori">Utenti</a>
+	          <a class="dropdown-item b" href="elencoSegnalazioni">Segnalazioni inserite</a>
+	          <a class="dropdown-item b" href="feedSegnalazioni.jsp">Feed Segnalazioni</a>
+	        </div>
+	      </li>
+	    </ul>
+	     <form class="form-inline my-2 my-lg-0">
+	     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+	    
+	    <div class="user-logo" id="prova2">
+		<a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" 
+		data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	        	<img class="user" src="user.png" width="30" height="30" class="d-inline-block align-top" 
+	        	alt="">
+	     </a>
+	     
+	<!-- LOGO PROFILO -->
+	
+		<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+		     <a class="dropdown-item b" href="elencoAnimaliSegnalati">Profilo Utente</a>
+		     <a class="dropdown-item b" href="ModificaDati.jsp">Impostazioni</a>
+		     <a class="dropdown-item b" href="home.jsp">Gestisci</a>
+		     <a class="dropdown-item b" href="feedSegnalazioni.jsp">Log Out</a>
+		</div>
+	</div> 
+	</div>
+	
+	
+	  
+</nav> 
+
+
+
+

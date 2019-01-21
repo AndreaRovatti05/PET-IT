@@ -1,3 +1,7 @@
 .table {
     background-color: #4865591c;
 }
+
+.btn {
+    padding: .0rem .6rem !important;
+}

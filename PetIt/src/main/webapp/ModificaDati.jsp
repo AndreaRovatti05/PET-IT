@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <jsp:include page="frammenti/utility/boostrap.html"></jsp:include>
+<jsp:include page="/frammenti/utility/utilitynavbar.html"></jsp:include>
+
 
 <title>Modifica dati</title>
 <style type="text/css">
