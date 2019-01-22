@@ -51,7 +51,7 @@ background-image: url (provaSfondo.jpg);
       <div class="col-md-5 p-lg-5 mx-auto my-5">
         <h1 class="display-4 font-weight-normal">Gestisci Segnalazioni</h1>
         <p class="lead font-weight-normal">Breve testo.</p>
-        <a class="btn btn-outline-success" href="#">TASTO AZIONE</a>
+        <a class="btn btn-outline-success" href="elencoSegnalazioni">TASTO AZIONE</a>
       </div>
       <div class="product-device shadow-sm d-none d-md-block"></div>
       <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
@@ -65,7 +65,7 @@ background-image: url (provaSfondo.jpg);
       <div class="col-md-5 p-lg-5 mx-auto my-5">
         <h1 class="display-4 font-weight-normal">Gestisci Utenti</h1>
         <p class="lead font-weight-normal">Breve testo.</p>
-        <a class="btn btn-outline-success" href="#">TASTO AZIONE</a>
+        <a class="btn btn-outline-success" href="elencoSegnalatori">TASTO AZIONE</a>
       </div>
       <div class="product-device shadow-sm d-none d-md-block"></div>
       <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
@@ -78,7 +78,7 @@ background-image: url (provaSfondo.jpg);
       <div class="col-md-5 p-lg-5 mx-auto my-5">
         <h1 class="display-4 font-weight-normal">Aggiungi Account</h1>
         <p class="lead font-weight-normal">Breve testo.</p>
-        <a class="btn btn-outline-success" href="#">TASTO AZIONE</a>
+        <a class="btn btn-outline-success" href="ModificaDati.jsp">TASTO AZIONE</a>
       </div>
       <div class="product-device shadow-sm d-none d-md-block"></div>
       <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
