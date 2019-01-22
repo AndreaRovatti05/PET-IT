@@ -10,6 +10,28 @@
 
 <title>Modifica dati</title>
 <style type="text/css">
+
+
+.button { 
+	
+  font-size: 10px; 
+  width:55px;
+  height:25px;
+  color: black; 
+	margin:1px; 
+  text-decoration: none; 
+  border-radius: 3px; 
+  background: rgb(64,199,129); 
+  box-shadow: 0 -3px rgb(53,167,110) inset; 
+  transition: 0.2s; 
+} 
+.button:hover { background: rgb(53, 167, 110); color:white} 
+.button:active { 
+  background: rgb(33,147,90); 
+  box-shadow: 0 3px rgb(33,147,90) inset; 
+}
+
+
 .marginealto {
 	margin-top: 20px;
 }
