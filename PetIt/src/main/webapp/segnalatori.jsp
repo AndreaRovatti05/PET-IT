@@ -11,7 +11,7 @@
 <jsp:include page="frammenti/utility/boostrap.html"></jsp:include>
 <jsp:include page="/frammenti/utility/utilitynavbar.html"></jsp:include>
 
-<title>PetIT</title>
+<title>Utenti</title>
 
 <style type="text/css">
 .mx-3 {
