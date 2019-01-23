@@ -42,7 +42,6 @@
 					<th scope="col">Email</th>
 					<th scope="col">Username</th>
 					<th scope="col">Stato Utente</th>
-					
 				</tr>
 			</thead>
 					  
