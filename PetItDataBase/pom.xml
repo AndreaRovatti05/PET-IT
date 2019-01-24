@@ -31,7 +31,7 @@
 		</dependency>
 	</dependencies>
 	<properties>
-		<maven.compiler.souce>1.8</maven.compiler.souce>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
 </project>
