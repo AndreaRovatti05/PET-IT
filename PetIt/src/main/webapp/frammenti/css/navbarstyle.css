@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: auto;
     font-family: 'PT Sans', sans-serif;
     font-weight: 800;
 }
@@ -7,7 +7,7 @@ body {
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .nav-link {
@@ -47,7 +47,7 @@ nav {
 }
 
 nav ul {
-    margin: 0;
+    margin: auto;
     padding: 0;
     list-style: none;
 }
