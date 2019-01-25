@@ -33,7 +33,48 @@
 					<div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
 						<jsp:include page="frammenti/html/ModificaDati.html"></jsp:include>
 					</div>
-					<div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+					<div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+					
+						<h2 class="text-center text-success">Utenti bannati</h2>
+	
+							<div class ="mx-3 border">
+								<table class="table table-hover table-striped">
+									<thead class="thead-dark" >
+										<tr>
+											<th scope="col">&nbsp</th>
+											<th scope="col">Codice Fiscale</th>
+											<th scope="col">Nome</th>
+											<th scope="col">Cognome</th>
+											<th scope="col">Data di nascita</th>
+											<th scope="col">Email</th>
+											<th scope="col">Username</th>
+											<th scope="col">Stato Utente</th>
+										</tr>
+									</thead>
+											  
+									<tbody>
+										<c:forEach var="s" items="${elencoSegnalatori}" >
+											<tr>
+												<td> 
+													<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">			
+														<jsp:include page="frammenti/html/ban.html"></jsp:include>
+													</div>
+						  						</td>
+													    
+												<td>${s.codiceFiscale}</td>
+												<td>${s.nome}</td>
+												<td>${s.cognome}</td>
+												<td>${s.dataNascita}</td>
+												<td> ${s.utente.email}</td>
+												<td> ${s.utente.nomeUtente}</td>
+												<td> ${s.utente.statoUtente}</td>
+											</tr> 
+										</c:forEach>						    
+									</tbody>
+								</table>
+							</div>
+					
+					</div>
 					<div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
 						<jsp:include page="frammenti/html/RegistrazioneAdmin.html"></jsp:include></div>
 					<div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
