@@ -5,16 +5,14 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-public class Segnalatore {
+public class Segnalatore extends UtenteRegistrato {
 
-	@Id
 	private String codiceFiscale; 
 	private String nome;
 	private String cognome;

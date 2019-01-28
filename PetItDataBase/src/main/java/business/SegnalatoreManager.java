@@ -37,5 +37,19 @@ private static Logger log = Logger.getLogger("petit-business");
 			Date dataNascita) {
 		EntityManager em = Programma.getEm();
 	}
+
+	public static List<Segnalatore> elencoSegnalatoriPerStato(String stato) {
+		EntityManager em = Programma.getEm();
+		return em.createQuery("select s from Segnalatore s where s.statoUtente=:stato", Segnalatore.class)
+				.setParameter("stato", stato)
+				.getResultList();
+	}
+
+	public static List<Segnalatore> elencoSegnalatoriNonPerStato(String stato) {
+		EntityManager em = Programma.getEm();
+		return em.createQuery("select s from Segnalatore s where s.statoUtente <> :stato", Segnalatore.class)
+				.setParameter("stato", stato)
+				.getResultList();
+	}
 	
 }

@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,28 +8,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import business.UtenteRegistratoManager;
-import modello.UtenteRegistrato;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
+import business.SpecieManager;
 
-public class ControllerUtenteRegistrato {
-
+/**
+ * Servlet implementation class SpecieController
+ */
+@WebServlet("/specie")
+public class SpecieController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
-    public ControllerUtenteRegistrato() {
+    public SpecieController() {
+        super();
+        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<UtenteRegistrato> utenti = UtenteRegistratoManager.elencoUtenti();
-
-		request.setAttribute("elencoUtenti", utenti);
-		request.getRequestDispatcher("segnalatori.jsp").forward(request, response);
+		ObjectMapper om = new ObjectMapper();
+		response.setContentType("application/json");
+		response.getWriter().append(om.writeValueAsString(SpecieManager.all()));
 	}
-	
+
 }

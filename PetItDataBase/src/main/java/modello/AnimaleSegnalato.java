@@ -9,6 +9,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class AnimaleSegnalato {
 	@Id
@@ -22,10 +24,11 @@ public class AnimaleSegnalato {
 	private String statoFisico;
 	private String statoMentale;
 	
-	
+	@JsonIgnore
 	@OneToMany(mappedBy="animale")
 	private List<Segnalazione> segnalazioni;
 	
+	@JsonIgnore
 	@ManyToMany(mappedBy="animaliSegnalati")
 	private List<PosizioniRilevamentiSegnalazioni> posizioni;
 

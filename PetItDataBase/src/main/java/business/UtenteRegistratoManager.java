@@ -32,7 +32,11 @@ private static Logger log = Logger.getLogger("petit-business");
 	
 	public static List<UtenteRegistrato> elencoUtenti() {
 		EntityManager em = Programma.getEm();
-		return em.createQuery("select u from utenteregistrato u", UtenteRegistrato.class).getResultList();
+		return em.createQuery("select u from UtenteRegistrato u", UtenteRegistrato.class).getResultList();
+	}
+	public static List<UtenteRegistrato> elencoUtentiBannati() {
+		EntityManager em = Programma.getEm();
+		return em.createQuery("select u from UtenteRegistrato u where u.stato='ban'", UtenteRegistrato.class).getResultList();
 	}
 	public static void aggiungiUtenteRegistrato(String email, String nomeUtente) {
 		EntityManager em = Programma.getEm();

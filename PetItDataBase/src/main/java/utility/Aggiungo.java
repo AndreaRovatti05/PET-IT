@@ -52,42 +52,36 @@ public class Aggiungo {
 		ra2.setNomeRazza("Europeo");
 		sp1.addRazza(ra2);
 		
-		UtenteRegistrato ut =new UtenteRegistrato();
 		Segnalatore se = new Segnalatore();
-		ut.setIdUtente("Ut01");
-		ut.setEmail("mario@rossi.it");
-		ut.setPassword("pass");
-		ut.setNomeUtente("mario");
-		ut.setStatoUtente("amministratore");
+		se.setIdUtente("Ut01");
+		se.setEmail("mario@rossi.it");
+		se.setPassword("pass");
+		se.setNomeUtente("mario");
+		se.setStatoUtente("amministratore");
 		se.setCodiceFiscale("rssmri");
 		se.setCognome("Rossi");
 		se.setNome("Mario");
-		ut.setSegnalatore(se);
 
 		
-		UtenteRegistrato ut1 =new UtenteRegistrato();
 		Segnalatore se1 = new Segnalatore();
-		ut1.setIdUtente("Ut02");
-		ut1.setEmail("paolo@verdi.it");
-		ut1.setPassword("pass");
-		ut1.setNomeUtente("paolo");
-		ut1.setStatoUtente("online");	
+		se1.setIdUtente("Ut02");
+		se1.setEmail("paolo@verdi.it");
+		se1.setPassword("pass");
+		se1.setNomeUtente("paolo");
+		se1.setStatoUtente("online");	
 		se1.setCodiceFiscale("vrdplo");
 		se1.setCognome("Verdi");
 		se1.setNome("Paolo");
-		ut1.setSegnalatore(se1);
 		
-		UtenteRegistrato ut2 =new UtenteRegistrato();
 		Segnalatore se2 = new Segnalatore();
-		ut2.setIdUtente("Ut03");
-		ut2.setEmail("giovanni@verdi.it");
-		ut2.setPassword("pass");
-		ut2.setNomeUtente("giovanni");
-		ut2.setStatoUtente("ban");	
+		se2.setIdUtente("Ut03");
+		se2.setEmail("giovanni@verdi.it");
+		se2.setPassword("pass");
+		se2.setNomeUtente("giovanni");
+		se2.setStatoUtente("ban");	
 		se2.setCodiceFiscale("vrdgvn");
 		se2.setCognome("Verdi");
 		se2.setNome("giovanni");
-		ut2.setSegnalatore(se2);
 		
 		AnimaleSegnalato an =new AnimaleSegnalato();
 		Segnalazione sg = new Segnalazione();
@@ -138,9 +132,6 @@ public class Aggiungo {
 		em.persist(ra1);
 		em.persist(ra2); 
 		em.persist(ra3);
-		em.persist(ut);
-		em.persist(ut1);
-		em.persist(ut2);
 		em.persist(se);
 		em.persist(se1);
 		em.persist(se2);

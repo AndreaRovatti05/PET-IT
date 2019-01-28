@@ -58,9 +58,9 @@
 						<td>${s.nome}</td>
 						<td>${s.cognome}</td>
 						<td>${s.dataNascita}</td>
-						<td> ${s.utente.email}</td>
-						<td> ${s.utente.nomeUtente}</td>
-						<td> ${s.utente.statoUtente}</td>
+						<td> ${s.email}</td>
+						<td> ${s.nomeUtente}</td>
+						<td> ${s.statoUtente}</td>
 					</tr> 
 				</c:forEach>						    
 			</tbody>

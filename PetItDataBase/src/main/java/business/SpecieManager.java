@@ -1,5 +1,6 @@
 package business;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,5 +27,10 @@ private static Logger log = Logger.getLogger("petit-business");
 		} else {
 			log.log(Level.WARNING, "presenza esiste già");
 		}
+	}
+	
+	public static List<Specie> all() {
+		EntityManager em = Programma.getEm();
+		return em.createQuery("select s from Specie s", Specie.class).getResultList();
 	}
 }

@@ -43,7 +43,7 @@
 				<tbody>
 			
 				<c:forEach var="a" items= "${elencoAnimaliSegnalati}">
-					<tr>
+					<tr data-id="${ a.idAnimale }">
 						<td>
 							<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">	
 								<jsp:include page="frammenti/html/tastocancella.html"></jsp:include>
@@ -66,12 +66,36 @@
 
 	<jsp:include page="frammenti/utility/script.html"></jsp:include>
 	<script>
-	function remove(id) {
-		var ok = confirm('Sei sicuro di eliminare ' + id + '?');
-		if (ok) {
-			location.href = 'rimuoviAnimaleSegnalato?idAnimale=' + id;
-		}
-	}
+	$(() => {
+		$.ajax({
+			url: 'specie',
+			method: 'get'
+		})
+		.done((species) => {
+			species.forEach((s) => {
+				$('#selSpecie').append('<option value="' + s.idSpecie + '">' + s.nomeSpecie + '</option>')
+			});
+		});
+		$('.bottoneCancellaAnimale').click((e) => {
+			let id = $(e.currentTarget).closest('tr').data('id');
+			var ok = confirm('Sei sicuro di eliminare ' + id + '?');
+			if (ok) {
+				location.href = 'rimuoviAnimaleSegnalato?idAnimale=' + id;
+			}
+		});
+		
+		$('.bottoneModificaAnimale').click((e) => {
+			let id = $(e.currentTarget).closest('tr').data('id');
+			$.ajax({
+				url: 'animalePerId?id=' + id,
+				method: 'get'
+			})
+			.done((an) => {
+				$('#selSpecie').val(an.razza.specie.idSpecie);
+				$('#modalmodifica').modal();
+			})
+		});
+	});
 	
 	function update(id) {
 		alert('stai per modificare ' + id);

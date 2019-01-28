@@ -17,10 +17,7 @@ public class UtenteRegistrato {
 	private String nomeUtente;
 	private String password;
 	private String statoUtente;
-	private boolean Attivo;
-	
-	@OneToOne(mappedBy="utente")
-	private Segnalatore segnalatore;
+	private boolean attivo;
 
 	public String getIdUtente() {
 		return idUtente;
@@ -54,14 +51,6 @@ public class UtenteRegistrato {
 		this.password = password;
 	}
 
-	public Segnalatore getSegnalatore() {
-		return segnalatore;
-	}
-
-	public void setSegnalatore(Segnalatore segnalatore) {
-		this.segnalatore = segnalatore;
-	}
-
 	public String getStatoUtente() {
 		return statoUtente;
 	}
@@ -75,6 +64,6 @@ public class UtenteRegistrato {
 	}
 
 	public void setAttivo(boolean attivo) {
-		Attivo = attivo;
+		attivo = attivo;
 	}
 }
