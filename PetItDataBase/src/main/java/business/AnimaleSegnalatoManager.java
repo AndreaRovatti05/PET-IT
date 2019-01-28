@@ -11,6 +11,7 @@ import utility.Programma;
 
 public class AnimaleSegnalatoManager {
 	private static Logger log = Logger.getLogger("petit-business");
+	
 
 	public static void aggiungiAnimaleSegnalato(AnimaleSegnalato a) {
 		EntityManager em = Programma.getEm();
