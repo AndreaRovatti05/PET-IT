@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,14 +43,11 @@
 									<thead class="thead-dark" >
 										<tr>
 											<th scope="col">&nbsp</th>
-											<th scope="col">Codice Fiscale</th>
-											<th scope="col">Nome</th>
-											<th scope="col">Cognome</th>
-											<th scope="col">Data di nascita</th>
-											<th scope="col">Email</th>
-											<th scope="col">Username</th>
-											<th scope="col">Stato Utente</th>
-										</tr>
+												<th>Codice Segnalazione</th>
+												<th>Segnalatore</th>
+												<th>Codice Utente</th>
+												<th>AnimaleSegnalato</th>
+												<th>Note Segnalazione</th>
 									</thead>
 											  
 									<tbody>

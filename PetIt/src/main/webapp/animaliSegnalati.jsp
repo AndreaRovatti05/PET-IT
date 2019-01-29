@@ -82,7 +82,7 @@
 		})
 		.done((razzas) => {
 			razzas.forEach((s) => {
-				$('#selRazza').append('<option value="' + s.idRazza + '">' + s.nomeRazza + '</option>')
+				$('#selRazza').append('<option value="' + s.id + '">' + s.nomeRazza + '</option>')
 			});
 		});
 		$('.bottoneCancellaAnimale').click((e) => {
@@ -100,6 +100,7 @@
 				method: 'get'
 			})
 			.done((an) => {
+				$('#selRazza').val(an.razza.id);
 				$('#selSpecie').val(an.razza.specie.idSpecie);
 				$('#modalmodifica').modal();
 			})
