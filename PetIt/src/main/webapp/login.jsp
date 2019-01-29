@@ -152,12 +152,6 @@ float:right!important;
 </style>
 </head>
 <body class="text-center body">
-<div class="container">
-<div class="row">
-	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
-	</div>
-	
-</div>
 	<div class="container">
 		<div class="row">
 			<div class=" col-md-4 offset-md-4"  >
