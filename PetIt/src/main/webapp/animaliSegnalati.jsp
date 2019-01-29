@@ -102,12 +102,13 @@
 			.done((an) => {
 				$('#selRazza').val(an.razza.id);
 				$('#selSpecie').val(an.razza.specie.idSpecie);
+				
 				$('#modalmodifica').modal();
 			})
 		});
 		
 	});
-	
+
 	function update(id) {
 		alert('stai per modificare ' + id);
 	}
