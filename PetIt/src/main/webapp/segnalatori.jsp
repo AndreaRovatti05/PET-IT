@@ -53,7 +53,7 @@
     <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori?stato=online">Attivi</a>
     <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori?stato=admin">Amministratori</a>
     </div>
-</div>
+</div> 
  	
 	<div class="center"><h2 class="text-center text-success">Segnalatori</h2></div>
 	
