@@ -1,5 +1,6 @@
 package business;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -7,6 +8,7 @@ import javax.persistence.EntityManager;
 
 import modello.AnimaleSegnalato;
 import modello.Razza;
+import modello.Specie;
 import utility.Programma;
 
 public class RazzaManager {
@@ -26,5 +28,10 @@ private static Logger log = Logger.getLogger("petit-business");
 		} else {
 			log.log(Level.WARNING, "presenza esiste già");
 		}
+	}
+
+	public static List<Razza> all() {
+		EntityManager em = Programma.getEm();
+		return em.createQuery("select r from Razza r", Razza.class).getResultList();
 	}
 }
