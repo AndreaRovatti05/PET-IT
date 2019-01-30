@@ -1,5 +1,6 @@
 package modello;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -7,6 +8,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Segnalazione {
 	@Id
+	@Column(length=50)
 	private String idSegnalazione;
 	private String note;
 	

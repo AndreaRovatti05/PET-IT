@@ -25,7 +25,7 @@
 </head>
 <body class="bg-light">
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>	
-	<h2 class="text-center text-success">Animali segnalati</h2>
+	<h2 class="text-center text-success" style="margin-bottom: 1.2rem">Animali segnalati</h2>
 	<div class ="mx-3 border">
 	<table class="table table-hover table-striped">
 			<thead class="thead-dark" >

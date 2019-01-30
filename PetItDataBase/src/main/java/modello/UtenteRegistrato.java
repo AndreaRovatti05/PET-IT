@@ -1,6 +1,7 @@
 package modello;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
@@ -12,6 +13,7 @@ import javax.persistence.OneToOne;
 public class UtenteRegistrato {
 
 	@Id
+	@Column(length=50)
 	private String idUtente;
 	private String email;
 	private String nomeUtente;

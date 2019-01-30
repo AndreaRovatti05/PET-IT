@@ -86,3 +86,12 @@ nav a::before {
 nav a:hover::before {
     width: 100%;
 }
+
+@media screen and(max-width:1024px) {
+
+	hamburger{ input[type="checkbox"]:checked ~ #sidebarMenu { transform: translateX(0); }}
+
+
+	
+	
+}

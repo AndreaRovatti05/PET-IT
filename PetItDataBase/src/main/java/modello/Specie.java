@@ -3,6 +3,7 @@ package modello;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -13,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Specie {
 
 	@Id
+	@Column(length=50)
 	private String idSpecie;
 	private String nomeSpecie;
 	
