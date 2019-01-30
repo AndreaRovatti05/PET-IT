@@ -76,6 +76,15 @@
 				$('#selSpecie').append('<option value="' + s.idSpecie + '">' + s.nomeSpecie + '</option>')
 			});
 		});
+		$.ajax({
+			url: 'razza',
+			method: 'get'
+		})
+		.done((razzas) => {
+			razzas.forEach((s) => {
+				$('#selRazza').append('<option value="' + s.id + '">' + s.nomeRazza + '</option>')
+			});
+		});
 		$('.bottoneCancellaAnimale').click((e) => {
 			let id = $(e.currentTarget).closest('tr').data('id');
 			var ok = confirm('Sei sicuro di eliminare ' + id + '?');
@@ -91,12 +100,15 @@
 				method: 'get'
 			})
 			.done((an) => {
+				$('#selRazza').val(an.razza.id);
 				$('#selSpecie').val(an.razza.specie.idSpecie);
+				
 				$('#modalmodifica').modal();
 			})
 		});
+		
 	});
-	
+
 	function update(id) {
 		alert('stai per modificare ' + id);
 	}

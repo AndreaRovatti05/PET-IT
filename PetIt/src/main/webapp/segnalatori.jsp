@@ -14,9 +14,23 @@
 <title>Utenti</title>
 
 <style type="text/css">
+.right{
+	float:right;
+	width:55px;
+}
+
+.btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.center{
+	margin-left: 500px;
+    width: 200px;
+}
 .mx-3 {
-  margin-left: ($spacer * .25) !important;
-  margin-right:($spacer * .25) !important;
+ 	margin-left: ($spacer * .25) !important;
+ 	margin-right:($spacer * .25) !important;
 }
 
  	<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
@@ -25,10 +39,27 @@
 
 </style>
 </head>
+
 <body class="bg-light">
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 
 	<h2 class="text-center text-success" style="margin-bottom: 1.2rem">Segnalatori</h2>
+
+	
+<div class="btn-group right">
+  <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<i class="fas fa-filter"></i>
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori">Tutti</a>
+    <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori?stato=ban">Bloccati</a>
+    <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori?stato=online">Attivi</a>
+    <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori?stato=admin">Amministratori</a>
+    </div>
+</div> 
+ 	
+	<div class="center"><h2 class="text-center text-success">Segnalatori</h2></div>
+
 	
 	<div class ="mx-3 border">
 		<table class="table table-hover table-striped">
