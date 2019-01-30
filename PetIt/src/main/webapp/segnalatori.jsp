@@ -42,8 +42,11 @@
 
 <body class="bg-light">
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
+
+	<h2 class="text-center text-success" style="margin-bottom: 1.2rem">Segnalatori</h2>
+
 	
-	<div class="btn-group right">
+<div class="btn-group right">
   <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<i class="fas fa-filter"></i>
   </button>
@@ -54,9 +57,8 @@
     <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori?stato=admin">Amministratori</a>
     </div>
 </div> 
-
-	<h2 class="text-center text-success" style="margin-bottom: 1.2rem">Segnalatori</h2>
-
+ 	
+	<div class="center"><h2 class="text-center text-success">Segnalatori</h2></div>
 
 	
 	<div class ="mx-3 border">

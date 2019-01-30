@@ -1,7 +1,9 @@
-<header>
+<html>
 
+<header>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <div class="container">
+    <div class="container topnav active nav-link dropdown-toggle" id="myTopnav">
 
         <i class="fas fa-paw fa-2x"><a href="home.jsp"> Pet-It</a></i>
 
@@ -13,7 +15,20 @@
                 <li><a href="elencoSegnalazioni">Segnalazioni</a></li>
                 <li><a href="profiloutente.jsp">Profilo Utente</a></li>
                 <li><a href="login.jsp">LOG OUT</a></li>
-              
+                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+               <i class="fa fa-bars"></i>
+  				</a>
+  				
+  <script>
+	function myFunction() {
+  	var x = document.getElementById("myTopnav");
+  	if (x.className === "topnav") {
+    x.className += " responsive";
+  		} else {
+    x.className = "topnav";
+  	}
+}
+</script>
                 	
                 		<!--  <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	        			Profilo</a>
@@ -31,3 +46,4 @@
     </div>
 </header>
  <br>
+ </html>
