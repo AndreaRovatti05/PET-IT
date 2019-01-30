@@ -34,4 +34,14 @@ private static Logger log = Logger.getLogger("petit-business");
 		return em.createQuery("select s from Segnalazione s", Segnalazione.class).getResultList();
 	}
 	
+	public static void eliminaSegnalazione(String idDaEliminare) {
+		EntityManager em = Programma.getEm();
+		Segnalazione se = em.find(Segnalazione.class, idDaEliminare);
+		if (se != null) {
+			em.getTransaction().begin();
+			em.remove(se);
+			em.getTransaction().commit();
+		}
+
+	}
 }

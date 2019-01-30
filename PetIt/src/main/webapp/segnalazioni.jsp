@@ -48,7 +48,7 @@
 							</div>  </td>
 						<td>${ s.idSegnalazione } </td>
 						<td> ${ s.segnalatore.nome}  ${s.segnalatore.cognome } </td>
-						<td>${ s.segnalatore.utente.idUtente}</td>
+						<td>${ s.segnalatore.idUtente}</td>
 						<td>${s.animale.idAnimale}</td>
 						<td>${ s.note}</td>
 					</tr>
