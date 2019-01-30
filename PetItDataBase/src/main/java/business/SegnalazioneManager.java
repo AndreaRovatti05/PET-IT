@@ -12,36 +12,43 @@ import modello.Segnalazione;
 import utility.Programma;
 
 public class SegnalazioneManager {
-private static Logger log = Logger.getLogger("petit-business");
-	
+	private static Logger log = Logger.getLogger("petit-business");
+
 	public static void aggiungiSegnalazione(Segnalazione s) {
 		EntityManager em = Programma.getEm();
 		Segnalazione sDb = null;
-		if(s.getIdSegnalazione() != null) {
+		if (s.getIdSegnalazione() != null) {
 			sDb = em.find(Segnalazione.class, s.getIdSegnalazione());
 		}
 		if (sDb == null) {
 			em.getTransaction().begin();
-			em.persist(s); 
+			em.persist(s);
 			em.getTransaction().commit();
 			log.log(Level.INFO, "aggiunta presenza");
 		} else {
 			log.log(Level.WARNING, "presenza esiste già");
 		}
 	}
+
 	public static List<Segnalazione> elencoSegnalazioni() {
 		EntityManager em = Programma.getEm();
 		return em.createQuery("select s from Segnalazione s", Segnalazione.class).getResultList();
 	}
-	
+
 	public static void eliminaSegnalazione(String idDaEliminare) {
 		EntityManager em = Programma.getEm();
 		Segnalazione se = em.find(Segnalazione.class, idDaEliminare);
 		if (se != null) {
-			em.getTransaction().begin();
-			em.remove(se);
-			em.getTransaction().commit();
+			AnimaleSegnalato as = se.getAnimale();
+			if (as.getSegnalazioni().size() == 1) {
+				em.getTransaction().begin();
+				em.remove(as);
+				em.getTransaction().commit();
+			} else {
+				em.getTransaction().begin();
+				em.remove(se);
+				em.getTransaction().commit();
+			}
 		}
-
 	}
 }

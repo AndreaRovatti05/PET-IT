@@ -85,6 +85,24 @@
 				$('#selRazza').append('<option value="' + s.id + '">' + s.nomeRazza + '</option>')
 			});
 		});
+		$.ajax({
+			url: 'dizionari',
+			method: 'get'
+		})
+		.done((dizio) => {
+			dizio.taglie.forEach((s) => {
+				$('#selTaglia').append('<option value="' + s + '">' + s + '</option>')
+			});
+			dizio.tipiPelo.forEach((s) => {
+				$('#selPelo').append('<option value="' + s + '">' + s + '</option>')
+			});
+			dizio.statiFisici.forEach((s) => {
+				$('#selFisico').append('<option value="' + s + '">' + s + '</option>')
+			});
+			dizio.statiMentali.forEach((s) => {
+				$('#selStatoMentale').append('<option value="' + s + '">' + s + '</option>')
+			});
+		});		
 		$('.bottoneCancellaAnimale').click((e) => {
 			let id = $(e.currentTarget).closest('tr').data('id');
 			var ok = confirm('Sei sicuro di eliminare ' + id + '?');
@@ -100,8 +118,10 @@
 				method: 'get'
 			})
 			.done((an) => {
+				$('#hddIdAnimale').val(an.idAnimale);
 				$('#selRazza').val(an.razza.id);
 				$('#selSpecie').val(an.razza.specie.idSpecie);
+				$('#selTaglia').val(an.taglia);
 				
 				$('#modalmodifica').modal();
 			})

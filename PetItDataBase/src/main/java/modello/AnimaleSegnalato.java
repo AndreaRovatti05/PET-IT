@@ -3,6 +3,7 @@ package modello;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class AnimaleSegnalato {
 	@Id
-	@Column(length=50)
+	@Column(length = 50)
 	private String idAnimale;
 	@ManyToOne
 	private Razza razza;
@@ -25,13 +26,13 @@ public class AnimaleSegnalato {
 	private String taglia;
 	private String statoFisico;
 	private String statoMentale;
-	
+
 	@JsonIgnore
-	@OneToMany(mappedBy="animale")
+	@OneToMany(mappedBy = "animale", cascade = { CascadeType.REMOVE })
 	private List<Segnalazione> segnalazioni;
-	
+
 	@JsonIgnore
-	@ManyToMany(mappedBy="animaliSegnalati")
+	@ManyToMany(mappedBy = "animaliSegnalati")
 	private List<PosizioniRilevamentiSegnalazioni> posizioni;
 
 	public String getIdAnimale() {
@@ -105,7 +106,7 @@ public class AnimaleSegnalato {
 	public void setSegnalazioni(List<Segnalazione> segnalazioni) {
 		this.segnalazioni = segnalazioni;
 	}
-	
+
 	public void addSegnalazione(Segnalazione sg) {
 		if (this.segnalazioni == null) {
 			this.segnalazioni = new ArrayList<Segnalazione>();
@@ -113,6 +114,5 @@ public class AnimaleSegnalato {
 		this.segnalazioni.add(sg);
 		sg.setAnimale(this);
 	}
-	
 
 }
