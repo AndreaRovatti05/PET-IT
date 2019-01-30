@@ -57,7 +57,7 @@ public class Aggiungo {
 		se.setEmail("mario@rossi.it");
 		se.setPassword("pass");
 		se.setNomeUtente("mario");
-		se.setStatoUtente("amministratore");
+		se.setStatoUtente("admin");
 		se.setCodiceFiscale("rssmri");
 		se.setCognome("Rossi");
 		se.setNome("Mario");
