@@ -34,15 +34,15 @@
 background-image: url (provaSfondo.jpg);
 }
 
-.bg-image1{background-image: url("segnala2.jpg");  
+.bg-image1{background-image: url("/PetIt/src/main/webapp/segnala2.png");  
 background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
-background-image:  -webkit-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg); 
-background-image:  -moz-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
-background-image:  -ms-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
-background-image:  -o-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
-background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg) !important
+background-image:  -webkit-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(/PetIt/src/main/webapp/segnala2.png); 
+background-image:  -moz-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(/PetIt/src/main/webapp/segnala2.png);
+background-image:  -ms-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(/PetIt/src/main/webapp/segnala2.png);
+background-image:  -o-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(/PetIt/src/main/webapp/segnala2.png);
+background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(/PetIt/src/main/webapp/segnala2.png) !important
  
 }
 .bg-image2{background-image: url("bello.jpg");  
@@ -88,6 +88,7 @@ background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107,
       <div class="col-md-5 p-lg-5 mx-auto my-5">
         <h1 class="display-4 font-weight-normal white">Gestisci Segnalazioni</h1>
         <p class="lead font-weight-normal white">Breve testo.</p>
+        
         <a class="btn btn-outline-success white" href="elencoSegnalazioni">TASTO AZIONE</a>
       </div>
       <div class="product-device shadow-sm d-none d-md-block"></div>
