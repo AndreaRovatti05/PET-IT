@@ -15,7 +15,6 @@
 			<property name="javax.persistence.schema-generation.database.action" value="none"/>
 		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
 		<property name="javax.persistence.schema-generation.create-database-schemas" value="true"/>
-		<property name="javax.persistence.jdbc.password" value="Tomvanilla00"/>
 		</properties>
 	</persistence-unit>
 </persistence>
