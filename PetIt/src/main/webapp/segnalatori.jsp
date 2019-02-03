@@ -42,9 +42,6 @@
 
 <body class="bg-light">
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
-
-	<h2 class="text-center text-success" style="margin-bottom: 1.2rem">Segnalatori</h2>
-
 	
 <div class="btn-group right">
   <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -58,7 +55,8 @@
     </div>
 </div> 
  	
-	<div class="center"><h2 class="text-center text-success">Segnalatori</h2></div>
+	
+	<h2 class="text-center text-success" style="margin-bottom: 1.2rem">Segnalatori</h2>
 
 	
 	<div class ="mx-3 border">

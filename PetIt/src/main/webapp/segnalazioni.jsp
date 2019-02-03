@@ -42,10 +42,13 @@
 			<tbody>
 				<c:forEach var="s" items= "${elencoSegnalazioni}">
 					<tr>
-						<td>&nbsp; </td>
+						<td><div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">	
+								<jsp:include page="frammenti/html/tastocancella.html"></jsp:include>
+								<jsp:include page="frammenti/html/tastomodificasegnalazione.html"></jsp:include>	
+							</div>  </td>
 						<td>${ s.idSegnalazione } </td>
 						<td> ${ s.segnalatore.nome}  ${s.segnalatore.cognome } </td>
-						<td>${ s.segnalatore.utente.idUtente}</td>
+						<td>${ s.segnalatore.idUtente}</td>
 						<td>${s.animale.idAnimale}</td>
 						<td>${ s.note}</td>
 					</tr>
@@ -54,5 +57,18 @@
 		</table>
 	</div> 
 	<jsp:include page="frammenti/utility/script.html"></jsp:include>
+	<script>
+	$(() => {
+		$('.bottoneCancellaSegnalazione').click((e) => {
+			let id = $(e.currentTarget).closest('tr').data('id');
+			var ok = confirm('Sei sicuro di eliminare ' + id + '?');
+			if (ok) {
+				location.href = 'rimuoviSegnalazione?idSegnalazione=' + id;
+			}
+		});
+		
+		
+	});
+	</script>
 </body>
 </html>
