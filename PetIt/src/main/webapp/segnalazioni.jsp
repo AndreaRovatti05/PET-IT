@@ -15,9 +15,13 @@
   margin-left: ($spacer * .25) !important;
   margin-right:($spacer * .25) !important;
 }
+.btn {
+    padding: .25rem .75rem !important;
+}
  	<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
 	<jsp:include page="frammenti/css/tablestyle.css"></jsp:include>
 	<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
+ 	<jsp:include page="frammenti/css/bottonistyle.css"></jsp:include>
 
 </style>
 
@@ -57,18 +61,6 @@
 		</table>
 	</div> 
 	<jsp:include page="frammenti/utility/script.html"></jsp:include>
-	<script>
-	$(() => {
-		$('.bottoneCancellaSegnalazione').click((e) => {
-			let id = $(e.currentTarget).closest('tr').data('id');
-			var ok = confirm('Sei sicuro di eliminare ' + id + '?');
-			if (ok) {
-				location.href = 'rimuoviSegnalazione?idSegnalazione=' + id;
-			}
-		});
-		
-		
-	});
-	</script>
+	
 </body>
 </html>

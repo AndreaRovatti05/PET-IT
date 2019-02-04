@@ -15,10 +15,14 @@
   margin-left: ($spacer * .25) !important;
   margin-right:($spacer * .25) !important;
 }
- 	<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
- 
-	<jsp:include page="frammenti/css/tablestyle.css"></jsp:include>
 
+.btn {
+    padding: .25rem .75rem !important;
+}
+
+ 	<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
+  	<jsp:include page="frammenti/css/bottonistyle.css"></jsp:include>
+	<jsp:include page="frammenti/css/tablestyle.css"></jsp:include>
 	<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
 
 </style>
@@ -122,7 +126,9 @@
 				$('#selRazza').val(an.razza.id);
 				$('#selSpecie').val(an.razza.specie.idSpecie);
 				$('#selTaglia').val(an.taglia);
-				
+				$('#selPelo').val(an.tipoPelo);
+				$('#selFisico').val(an.statoFisico);
+				$('#selStatoMentale').val(an.statoMentale);
 				$('#modalmodifica').modal();
 			})
 		});

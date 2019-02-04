@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Segnalazione {
 	@Id
@@ -15,6 +17,7 @@ public class Segnalazione {
 	@ManyToOne()
 	private AnimaleSegnalato animale;
 	
+	@JsonIgnore
 	@ManyToOne()
 	private Segnalatore segnalatore;
 
