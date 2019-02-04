@@ -134,11 +134,17 @@
 			})
 		});
 		
+		$('.bottoneSalvaModifiche').click((e) =>{
+			let id = $(e.currentTarget).closest('tr').data('id');
+			let razza = 
+			let cPelo = $('#selPelo').value
+			location.href = 'modificaAnimale?idAnimale=' + id + 'colorePelo=' + cPelo + 'razza=' + razza + 'statoFisico='+ a+ 'statoMentale=' +a+ 'taglia=' + a+ 'tipoPelo='+ a ;
+		})
+		 function modifica()
+		
 	});
 
-	function update(id) {
-		alert('stai per modificare ' + id);
-	}
+	
 	</script>
 
 </body>
