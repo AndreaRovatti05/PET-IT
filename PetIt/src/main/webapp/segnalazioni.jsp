@@ -15,6 +15,9 @@
   margin-left: ($spacer * .25) !important;
   margin-right:($spacer * .25) !important;
 }
+.form-control{
+width: 200%
+}
 .btn {
     padding: .25rem .75rem !important;
 }
@@ -26,7 +29,7 @@
 </style>
 
 </head>
-<body>
+<body class="bg-light">
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 
 	<h2 class="text-center text-success"> Segnalazioni</h2>
@@ -47,7 +50,7 @@
 				<c:forEach var="s" items= "${elencoSegnalazioni}">
 					<tr data-id="${ s.idSegnalazione }">
 						<td><div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">	
-								<jsp:include page="frammenti/html/tastocancella.html"></jsp:include>
+								<jsp:include page="frammenti/html/tastocancellasegnalazione.html"></jsp:include>
 								<jsp:include page="frammenti/html/tastomodificasegnalazione.html"></jsp:include>	
 							</div>  </td>
 						<td>${ s.idSegnalazione } </td>
@@ -69,15 +72,16 @@
 			if (ok) {
 				location.href = 'rimuoviSegnalazione?idSegnalazione=' + id;
 			}
+		});
 		$('.bottoneModificaSegnalazione').click((e) => {
 			let id = $(e.currentTarget).closest('tr').data('id');
 			$.ajax({
 				url: 'segnalazionePerId?idSegnalazione=' + id,
 				method: 'get'
 			})
-			.done((se) => {
-				$('#hddIdSegnalazione').val(se.idSegnalazione);
-				$('#selNote').val(se.note);
+			.done((an) => {
+				$('#hddIdSegnalazione').val(an.idSegnalazione);
+				$('#selNote').val(an.note);
 				$('#modalmodificasegnalazione').modal();
 			})
 		});
