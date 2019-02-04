@@ -69,13 +69,24 @@
 			if (ok) {
 				location.href = 'rimuoviSegnalazione?idSegnalazione=' + id;
 			}
+		$('.bottoneModificaSegnalazione').click((e) => {
+			let id = $(e.currentTarget).closest('tr').data('id');
+			$.ajax({
+				url: 'segnalazionePerId?idSegnalazione=' + id,
+				method: 'get'
+			})
+			.done((se) => {
+				$('#hddIdSegnalazione').val(se.idSegnalazione);
+				$('#selNote').val(se.note);
+				$('#modalmodificasegnalazione').modal();
+			})
 		});
-		.done((se) => {
-			$('#hddIdsegnalazione').val(se.idSegnalazione);
-			$('#modalmodifica').modal();
-		})
 		
 	});
+
+		function update(id) {
+			alert('stai per modificare ' + id);
+		}
 	</script>
 </body>
 </html>
