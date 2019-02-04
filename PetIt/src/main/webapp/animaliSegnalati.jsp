@@ -129,6 +129,7 @@
 				$('#selPelo').val(an.tipoPelo);
 				$('#selFisico').val(an.statoFisico);
 				$('#selStatoMentale').val(an.statoMentale);
+				$('#selColorePelo').val(an.colorePelo)
 				$('#modalmodifica').modal();
 			})
 		});

@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Segnalazione {
 	@Id
-	@Column(length=50)
+	//@Column(length=50)
 	private String idSegnalazione;
 	private String note;
 	
