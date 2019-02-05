@@ -40,6 +40,8 @@ private static Logger log = Logger.getLogger("petit-business");
 	}
 	public static void aggiungiUtenteRegistrato(String email, String nomeUtente) {
 		EntityManager em = Programma.getEm();
+		
+		
 	}
 	
 	

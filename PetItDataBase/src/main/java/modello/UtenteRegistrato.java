@@ -6,7 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.Type;
 
 @Entity
 @Inheritance(strategy =InheritanceType.JOINED)
@@ -19,7 +20,8 @@ public class UtenteRegistrato {
 	private String nomeUtente;
 	private String password;
 	private String statoUtente;
-	private boolean attivo;
+	
+	private Boolean attivo = true;
 
 	public String getIdUtente() {
 		return idUtente;
@@ -62,10 +64,10 @@ public class UtenteRegistrato {
 	}
 
 	public boolean getAttivo() {
-		return false;
+		return attivo;
 	}
 
 	public void setAttivo(boolean attivo) {
-		attivo = attivo;
+		this.attivo = attivo;
 	}
 }
