@@ -35,23 +35,11 @@
 </ul>
 </div>
 
-
+<jsp:include page="frammenti/html/RegistrazioneAdmin.html"></jsp:include>
 
 <jsp:include page="frammenti/utility/script.html"></jsp:include>
 <script>
-$.ajax({
-	url: 'utenteRegistrato',
-	method: 'get'	
-});
-.done((ut) => {
-	$('#hddUtRegistrato').val(ut.idUtente);
-	$('#nome').val(an.razza.id);
-	$('#cognome').val(an.razza.specie.idSpecie);
-	$('#email').val(an.taglia);
-	$('#username').val(an.tipoPelo);
-	$('#numeroTelefono').val(an.statoFisico);
-	$('#indirizzo').val(an.statoMentale);
-})
+
 </script>
 </body>
 </html>

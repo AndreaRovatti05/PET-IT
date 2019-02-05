@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -28,9 +29,10 @@ public class ControllerUtenteRegistrato {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<UtenteRegistrato> utenti = UtenteRegistratoManager.elencoUtenti();
-
+		
 		request.setAttribute("elencoUtenti", utenti);
 		request.getRequestDispatcher("segnalatori.jsp").forward(request, response);
+		
 	}
 	
 }
