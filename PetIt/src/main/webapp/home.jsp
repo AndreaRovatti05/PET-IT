@@ -31,35 +31,24 @@
 background-image: url("provaSfondo.jpg");
 }
 
-<<<<<<< HEAD
-.bg-image1 {background-image: url("segnala2.jpg");  
-=======
-.bg-image1{background-image: url("segnala2.jpg");  
->>>>>>> branch 'master' of https://github.com/AndreaRovatti05/PET-IT.git
+
+.bg-image1 {
+background-image: url("segnala2.jpg");  
 background-repeat: no-repeat;
- background-position: center;
- background-size: cover;
-<<<<<<< HEAD
-background-image:  -webkit-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url("segnala2.jpg"); 
-background-image:  -moz-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
-background-image:  -ms-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
-background-image:  -o-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
-background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg) !important 
-=======
+background-position: center;
+background-size: cover;
 background-image:  -webkit-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg); 
 background-image:  -moz-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
 background-image:  -ms-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
 background-image:  -o-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
 background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg) !important
- 
->>>>>>> branch 'master' of https://github.com/AndreaRovatti05/PET-IT.git
 }
 
 
 .bg-image2{background-image: url("bello.jpg");  
 background-repeat: no-repeat;
- background-position: center;
- background-size: cover;
+background-position: center;
+background-size: cover;
 background-image:  -webkit-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(bello.jpg); 
 background-image:  -moz-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(bello.jpg);
 background-image:  -ms-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(bello.jpg);
@@ -69,8 +58,8 @@ background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107,
 }
 .bg-image3{background-image: url("bellissimo.jpg");  
 background-repeat: no-repeat;
- background-position: center;
- background-size: cover;
+background-position: center;
+background-size: cover;
 background-image:  -webkit-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(bellissimo.jpg); 
 background-image:  -moz-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(bellissimo.jpg);
 background-image:  -ms-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(bellissimo.jpg);
@@ -138,10 +127,6 @@ background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107,
     </div>
     </div>
     	
-
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<jsp:include page="frammenti/utility/script.html"></jsp:include>
 
 </body>
