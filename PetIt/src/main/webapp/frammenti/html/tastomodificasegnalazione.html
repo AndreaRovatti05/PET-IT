@@ -1,12 +1,10 @@
 
 <p class="btn-group mr-2" role="group" aria-label="Fourth group">
-	<button type="button" class="btn btn-secondary bottoneModificaAnimale" title="modifica">
+	<button type="button" class="btn btn-secondary btn- tabella bottoneModificaSegnalazione" title="modificasegnalazione">
 		<i class="fas fa-pencil-alt"></i>
 	</button>
 </p>
-<div class="modal fade bd-example-modal-lg" id="modalmodifica"
-	tabindex="-1" role="dialog" aria-labelledby="modalmodifica"
-	aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" id="modalmodificasegnalazione" tabindex="-1" role="dialog" aria-labelledby="modalmodificasegnalazione" aria-hidden="true">
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -17,16 +15,18 @@
 			</div>
 			<div class="modal-body">
 				<form>
+				<input type="hidden" id="hddIdSegnalazione">
 					<div class="form-group col-md-4">
-						<label for="inputnote">Note</label> <input type="note" class="form-control" id="Inputnote" placeholder="Note">
+						<label for="inputnote">Note</label> <input type="note" class="form-control" id="selNote" placeholder="Note">
 					</div>
 				</form>
 			</div>
-		</div>
+		
 		<div class="modal-footer">
 			<button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
 			<button type="button" class="btn btn-primary">Salva modifiche</button>
 		</div>
 	</div>
+</div>
 </div>
 

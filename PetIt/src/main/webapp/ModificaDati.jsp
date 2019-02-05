@@ -13,6 +13,9 @@
 <jsp:include page="frammenti/css/modificadatistyle.css"></jsp:include>
 <jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
 <jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
+
+.active{
+color: black !important}
 </style>
 </head>
 <body>

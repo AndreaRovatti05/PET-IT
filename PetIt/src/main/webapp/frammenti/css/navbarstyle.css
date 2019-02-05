@@ -1,9 +1,17 @@
+a {text-decoration:none !important;}
+
 body {
     margin: auto;
     font-family: 'PT Sans', sans-serif;
     font-weight: 800;
+    line-height:2
 }
 
+.text-success {
+    color: #28a745!important;
+    margin-top: 1.2rem !important;
+    margin-bottom: 1.2rem !important;
+}
 
 .container {
     width: 80%;
@@ -14,6 +22,10 @@ body {
     	padding: .0rem 0rem !important;
 }
 
+element.style {
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem !important;
+}
 a {
     text-decoration: none;
     color: black !important;
@@ -28,7 +40,7 @@ a {
 
 .fas {
     float: left !important;
-    padding: 10px 0 !important;
+    padding: 17px 0 !important;
 
 }
 
@@ -90,10 +102,10 @@ nav a:hover::before {
 
 .topnav {
   overflow: hidden;
-  background-color: mediumseagreen;
+  background-color: #00942200;
 }
 
-
+/* style dei link */
 .topnav a {
   float: left;
   display: block;
@@ -104,16 +116,19 @@ nav a:hover::before {
   font-size: 17px;
 }
 
+/* l'attributo hover cambia stile all'elemento su cui si passa il puntatore */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.active {
-  background-color: #4CAF50;
+/* cambia stile ai link selezionati */
+.active:hover {
+  
   color: white;
 }
 
+/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
 }

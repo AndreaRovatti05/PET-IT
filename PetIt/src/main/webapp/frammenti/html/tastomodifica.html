@@ -1,5 +1,5 @@
 <p class="btn-group mr-2" role="group" aria-label="Second group">
-	<button type="button" class="btn btn-secondary bottoneModificaAnimale" title="modifica">
+	<button type="button" class="btn btn-secondary btn-tabella bottoneModificaAnimale" title="modifica">
      <i class="fas fa-pencil-alt"></i>
  </button>
  </p>
@@ -7,7 +7,7 @@
          <div class="modal-dialog modal-lg" role="document">
            <div class="modal-content">
              <div class="modal-header">
-               <h5 class="modal-title" id="modalmodifica">Modifica Segnalazione</h5>
+               <h5 class="modal-title" id="modalmodifica">Modifica Animale Segnalato</h5>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
                </button>
@@ -49,7 +49,7 @@
                           </div>
                           <div class="form-group col-md-4">
                                   <label for="inputcolore">Colore Pelo</label>
-                                  <input type="colorepelo" class="form-control" id="Inputcolore" placeholder="Colore Pelo">
+                                  <input class="form-control" id="selColorePelo" >
                               </div>     
                       </div>
                  </form>               
@@ -57,7 +57,7 @@
              </div>
              <div class="modal-footer">
                <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-               <button type="button" class="btn btn-primary">Salva modifiche</button>
+               <button type="button" id ="bottoneSalvaModifiche" class="btn btn-primary">Salva modifiche</button>
              </div>
            </div>
          </div>

@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 import javax.persistence.EntityManager;
 
+import modello.AnimaleSegnalato;
 import modello.UtenteRegistrato;
 
 import utility.Programma;
@@ -42,6 +43,15 @@ private static Logger log = Logger.getLogger("petit-business");
 		EntityManager em = Programma.getEm();
 		
 		
+	}
+
+
+	public static Object perId(String parameter) {
+		if (parameter != null) {
+			EntityManager em = Programma.getEm();
+			return em.find(UtenteRegistrato.class, parameter);
+		}
+		return null;
 	}
 	
 	
