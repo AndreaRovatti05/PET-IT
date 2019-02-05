@@ -17,6 +17,7 @@ private static Logger log = Logger.getLogger("business");
 		if (u != null) {
 			if (!u.getAttivo()) {
 				log.warning("accesso con utente non attivo");
+				//cambiare accesso
 			}
 			if (!u.getPassword().equals(password)) {
 				log.warning("accesso con password errata");

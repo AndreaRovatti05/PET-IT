@@ -70,13 +70,13 @@ public class AnimaleSegnalatoManager {
 		return Animale;
 	}
 
-	public static void modificaAnimaleSegnalato(String idDaModificare, String colorePelo, String razza,
+	public static void modificaAnimaleSegnalato(String idDaModificare, String colorePelo,
 			String statoFisico, String statoMentale, String taglia, String tipoPelo) {
 		EntityManager em = Programma.getEm();
-		Razza findrazza = em.find(Razza.class, razza);
+		//Razza findrazza = em.find(Razza.class, razza);
 		AnimaleSegnalato nuovoanimale = ricercaRecord(idDaModificare);
 		nuovoanimale.setColorePelo(colorePelo);
-		nuovoanimale.setRazza(findrazza);
+		//nuovoanimale.setRazza(findrazza);
 		nuovoanimale.setStatoFisico(statoFisico);
 		nuovoanimale.setStatoMentale(statoMentale);
 		nuovoanimale.setTaglia(taglia);
