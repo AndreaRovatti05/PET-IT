@@ -37,7 +37,6 @@ public static Boolean login(String id, String password) {
 			u = em.find(UtenteRegistrato.class, id);
 			if (u!=null) {
 				if (!u.getAttivo()) {
-					log.warning("l' utente non ha i privilegi di amministrazione");
 				}
 				if (!u.getPassword().equals(password)) {
 					log.warning("accesso con password errata");

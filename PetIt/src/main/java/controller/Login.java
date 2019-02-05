@@ -42,9 +42,17 @@ public class Login extends HttpServlet {
 		out.println("<html><body>");
 		out.println("stiamo gestendo la sua richiesta signor " + request.getParameter("username"));
 		out.println("</body></html>");
-		doGet(request, response);
+		String messaggio = new String();
+		if(AccessoApplicazione.login(username, password)){
+			request.getSession().setAttribute("email", username);
+			
+			response.sendRedirect(response.encodeRedirectURL("home.jsp"));
+		} else {
+			response.sendRedirect(response.encodeRedirectURL("login.jsp"));
+		}
 		
-		AccessoApplicazione.login(username, password);
+		
+		
 		
 	}
 

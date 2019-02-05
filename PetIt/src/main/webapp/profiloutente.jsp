@@ -29,7 +29,7 @@ margin-top:1.8rem
 bordercolor="#111111" width="100%" id="AutoNumber1">
   <td class="list-group-item">Nome:</td>
   <td class="list-group-item">Cognome:</td>
-  <td class="list-group-item">E-mail:</td>
+  <td class="list-group-item">E-mail: ${email} </td>
   <td class="list-group-item">Username:</td>
   <td class="list-group-item">Numero di telefono:</td>
   <td class="list-group-item">Indirizzo:</td>
