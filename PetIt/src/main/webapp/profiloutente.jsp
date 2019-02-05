@@ -21,6 +21,7 @@
 </head>
 <body>
 <jsp:include page="frammenti/html/navbar.html"></jsp:include>
+
 <h2 class="text-center text-success">Profilo Utente</h2>
 <div align="left">
 <ul class="list-group" data-id="${ ut.idUtenteRegistrato }"> 

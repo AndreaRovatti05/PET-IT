@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -13,23 +12,22 @@ import javax.servlet.http.HttpServletResponse;
 import business.UtenteRegistratoManager;
 import modello.UtenteRegistrato;
 
-
-public class ControllerUtenteRegistrato {
-
+@WebServlet("/utenteRegistrato")
+public class ControllerUtenteRegistrato extends HttpServlet{
 	private static final long serialVersionUID = 1L;
-
+	   
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
     public ControllerUtenteRegistrato() {
+    	super();
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<UtenteRegistrato> utenti = UtenteRegistratoManager.elencoUtenti();
-		
+		List<UtenteRegistrato> utenti = UtenteRegistratoManager.elencoUtenti();	
 		request.setAttribute("elencoUtenti", utenti);
 		request.getRequestDispatcher("segnalatori.jsp").forward(request, response);
 		
