@@ -1,6 +1,6 @@
 <p class="btn-group mr-2" role="group" aria-label="Second group">
 	<button type="button" class="btn btn-secondary btn-tabella bottoneModificaAnimale" title="modifica">
-     <i class="fas fa-pencil-alt"></i>
+     <i class="fas fa-pencil-alt" style="padding: 10px 0 !important"></i>
  </button>
  </p>
  <div class="modal fade bd-example-modal-lg" id="modalmodifica" tabindex="-1" role="dialog" aria-labelledby="modalmodifica" aria-hidden="true">
@@ -14,8 +14,8 @@
              </div>
              <div class="modal-body">
               <p>   
-              <form>
-              	<input type="hidden" id="hddIdAnimale">
+              <form action="modificaAnimale" method = "post" id = "form_modifica">
+              	<input type="hidden" id="hddIdAnimale" name="idAnimale">
                       <div class="form-row">
                           <div class="form-group col-md-2">
                                   <label for="inputState">Specie</label>
@@ -29,27 +29,27 @@
                           </div>
                           <div class="form-group col-md-2">
                                   <label for="inputState">Taglia</label>
-                                  <select id="selTaglia" class="form-control">
+                                  <select id="selTaglia" class="form-control" name="taglia">
                                   </select>
                           </div>
                           <div class="form-group col-md-2">
                                   <label for="inputState">Tipo Pelo</label>
-                                  <select id="selPelo" class="form-control">
+                                  <select id="selPelo" class="form-control" name = "tipoPelo">
                                   </select>
                           </div>
                           <div class="form-group col-md-2">
                                   <label for="inputState">Stato Fisico</label>
-                                  <select id="selFisico" class="form-control">
+                                  <select id="selFisico" class="form-control" name="statoFisico">
                                   </select>
                           </div>
                           <div class="form-group col-md-2">
                                   <label for="inputState">Stato Mentale</label>
-                                  <select id="selStatoMentale" class="form-control">
+                                  <select id="selStatoMentale" class="form-control" name="statoMentale">
                                   </select>
                           </div>
                           <div class="form-group col-md-4">
                                   <label for="inputcolore">Colore Pelo</label>
-                                  <input class="form-control" id="selColorePelo" >
+                                  <input class="form-control" id="selColorePelo" name="colorePelo" >
                               </div>     
                       </div>
                  </form>               
@@ -57,8 +57,10 @@
              </div>
              <div class="modal-footer">
                <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-               <button type="button" id ="bottoneSalvaModifiche" class="btn btn-primary">Salva modifiche</button>
+               <button type="button" id ="bottoneSalvaModifiche" class="btn btn-primary" onclick="manda()">Salva modifiche</button>
              </div>
            </div>
          </div>
        </div>
+       
+       

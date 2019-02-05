@@ -133,16 +133,20 @@
 				$('#modalmodifica').modal();
 			})
 		});
-		/* 
-		$('.bottoneSalvaModifiche').click((e) =>{
-			let id = $(e.currentTarget).closest('tr').data('id');		
-			let cPelo = $('#selPelo').value
-			location.href = 'modificaAnimale?idAnimale=' + id + 'colorePelo=' + cPelo + 'razza=' + razza + 'statoFisico='+ a+ 'statoMentale=' +a+ 'taglia=' + a+ 'tipoPelo='+ a ;
-		}) */
 		
+		/*  $('.bottoneSalvaModifiche').click((e) =>{
+			
+			let id = $(e.currentTarget).closest('tr').data('id');	e	
+			location.href = 'modificaAnimale?idAnimale=' + id + 'colorePelo=' + $('#selColorePelo').value() 
+					+ 'razza=' + $('#selRazza').value()  + 'statoFisico='+ $('#selFisico').value() + 'statoMentale=' + $('#selStatoMentale').value() 
+					+ 'taglia=' + $('#selTaglia').value() + 'tipoPelo='+ $('#selPelo').value() ;
+		})  
+		 */
 	});
-
 	
+	function manda() {
+		document.forms['form_modifica'].submit();
+		}	
 	</script>
 
 </body>

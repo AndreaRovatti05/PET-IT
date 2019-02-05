@@ -63,27 +63,24 @@ public class AnimaleSegnalatoManager {
 		return null;
 	}
 
-	public static AnimaleSegnalato ricercaRecord(String idAnimale) {
-		EntityManager em = Programma.getEm();
-		AnimaleSegnalato Animale = em.find(AnimaleSegnalato.class, idAnimale);
-		em.refresh(Animale);
-		return Animale;
-	}
+
 
 	public static void modificaAnimaleSegnalato(String idDaModificare, String colorePelo,
 			String statoFisico, String statoMentale, String taglia, String tipoPelo) {
 		EntityManager em = Programma.getEm();
 		//Razza findrazza = em.find(Razza.class, razza);
-		AnimaleSegnalato nuovoanimale = ricercaRecord(idDaModificare);
+		AnimaleSegnalato nuovoanimale = em.find(AnimaleSegnalato.class, idDaModificare);
+		em.getTransaction().begin();
 		nuovoanimale.setColorePelo(colorePelo);
 		//nuovoanimale.setRazza(findrazza);
 		nuovoanimale.setStatoFisico(statoFisico);
 		nuovoanimale.setStatoMentale(statoMentale);
 		nuovoanimale.setTaglia(taglia);
 		nuovoanimale.setTipoPelo(tipoPelo);
-		nuovoanimale = em.merge(nuovoanimale);
-	    em.flush();
-	    em.clear();
+//		nuovoanimale = em.merge(nuovoanimale);
+//	    em.flush();
+//	    em.clear();
+		em.getTransaction().commit();
 
 	}
 }

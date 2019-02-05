@@ -15,6 +15,16 @@
 
 <style type="text/css">
 
+ 	<jsp:include page="frammenti/css/bottonistyle.css"></jsp:include>
+ 	<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
+	<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
+	<jsp:include page="frammenti/css/tablestyle.css"></jsp:include>
+
+#fas {
+    float: left !important;
+    padding-top: 10px !important;
+} 
+
 .center{
 	margin-left: 500px;
     width: 200px;
@@ -24,11 +34,6 @@
  	margin-right:($spacer * .25) !important;
 }
 
- 	<jsp:include page="frammenti/css/bottonistyle.css"></jsp:include>
- 	<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
-	<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
-	<jsp:include page="frammenti/css/tablestyle.css"></jsp:include>
-
 </style>
 </head>
 
@@ -36,8 +41,8 @@
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 	
 <div class="btn-group right">
-  <button type="button" class="btn btn-secondary filtro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		<i class="fas fa-filter"></i>
+  <button type="button" class="btn btn-secondary filtro"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<i class="fas fa-filter" style="padding: 10px 0 !important"></i>
   </button>
   <div class="dropdown-menu dropdown-menu-right">
     <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori">Tutti</a>
@@ -70,7 +75,8 @@
 				<c:forEach var="s" items="${elencoSegnalatori}" >
 					<tr>
 						<td> 
-							<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">			
+							<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">	
+	
 								<jsp:include page="frammenti/html/ban.html"></jsp:include>
 							</div>
   						</td>
@@ -87,7 +93,11 @@
 			</tbody>
 		</table>
 	</div>
-
+<script type="text/javascript">
+function banna() {
+	document.invisibile.submit();
+}
+</script>
 	<jsp:include page="frammenti/utility/script.html"></jsp:include>
 	
 </body>

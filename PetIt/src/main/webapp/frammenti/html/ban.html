@@ -1,5 +1,10 @@
-	<div class="btn-group mr-2" role="group" aria-label="Third group">
-		<button type="button" class="btn btn-secondary btn-tabella" data-toggle="tooltip" title="banna">    
-			<i class="fas fa-ban"></i>		    
-		</button>
-	</div>
+
+<form action="ModificaStatoSegnalatoreController" method="post" name="invisibile">
+	<input type="hidden" name="id" value="${s.idSegnalatore}">
+</form>
+<div class="btn-group mr-2" role="group" aria-label="Third group">
+	<button  type="button" class="btn btn-secondary btn-tabella"
+		data-toggle="tooltip" onclick="banna()" title="banna">
+		<i class="fas fa-ban" style="padding: 10px 0 !important"></i>
+	</button>
+</div>
