@@ -31,15 +31,28 @@
 background-image: url("provaSfondo.jpg");
 }
 
+<<<<<<< HEAD
 .bg-image1 {background-image: url("segnala2.jpg");  
+=======
+.bg-image1{background-image: url("segnala2.jpg");  
+>>>>>>> branch 'master' of https://github.com/AndreaRovatti05/PET-IT.git
 background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
+<<<<<<< HEAD
 background-image:  -webkit-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url("segnala2.jpg"); 
 background-image:  -moz-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
 background-image:  -ms-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
 background-image:  -o-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
 background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg) !important 
+=======
+background-image:  -webkit-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg); 
+background-image:  -moz-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
+background-image:  -ms-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
+background-image:  -o-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
+background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg) !important
+ 
+>>>>>>> branch 'master' of https://github.com/AndreaRovatti05/PET-IT.git
 }
 
 

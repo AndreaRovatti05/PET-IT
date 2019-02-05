@@ -142,9 +142,7 @@
 		
 	});
 
-	function update(id) {
-		alert('stai per modificare ' + id);
-	}
+	
 	</script>
 
 </body>

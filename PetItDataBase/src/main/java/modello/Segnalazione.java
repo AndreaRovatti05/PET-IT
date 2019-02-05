@@ -5,16 +5,19 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Segnalazione {
 	@Id
-	@Column(length=50)
+	//@Column(length=50)
 	private String idSegnalazione;
 	private String note;
 	
 	@ManyToOne()
 	private AnimaleSegnalato animale;
 	
+	@JsonIgnore
 	@ManyToOne()
 	private Segnalatore segnalatore;
 
