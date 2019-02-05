@@ -13,9 +13,6 @@
 <title>Home</title>
 <style type="text/css">
 
- /*---FRAMMENTO NAVBAR STYLE---*/
-
-<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
 
 /*---CSS---*/
 
@@ -31,20 +28,21 @@
 }
 
 .bg-img {
-background-image: url (provaSfondo.jpg);
+background-image: url("provaSfondo.jpg");
 }
 
-.bg-image1{background-image: url("/PetIt/src/main/webapp/segnala2.png");  
+.bg-image1 {background-image: url("segnala2.jpg");  
 background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
-background-image:  -webkit-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(/PetIt/src/main/webapp/segnala2.png); 
-background-image:  -moz-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(/PetIt/src/main/webapp/segnala2.png);
-background-image:  -ms-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(/PetIt/src/main/webapp/segnala2.png);
-background-image:  -o-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(/PetIt/src/main/webapp/segnala2.png);
-background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(/PetIt/src/main/webapp/segnala2.png) !important
- 
+background-image:  -webkit-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url("segnala2.jpg"); 
+background-image:  -moz-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
+background-image:  -ms-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
+background-image:  -o-linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg);
+background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107, 175, 1)), url(segnala2.jpg) !important 
 }
+
+
 .bg-image2{background-image: url("bello.jpg");  
 background-repeat: no-repeat;
  background-position: center;
@@ -71,24 +69,28 @@ background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107,
 .white{color: white !important
 }
 
+ /*---FRAMMENTO NAVBAR STYLE---*/
+<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
+
 </style>
 </head>
-<body>
+
 
 	<!-- NAVBAR -->
+
 
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 	
 	<!-- HOME -->
 	
 		<!-- FUNZIONE 1 -->
+		<body>
 		
 	<div class="header">
 	 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-image1">
       <div class="col-md-5 p-lg-5 mx-auto my-5">
         <h1 class="display-4 font-weight-normal white">Gestisci Segnalazioni</h1>
         <p class="lead font-weight-normal white">Breve testo.</p>
-        
         <a class="btn btn-outline-success white" href="elencoSegnalazioni">TASTO AZIONE</a>
       </div>
       <div class="product-device shadow-sm d-none d-md-block"></div>
@@ -122,10 +124,6 @@ background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107,
       <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
     </div>
     </div>
-    	
-    	
- 
-    		
     	
 
 

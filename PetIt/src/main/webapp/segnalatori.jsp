@@ -14,15 +14,6 @@
 <title>Utenti</title>
 
 <style type="text/css">
-.right{
-	float:right;
-	width:55px;
-}
-
-.btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
-    border-top-right-radius: 10%;
-    border-bottom-right-radius: 10%;
-}
 
 .center{
 	margin-left: 500px;
@@ -33,6 +24,7 @@
  	margin-right:($spacer * .25) !important;
 }
 
+ 	<jsp:include page="frammenti/css/bottonistyle.css"></jsp:include>
  	<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
 	<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
 	<jsp:include page="frammenti/css/tablestyle.css"></jsp:include>
@@ -44,7 +36,7 @@
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 	
 <div class="btn-group right">
-  <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary filtro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<i class="fas fa-filter"></i>
   </button>
   <div class="dropdown-menu dropdown-menu-right">
@@ -56,7 +48,7 @@
 </div> 
  	
 	
-	<h2 class="text-center text-success" style="margin-bottom: 1.2rem">Segnalatori</h2>
+	<h2 class="text-center text-success" style="margin:0.6rem">Segnalatori</h2>
 
 	
 	<div class ="mx-3 border">
