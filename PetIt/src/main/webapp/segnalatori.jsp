@@ -92,7 +92,10 @@
 				</c:forEach>						    
 			</tbody>
 		</table>
+			<jsp:include page="frammenti/html/RegistrazioneAdmin.html"></jsp:include>
 	</div>
+						
+	
 <script type="text/javascript">
 function banna() {
 	document.invisibile.submit();
