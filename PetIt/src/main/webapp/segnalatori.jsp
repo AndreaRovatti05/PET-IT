@@ -38,6 +38,13 @@
 </head>
 
 <body class="bg-light">
+<% 
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	if(session.getAttribute("email")==null)
+	{
+		response.sendRedirect("login.jsp");
+	}
+	%>
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 	
 <div class="btn-group right">

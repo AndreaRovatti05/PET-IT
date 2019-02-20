@@ -3,12 +3,8 @@ package business;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javax.persistence.EntityManager;
-
-import modello.AnimaleSegnalato;
 import modello.UtenteRegistrato;
-
 import utility.Programma;
 
 public class UtenteRegistratoManager {

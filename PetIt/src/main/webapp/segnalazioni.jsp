@@ -31,7 +31,13 @@ width: 200%
 </head>
 <body class="bg-light">
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
-
+<% 
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	if(session.getAttribute("email")==null)
+	{
+		response.sendRedirect("login.jsp");
+	}
+	%>
 	<h2 class="text-center text-success" style="margin:0.6rem"> Segnalazioni</h2>
 
 	<div class ="mx-3 border">

@@ -28,6 +28,14 @@
 </style>
 </head>
 <body class="bg-light">
+	<% 
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	
+		if(session.getAttribute("email")==null)
+		{
+		response.sendRedirect("login.jsp");
+		}
+	%>
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>	
 	<h2 class="text-center text-success" style="margin:0.6rem">Animali segnalati</h2>
 	<div class ="mx-3 border">
