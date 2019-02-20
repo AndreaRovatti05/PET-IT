@@ -32,6 +32,7 @@ width: 200%
 <body class="bg-light">
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 <% 
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	if(session.getAttribute("email")==null)
 	{
 		response.sendRedirect("login.jsp");
