@@ -11,16 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import business.AccessoApplicazione;
 
-/**
- * Servlet implementation class Login
- */
+
 @WebServlet("/Login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+  
     public Login() {
         super();
         // TODO Auto-generated constructor stub
@@ -33,22 +29,19 @@ public class Login extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
+		
+		
 	
 				
 		
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		
-		out.println("<html><body>");
-		out.println("stiamo gestendo la sua richiesta signor " + request.getParameter("username"));
-		out.println("</body></html>");
-		String messaggio = new String();
 		if(AccessoApplicazione.login(username, password)){
 			request.getSession().setAttribute("email", username);
 			
 			response.sendRedirect(response.encodeRedirectURL("home.jsp"));
 		} else {
-			response.sendRedirect(response.encodeRedirectURL("login.jsp"));
+			request.setAttribute("messaggio", "l' username o la password sono errati!");
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+			
 		}
 		
 		

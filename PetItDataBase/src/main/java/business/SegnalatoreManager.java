@@ -29,6 +29,18 @@ private static Logger log = Logger.getLogger("petit-business");
 		}
 	}
 	
+	public static Segnalatore  trovaSegnalatore(String idUtente) {
+		EntityManager em = Programma.getEm();
+		Segnalatore sDb = null;
+			sDb = em.find(Segnalatore.class, idUtente);
+			if (sDb != null) {
+				return sDb;
+			}
+			else return null;
+		
+		
+	}
+	
 	public static List<Segnalatore> elencoSegnalatori() {
 		EntityManager em = Programma.getEm();
 		return em.createQuery("select s from Segnalatore s", Segnalatore.class).getResultList();

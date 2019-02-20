@@ -38,6 +38,12 @@
 </head>
 
 <body class="bg-light">
+<% 
+	if(session.getAttribute("email")==null)
+	{
+		response.sendRedirect("login.jsp");
+	}
+	%>
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 	
 <div class="btn-group right">

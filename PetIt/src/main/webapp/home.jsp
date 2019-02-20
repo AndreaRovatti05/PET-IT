@@ -87,6 +87,12 @@ background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107,
 	
 		<!-- FUNZIONE 1 -->
 		<body>
+		<% 
+	if(session.getAttribute("email")==null)
+	{
+		response.sendRedirect("login.jsp");
+	}
+	%>
 		
 	<div class="header">
 	 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-image1">

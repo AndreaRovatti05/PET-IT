@@ -52,6 +52,12 @@ max-width: 500px;
 </style>
 </head>
 <body>
+<% 
+	if(session.getAttribute("email")==null)
+	{
+		response.sendRedirect("login.jsp");
+	}
+	%>
 
 	<!-- NAVBAR -->
 

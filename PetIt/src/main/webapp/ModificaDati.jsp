@@ -20,6 +20,13 @@ color: black !important}
 </head>
 <body>
 
+<% 
+	if(session.getAttribute("email")==null)
+	{
+		response.sendRedirect("login.jsp");
+	}
+	%>
+
 	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
 
 	<div class="marginealto marginelato">
