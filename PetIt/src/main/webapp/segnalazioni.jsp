@@ -40,7 +40,7 @@ width: 200%
 	%>
 	<h2 class="text-center text-success" style="margin:0.6rem"> Segnalazioni</h2>
 
-	<div class ="mx-3" class="border border-success">
+	<div class ="mx-3 border">
 		<table class="table table-hover table-striped">
 			<thead class="thead-dark" >
 				<tr>
