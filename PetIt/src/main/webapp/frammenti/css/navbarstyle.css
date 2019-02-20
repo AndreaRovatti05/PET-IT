@@ -13,6 +13,13 @@ body {
     margin-bottom: 1.2rem !important;
 }
 
+.logout {
+    background-color: transparent;
+    border-color: transparent;
+    overflow: visible;
+    margin-top: -12px;
+    font-weight:bold;
+}
 .container {
     width: 80%;
     margin: auto;
@@ -154,4 +161,5 @@ nav a:hover::before {
     display: block;
     text-align: right;
   }
+
 

@@ -167,12 +167,7 @@ float:right!important;
 								<label for="inputPassword" class="sr-only">Password</label> 
 								<input name="password" type="password" id="inputPassword" class="form-control"
 									placeholder="Password">
-								<div class="checkbox mb-3">
-									<label> 
-									<input type="checkbox" value="remember-me">
-										Remember me
-									</label>
-								</div>
+								</br> 
 								<button class="btn btn-lg btn-outline-success btn-block"
 									type="submit" value="Login">Sign in</button>
 									<div style="color:#FF0000">${messaggio}</div>
