@@ -20,7 +20,6 @@ public class Segnalatore extends UtenteRegistrato {
 	private Date dataNascita;
 	
 	
-	
 	@OneToOne()
 	private UtenteRegistrato utente;
 	
