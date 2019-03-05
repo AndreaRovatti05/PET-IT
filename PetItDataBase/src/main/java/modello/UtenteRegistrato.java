@@ -6,8 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
 
-import org.hibernate.annotations.Type;
 
 @Entity
 @Inheritance(strategy =InheritanceType.JOINED)
@@ -16,12 +16,45 @@ public class UtenteRegistrato {
 	@Id
 	@Column(length=50)
 	private String idUtente;
-	private String email;
+	
 	private String nomeUtente;
 	private String password;
-	private String statoUtente;
-	
+	private Integer numeroTel;
+	private Boolean statoUtente = false;
 	private Boolean attivo = true;
+	private Boolean ban = false;
+	private Boolean admin = false;
+	
+	@ManyToOne
+	private Indirizzo indirizzo;
+	
+	public Integer getNumeroTel() {
+		return numeroTel;
+	}
+
+	public void setNumeroTel(Integer numeroTel) {
+		this.numeroTel = numeroTel;
+	}
+
+	public void setAttivo(Boolean attivo) {
+		this.attivo = attivo;
+	}
+
+	public Boolean getBan() {
+		return ban;
+	}
+
+	public void setBan(Boolean ban) {
+		this.ban = ban;
+	}
+
+	public Boolean getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(Boolean admin) {
+		this.admin = admin;
+	}
 
 	public String getIdUtente() {
 		return idUtente;
@@ -31,13 +64,6 @@ public class UtenteRegistrato {
 		this.idUtente = idUtente;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
 
 	public String getNomeUtente() {
 		return nomeUtente;
@@ -55,11 +81,12 @@ public class UtenteRegistrato {
 		this.password = password;
 	}
 
-	public String getStatoUtente() {
+
+	public Boolean getStatoUtente() {
 		return statoUtente;
 	}
 
-	public void setStatoUtente(String statoUtente) {
+	public void setStatoUtente(Boolean statoUtente) {
 		this.statoUtente = statoUtente;
 	}
 

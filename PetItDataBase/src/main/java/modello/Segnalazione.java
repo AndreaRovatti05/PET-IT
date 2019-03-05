@@ -1,31 +1,38 @@
 package modello;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Segnalazione {
 	@Id
-	//@Column(length=50)
-	private String idSegnalazione;
+	@GeneratedValue
+	private Integer idSegnalazione;
 	private String note;
 	
 	@ManyToOne()
 	private AnimaleSegnalato animale;
 	
+	@OneToMany(mappedBy ="segnalazione")
+	private List<CommentoSegnalazione> commenti;
+	
 	@JsonIgnore
 	@ManyToOne()
 	private Segnalatore segnalatore;
 
-	public String getIdSegnalazione() {
+	public Integer getIdSegnalazione() {
 		return idSegnalazione;
 	}
 
-	public void setIdSegnalazione(String idSegnalazione) {
+	public void setIdSegnalazione(Integer idSegnalazione) {
 		this.idSegnalazione = idSegnalazione;
 	}
 

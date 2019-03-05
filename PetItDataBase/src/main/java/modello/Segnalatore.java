@@ -18,7 +18,10 @@ public class Segnalatore extends UtenteRegistrato {
 	private String cognome;
 	@Temporal (TemporalType.DATE)
 	private Date dataNascita;
-	
+	private Integer dislike;
+
+	@OneToMany(mappedBy="segnalatore")
+	private List<CommentoSegnalazione> commenti;
 	
 	@OneToOne()
 	private UtenteRegistrato utente;
@@ -32,6 +35,13 @@ public class Segnalatore extends UtenteRegistrato {
 
 	public void setCodiceFiscale(String codiceFiscale) {
 		this.codiceFiscale = codiceFiscale;
+	}
+	public Integer getDislike() {
+		return dislike;
+	}
+
+	public void setDislike(Integer dislike) {
+		this.dislike = dislike;
 	}
 
 	public String getNome() {

@@ -92,7 +92,7 @@
 						<td>${s.nome}</td>
 						<td>${s.cognome}</td>
 						<td>${s.dataNascita}</td>
-						<td> ${s.email}</td>
+						<td> ${s.idUtente}</td>
 						<td> ${s.nomeUtente}</td>
 						<td> ${s.statoUtente}</td>
 					</tr> 

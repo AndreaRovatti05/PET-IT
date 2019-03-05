@@ -8,50 +8,72 @@ import javax.persistence.EntityManager;
 import modello.AnimaleSegnalato;
 import modello.UtenteRegistrato;
 import utility.Programma;
-										//LOGIN !!!!
+
+//LOGIN !!!!
 public class AccessoApplicazione {
-	
-private static Logger log = Logger.getLogger("business");
 
-
+	private static Logger log = Logger.getLogger("business");
 
 //public static void aggiungiAnimaleSegnalato(AnimaleSegnalato a) {
 //	EntityManager em = Programma.getEm();
 //	AnimaleSegnalato aDb = null;
 //	if (a.getIdAnimale() != null) {
 //		aDb = em.find(AnimaleSegnalato.class, a.getIdAnimale());
- 
-	
-public static List<UtenteRegistrato> elencoUtenti() {
-	EntityManager em = Programma.getEm();
-	return em.createQuery("select u from UtenteRegistrato u", UtenteRegistrato.class).getResultList();
-}
 
+	public static List<UtenteRegistrato> elencoUtenti() {
+		EntityManager em = Programma.getEm();
+		return em.createQuery("select u from UtenteRegistrato u", UtenteRegistrato.class).getResultList();
+	}
 
-
-public static Boolean login(String id, String password) {
+	public static Boolean login(String id, String password) {
 		Boolean result = false;
 		EntityManager em = Programma.getEm();
 		UtenteRegistrato u = null;
-		if (id != null ) {
+		if (id != null) {
 			u = em.find(UtenteRegistrato.class, id);
-			if (u!=null) {
-				if (!u.getAttivo()) {
+			if (u != null) {
+				if (!u.getAdmin()) {
 					log.warning("l' utente non ha i privilegi di amministrazione");
+				}
+				if (!u.getAttivo()) {
+					log.warning("l'account è stato disattivato");
 				}
 				if (!u.getPassword().equals(password)) {
 					log.warning("accesso con password errata");
 				}
-				result = u.getAttivo() && u.getPassword().equals(password);
+				
+				result = u.getAdmin() && u.getAttivo() && u.getPassword().equals(password);
 			} else {
 				log.warning("l'utente " + id + " non esiste");
 			}
 
-			}
+		}
 		log.info("accesso di " + id + ": " + result);
+		modificaStato(id);
 		return result;
 	}
+
+	private static void modificaStato(String idUtente) {
+		EntityManager em = Programma.getEm();
+		UtenteRegistrato nuovoutente = em.find(UtenteRegistrato.class, idUtente);
+		em.getTransaction().begin();
+		if(nuovoutente.getStatoUtente() == false) {
+			nuovoutente.setStatoUtente(true);
+		}else {
+			nuovoutente.setStatoUtente(false);
+
 		}
+		
+		em.getTransaction().commit();
+	}
+
+	public static void logout(String id) {
+		EntityManager em = Programma.getEm();
+		UtenteRegistrato ut = new UtenteRegistrato();
+		modificaStato(id);
+	}
+}
+
 //		UtenteRegistrato u = em.find(UtenteRegistrato.class, u.getNomeUtente());
 //		if (u != null) {
 //			if (!u.getAttivo()) {
@@ -67,4 +89,3 @@ public static Boolean login(String id, String password) {
 //		log.info("accesso di " + username + ": " + result);
 //		return result;
 //	}
-

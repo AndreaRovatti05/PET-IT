@@ -38,8 +38,7 @@ bordercolor="#111111" width="100%" id="AutoNumber1">
   <td id="email" class="list-group-item">E-mail:&emsp;${email}</td>
   <td id="num" class="list-group-item">Numero di telefono:&emsp;</td>
   <td id="ind" class="list-group-item">Indirizzo:&emsp;</td>
-  <td id="ns" class="list-group-item">N. Segnalazioni visualizzate:</td>
-  <td id="nu" class="list-group-item">N. Utenti bloccati:</td>
+ 
 </table>
 
 <jsp:include page="frammenti/html/RegistrazioneAdmin.html"></jsp:include>
@@ -58,12 +57,11 @@ $(()=>{
 	})
 	.done((u)=>{
 		console.log(u);
-		$('#nome').text('Nome:  '+u.nomeUtente);
+		$('#nome').text('Nome:  '+u.nome);
 		$('#cognome').text('cognome:  '+u.cognome);
-		$('#num').text('Numero di telefono: non esiste nel database');
-		$('#ind').text('Indirizzo: non esiste nel database');
-		$('#ns').text('N. Segnalazioni visualizzate: contatore da implementare');
-		$('#nu').text('N. Utenti bloccati: contatore da implementare');
+		$('#num').text('numero:' + u.numeroTel);
+		$('#ind').text('Indirizzo:' + u.indirizzo.via + " " + u.indirizzo.civico + "," + u.indirizzo.citta + " ("  + u.indirizzo.provincia + ") "  + u.indirizzo.cap );
+	
 	})
 })
 </script>

@@ -4,14 +4,15 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 @Entity
 public class PosizioniRilevamentiSegnalazioni {
 	@Id
-	@Column(length=50)
-	private String idPosizione;
+	@GeneratedValue
+	private Integer idPosizione;
 	private String citta;
 	private String via;
 	private Integer numeroCivico;
@@ -21,11 +22,11 @@ public class PosizioniRilevamentiSegnalazioni {
 	@ManyToMany
 	private List<AnimaleSegnalato> animaliSegnalati;
 
-	public String getIdPosizione() {
+	public Integer getIdPosizione() {
 		return idPosizione;
 	}
 
-	public void setIdPosizione(String idPosizione) {
+	public void setIdPosizione(Integer idPosizione) {
 		this.idPosizione = idPosizione;
 	}
 
