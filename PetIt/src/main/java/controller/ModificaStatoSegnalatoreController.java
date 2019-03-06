@@ -7,12 +7,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import business.UtenteRegistratoManager;
 import modello.Segnalatore;
 
 /**
  * Servlet implementation class ModificaStatoSegnalatoreController
  */
-@WebServlet("/modificaStatoSegnalatore")
+@WebServlet("/modificaBanUtente")
 public class ModificaStatoSegnalatoreController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -36,10 +37,12 @@ public class ModificaStatoSegnalatoreController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String stato ="ban";
-		Segnalatore se =new Segnalatore();
-		
-				
+		response.setContentType("application/json");
+		String idDaModificare = new String(request.getParameter("idUtente"));
+		UtenteRegistratoManager.modificaBan(idDaModificare);
+		response.sendRedirect(response.encodeRedirectURL("elencoSegnalatori"));
+
+
 	}
 
 }

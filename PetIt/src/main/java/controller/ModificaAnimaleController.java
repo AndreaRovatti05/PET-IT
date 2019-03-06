@@ -32,7 +32,7 @@ public class ModificaAnimaleController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("application/json");
-		String idDaModificare = new String(request.getParameter("idAnimale"));
+		Integer idDaModificare = new Integer(request.getParameter("idAnimale"));
 		String colorePelo = new String(  request.getParameter("colorePelo"));
 		//String razza= request.getParameter("razza");
 		String statoFisico = request.getParameter("statoFisico");

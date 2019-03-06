@@ -80,10 +80,9 @@
 					  
 			<tbody>
 				<c:forEach var="s" items="${elencoSegnalatori}" >
-					<tr>
+					<tr data-id="${ s.idUtente }">
 						<td> 
 							<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">	
-	
 								<jsp:include page="frammenti/html/ban.html"></jsp:include>
 							</div>
   						</td>
@@ -104,8 +103,20 @@
 						
 	
 <script type="text/javascript">
-function banna() {
-	document.invisibile.submit();
+$(() =>{
+		$('.bottoneModificaUtenti').click((e) => {
+			let id = $(e.currentTarget).closest('tr').data('id');
+			$.ajax({
+				url: 'utentiPerId?idUtente=' + id,
+				method: 'get'
+			})
+		.done((se) => {
+			$('#idUtente').val(se.idUtente);
+		})
+	});
+});
+function banUtenti() {
+	document.form['form_modifica_ban'].submit();
 }
 </script>
 	<jsp:include page="frammenti/utility/script.html"></jsp:include>

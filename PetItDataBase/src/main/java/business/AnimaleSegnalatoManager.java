@@ -7,7 +7,6 @@ import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 
 import modello.AnimaleSegnalato;
-import modello.Razza;
 import utility.Programma;
 
 public class AnimaleSegnalatoManager {
@@ -55,7 +54,7 @@ public class AnimaleSegnalatoManager {
 
 	}
 
-	public static AnimaleSegnalato perId(String parameter) {
+	public static AnimaleSegnalato perId(Integer parameter) {
 		if (parameter != null) {
 			EntityManager em = Programma.getEm();
 			return em.find(AnimaleSegnalato.class, parameter);
@@ -65,7 +64,7 @@ public class AnimaleSegnalatoManager {
 
 
 
-	public static void modificaAnimaleSegnalato(String idDaModificare, String colorePelo,
+	public static void modificaAnimaleSegnalato(Integer idDaModificare, String colorePelo,
 			String statoFisico, String statoMentale, String taglia, String tipoPelo) {
 		EntityManager em = Programma.getEm();
 		//Razza findrazza = em.find(Razza.class, razza);
