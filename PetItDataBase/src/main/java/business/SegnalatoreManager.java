@@ -52,9 +52,23 @@ private static Logger log = Logger.getLogger("petit-business");
 
 	public static List<Segnalatore> elencoSegnalatoriPerStato(String stato) {
 		EntityManager em = Programma.getEm();
-		return em.createQuery("select s from Segnalatore s where s.statoUtente=:stato", Segnalatore.class)
-				.setParameter("stato", stato)
-				.getResultList();
+		switch(stato) {
+		case "ban":
+			return em.createQuery("select s from Segnalatore s where s.ban=:true", Segnalatore.class)
+					.setParameter("true", true).getResultList();
+		case "online":
+			return em.createQuery("select s from Segnalatore s where s.statoUtente=:true", Segnalatore.class)
+					.setParameter("true", true).getResultList();
+		case "attivi":
+			return em.createQuery("select s from Segnalatore s where s.attivo=:true", Segnalatore.class)
+					.setParameter("true", true).getResultList();
+		case "admin":
+			return em.createQuery("select s from Segnalatore s where s.admin=:true", Segnalatore.class)
+					.setParameter("true", true).getResultList();
+		default:
+			return null;
+		}
+		
 	}
 
 	public static List<Segnalatore> elencoSegnalatoriNonPerStato(String stato) {
