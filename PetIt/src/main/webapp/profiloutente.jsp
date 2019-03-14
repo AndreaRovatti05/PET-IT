@@ -33,11 +33,11 @@ margin-top:1.8rem
 <div class="margine-tab">
 <table border="1" cellpadding="0" cellspacing="1" style="border-collapse: collapse;" 
 bordercolor="#111111" width="100%" id="AutoNumber1">
-  <td id="nome" class="list-group-item">Nome:&emsp;</td>
-  <td id="cognome" class="list-group-item">Cognome:&emsp;</td>
+  <td id="nome" class="list-group-item"></td>
+  <td id="cognome" class="list-group-item"></td>
   <td id="email" class="list-group-item">E-mail:&emsp;${email}</td>
-  <td id="num" class="list-group-item">Numero di telefono:&emsp;</td>
-  <td id="ind" class="list-group-item">Indirizzo:&emsp;</td>
+  <td id="num" class="list-group-item"></td>
+  <td id="ind" class="list-group-item"></td>
  
 </table>
 
@@ -58,8 +58,8 @@ $(()=>{
 	.done((u)=>{
 		console.log(u);
 		$('#nome').text('Nome:  '+u.nome);
-		$('#cognome').text('cognome:  '+u.cognome);
-		$('#num').text('numero:' + u.numeroTel);
+		$('#cognome').text('Cognome:  '+u.cognome);
+		$('#num').text('Numero di telefono:' + u.numeroTel);
 		$('#ind').text('Indirizzo:' + u.indirizzo.via + " " + u.indirizzo.civico + "," + u.indirizzo.citta + " ("  + u.indirizzo.provincia + ") "  + u.indirizzo.cap );
 	
 	})

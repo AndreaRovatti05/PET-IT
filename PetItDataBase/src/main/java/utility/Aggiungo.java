@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import modello.AnimaleSegnalato;
+import modello.Indirizzo;
 import modello.Razza;
 import modello.Segnalatore;
 import modello.Segnalazione;
@@ -37,8 +38,9 @@ public class Aggiungo {
 		sp1.setNomeSpecie("Gatto");
 		ra2.setNomeRazza("Europeo");
 		sp1.addRazza(ra2);
-		
+			
 		Segnalatore se = new Segnalatore();
+		Indirizzo i = new Indirizzo();
 		se.setIdUtente("mario@rossi.it");
 		se.setPassword("pass");
 		se.setNomeUtente("mario");
@@ -47,9 +49,16 @@ public class Aggiungo {
 		se.setNome("Mario");
 		se.setAdmin(true);
 		se.setAttivo(true);
-
+		i.setVia("Manzoni");
+		i.setProvincia("Roma");
+		i.setCivico("100");
+		i.setInterno("A");
+		i.setCitta("Roma");
+		i.setCap(10010);
+		i.addUtenti(se);
 		
 		Segnalatore se1 = new Segnalatore();
+		Indirizzo i1 = new Indirizzo();
 		se1.setIdUtente("paolo@verdi.it");
 		se1.setPassword("pass");
 		se1.setNomeUtente("paolo");
@@ -58,8 +67,16 @@ public class Aggiungo {
 		se1.setNome("Paolo");
 		se1.setAdmin(false);
 		se1.setAttivo(true);
+		i1.setVia("Manzoni");
+		i1.setProvincia("Roma");
+		i1.setCivico("100");
+		i1.setInterno("A");
+		i1.setCitta("Roma");
+		i1.setCap(10010);
+		i1.addUtenti(se1);
 		
 		Segnalatore se2 = new Segnalatore();
+		Indirizzo i2 = new Indirizzo();
 		se2.setIdUtente("giovanni@verdi.it");
 		se2.setPassword("pass");
 		se2.setNomeUtente("giovanni");
@@ -68,6 +85,14 @@ public class Aggiungo {
 		se2.setNome("giovanni");
 		se2.setAdmin(false);
 		se2.setAttivo(false);
+		i2.setVia("Manzoni");
+		i2.setProvincia("Roma");
+		i2.setCivico("100");
+		i2.setInterno("A");
+		i2.setCitta("Roma");
+		i2.setCap(10010);
+		i2.addUtenti(se2);
+		
 		
 		AnimaleSegnalato an =new AnimaleSegnalato();
 		Segnalazione sg = new Segnalazione();
@@ -118,10 +143,12 @@ public class Aggiungo {
 		em.persist(sg);
 		em.persist(sg1);
 		em.persist(sg2);
+		em.persist(i);
+		em.persist(i1);
+		em.persist(i2);
 		em.persist(an);
 		em.persist(an1);
 		em.persist(an2);
-
 		em.getTransaction().commit();
 		
 	}	

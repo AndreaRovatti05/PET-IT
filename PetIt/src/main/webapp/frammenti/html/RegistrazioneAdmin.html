@@ -14,10 +14,10 @@
         </button>
       </div>
       <div class="modal-body">
-       <form action ="addNuovoUtente" method="get">
+       <form action ="addNuovoUtente" method="get" id="form_add">
   <div class="form-group">
     <label for="Nome">Nome</label>
-    <input class="form-control" name="nomeUtente"  aria-describedby="emailHelp" placeholder="Inserisci Nome Utente">
+    <input class="form-control" id="nomeUtente"  aria-describedby="emailHelp" placeholder="Inserisci Nome Utente">
   </div>
   <div class="form-group">
     <label for="Cognome">Cognome</label>
@@ -37,14 +37,14 @@
   </div>
   <div class="form-group">
     <label for="InputPassword">Password</label>
-    <input type="password" name="passwordUtente" class="form-control" id="Password" placeholder="Inserisci Password">
+    <input type="password" id="passwordUtente" class="form-control" placeholder="Inserisci Password">
   </div>
   
 </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" id="addAdmin" value="addNuovoUtente" class="btn btn-success">Add</button>
+        <button type="button" id="addAdmin" onClick="addUtente" value="addNuovoUtente" class="btn btn-success">Add</button>
       </div>
     </div>
   </div>

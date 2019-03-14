@@ -92,4 +92,6 @@ public class Segnalatore extends UtenteRegistrato {
 		s.setSegnalatore(this);
 	}
 	
+
+	
 }

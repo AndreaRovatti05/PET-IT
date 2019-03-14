@@ -1,8 +1,6 @@
 package controller;
 
 import java.io.IOException;
-
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +15,7 @@ import modello.AnimaleSegnalato;
 /**
  * Servlet implementation class AnimalePerIdController
  */
+
 @WebServlet("/animalePerId")
 public class AnimalePerIdController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,6 +23,7 @@ public class AnimalePerIdController extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
+	
     public AnimalePerIdController() {
         super();
         // TODO Auto-generated constructor stub
@@ -36,9 +36,7 @@ public class AnimalePerIdController extends HttpServlet {
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)  {
 		String idStr = request.getParameter("id");
-		System.out.println(idStr);
 		Integer idNum = Integer.valueOf(idStr);
-		
 		ObjectMapper om = new ObjectMapper();
 		response.setContentType("application/json");
 		AnimaleSegnalato as = AnimaleSegnalatoManager.perId(idNum);
