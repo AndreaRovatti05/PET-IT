@@ -18,28 +18,28 @@ margin-top:1.8rem
 
 </style>
 </head>
+
 <body>
-<% 
-	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-	if(session.getAttribute("email")==null)
-	{
-		response.sendRedirect("login.jsp");
-	}
+	<%
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		if (session.getAttribute("email") == null) {
+			response.sendRedirect("login.jsp");
+		}
 	%>
-<jsp:include page="frammenti/html/navbar.html"></jsp:include>
-<h2 class="text-center text-success" style="margin:0.8rem">Profilo Utente
-<button style="font-size:32px; float:left; margin:0.4rem">
-<i class="fa fa-edit"></i></button></h2>
-<div class="margine-tab">
-<table border="1" cellpadding="0" cellspacing="1" style="border-collapse: collapse;" 
-bordercolor="#111111" width="100%" id="AutoNumber1">
-  <td id="nome" class="list-group-item"></td>
-  <td id="cognome" class="list-group-item"></td>
-  <td id="email" class="list-group-item">E-mail:&emsp;${email}</td>
-  <td id="num" class="list-group-item"></td>
-  <td id="ind" class="list-group-item"></td>
+	<jsp:include page="frammenti/html/navbar.html"></jsp:include>
+	<h2 class="text-center text-success" style="margin: 0.8rem">Profilo
+		Utente
+	<jsp:include page="frammenti/html/tastoModificaProfilo.html"></jsp:include></h2>
+	<div class="margine-tab">
+		<table border="1" cellspacing="1" style="border-collapse: collapse; bordercolor:#111111; width:100%" id="AutoNumber1">
+			<td id="nome" class="list-group-item"></td>
+  			<td id="cognome" class="list-group-item"></td>
+  			<td id="email" class="list-group-item">E-mail:&emsp;${email}</td>
+  			<td id="num" class="list-group-item"></td>
+  			<td id="ind" class="list-group-item"></td>
  
-</table>
+		</table>
+	</div>
 
 <jsp:include page="frammenti/html/RegistrazioneAdmin.html"></jsp:include>
 

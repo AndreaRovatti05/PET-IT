@@ -49,6 +49,7 @@ public class Aggiungo {
 		se.setNome("Mario");
 		se.setAdmin(true);
 		se.setAttivo(true);
+
 		i.setVia("Manzoni");
 		i.setProvincia("Roma");
 		i.setCivico("100");
