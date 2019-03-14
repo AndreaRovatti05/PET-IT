@@ -32,12 +32,12 @@ margin-top:1.8rem
 	<jsp:include page="frammenti/html/tastoModificaProfilo.html"></jsp:include></h2>
 	<div class="margine-tab">
 		<table border="1" cellspacing="1" style="border-collapse: collapse; bordercolor:#111111; width:100%" id="AutoNumber1">
-			<td id="nome" class="list-group-item">Nome:&emsp;</td>
-			<td id="cognome" class="list-group-item">Cognome:&emsp;</td>
-			<td id="email" class="list-group-item">E-mail:&emsp;${email}</td>
-			<td id="num" class="list-group-item">Numero di telefono:&emsp;</td>
-			<td id="ind" class="list-group-item">Indirizzo:&emsp;</td>
-
+			<td id="nome" class="list-group-item"></td>
+  			<td id="cognome" class="list-group-item"></td>
+  			<td id="email" class="list-group-item">E-mail:&emsp;${email}</td>
+  			<td id="num" class="list-group-item"></td>
+  			<td id="ind" class="list-group-item"></td>
+ 
 		</table>
 	</div>
 
