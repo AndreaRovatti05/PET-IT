@@ -22,8 +22,7 @@ public class Aggiungo {
 		sp.setNomeSpecie("Cane");
 		ra.setNomeRazza("Labrador");
 		sp.addRazza(ra);
-		
-		
+			
 		Razza ra1 = new Razza();
 		ra1.setNomeRazza("Pincer");
 		sp.addRazza(ra1);
@@ -47,7 +46,6 @@ public class Aggiungo {
 		se.setNome("Mario");
 		se.setAdmin(true);
 		se.setAttivo(true);
-
 		
 		Segnalatore se1 = new Segnalatore();
 		se1.setIdUtente("paolo@verdi.it");

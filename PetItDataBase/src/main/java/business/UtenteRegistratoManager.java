@@ -13,8 +13,8 @@ private static Logger log = Logger.getLogger("petit-business");
 	public static void aggiungiUtenteRegistrato(UtenteRegistrato u) {
 		EntityManager em = Programma.getEm();
 		UtenteRegistrato uDb = null;
-		if(u.getEmail() != null) {
-			uDb = em.find(UtenteRegistrato.class, u.getEmail());
+		if(u.getIdUtente() != null) {
+			uDb = em.find(UtenteRegistrato.class, u.getIdUtente());
 		}
 		if (uDb == null) {
 			em.getTransaction().begin();
