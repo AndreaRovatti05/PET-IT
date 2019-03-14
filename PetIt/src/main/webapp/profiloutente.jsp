@@ -60,7 +60,7 @@ $(()=>{
 		$('#nome').text('Nome:  '+u.nome);
 		$('#cognome').text('Cognome:  '+u.cognome);
 		$('#num').text('Numero di telefono:' + u.numeroTel);
-		$('#ind').text('Indirizzo:' + u.indirizzo.via + " " + u.indirizzo.civico + "," + u.indirizzo.citta + " ("  + u.indirizzo.provincia + ") "  + u.indirizzo.cap );
+		$('#ind').text('Indirizzo: Via ' + u.indirizzo.via + " " + u.indirizzo.civico + "," + u.indirizzo.citta + " ("  + u.indirizzo.provincia + ") "  + u.indirizzo.cap );
 	
 	})
 })
