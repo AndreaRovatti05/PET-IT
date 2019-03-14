@@ -1,6 +1,8 @@
 package modello;
 
 
+import java.util.ArrayList;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,6 +11,8 @@ import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Type;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 @Inheritance(strategy =InheritanceType.JOINED)
@@ -26,9 +30,18 @@ public class UtenteRegistrato {
 	private Boolean ban = false;
 	private Boolean admin = false;
 	
+
 	@ManyToOne
 	private Indirizzo indirizzo;
 	
+	public Indirizzo getIndirizzo() {
+		return indirizzo;
+	}
+
+	public void setIndirizzo(Indirizzo indirizzo) {
+		this.indirizzo = indirizzo;
+	}
+
 	public Integer getNumeroTel() {
 		return numeroTel;
 	}
@@ -98,4 +111,6 @@ public class UtenteRegistrato {
 	public void setAttivo(boolean attivo) {
 		this.attivo = attivo;
 	}
+	
+	
 }

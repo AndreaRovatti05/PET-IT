@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +8,13 @@
 <jsp:include page="/frammenti/utility/utilitynavbar.html"></jsp:include>
 <title>PROFILO UTENTE</title>
 <style type="text/css">
-.margine-tab {
-	margin-top: 1.8rem
+
+.margine-tab{
+margin-top:1.8rem
 }
-<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
-<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
+ 	<jsp:include page="frammenti/css/navbarstyle.css"></jsp:include>
+ 	<jsp:include page="frammenti/css/boxstyle.css"></jsp:include>
+	
 
 </style>
 </head>
@@ -39,14 +41,14 @@
 		</table>
 	</div>
 
-	<jsp:include page="frammenti/html/RegistrazioneAdmin.html"></jsp:include>
+<jsp:include page="frammenti/html/RegistrazioneAdmin.html"></jsp:include>
 
-	<jsp:include page="frammenti/utility/script.html"></jsp:include>
-	<script>
+<jsp:include page="frammenti/utility/script.html"></jsp:include>
+<script>
 	sessionStorage.setItem('email','${email}');
 </script>
 
-	<script>
+<script>
 $(()=>{
 	var e = sessionStorage.getItem('email');
 	$.ajax({
@@ -56,8 +58,8 @@ $(()=>{
 	.done((u)=>{
 		console.log(u);
 		$('#nome').text('Nome:  '+u.nome);
-		$('#cognome').text('cognome:  '+u.cognome);
-		$('#num').text('numero:' + u.numeroTel);
+		$('#cognome').text('Cognome:  '+u.cognome);
+		$('#num').text('Numero di telefono:' + u.numeroTel);
 		$('#ind').text('Indirizzo:' + u.indirizzo.via + " " + u.indirizzo.civico + "," + u.indirizzo.citta + " ("  + u.indirizzo.provincia + ") "  + u.indirizzo.cap );
 	
 	})

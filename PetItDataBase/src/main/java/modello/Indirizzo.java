@@ -1,15 +1,21 @@
 package modello;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Indirizzo {
 	@Id
+	@GeneratedValue
 	private Integer id;
+	
 	private String via;
 	private String civico;
 	private String interno;
@@ -17,9 +23,16 @@ public class Indirizzo {
 	private String provincia;
 	private Integer cap;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy="indirizzo")
 	private List<UtenteRegistrato> utenti;
 	
+	public List<UtenteRegistrato> getUtenti() {
+		return utenti;
+	}
+	public void setUtenti(List<UtenteRegistrato> utenti) {
+		this.utenti = utenti;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -63,6 +76,12 @@ public class Indirizzo {
 		this.cap = cap;
 	}
 	
+	public void addUtenti(UtenteRegistrato u) {
+		if (this.utenti == null) {
+			this.utenti = new ArrayList<UtenteRegistrato>();
+		}
+		this.utenti.add(u);
+		u.setIndirizzo(this);
+	}
 	
-
 }

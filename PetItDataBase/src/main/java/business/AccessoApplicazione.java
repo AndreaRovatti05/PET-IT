@@ -49,8 +49,8 @@ public class AccessoApplicazione {
 
 		}
 		log.info("accesso di " + id + ": " + result);
-		modificaStato(id);
 		return result;
+		
 	}
 
 	private static void modificaStato(String idUtente) {
@@ -70,7 +70,7 @@ public class AccessoApplicazione {
 	public static void logout(String id) {
 		EntityManager em = Programma.getEm();
 		UtenteRegistrato ut = new UtenteRegistrato();
-		modificaStato(id);
+		
 	}
 }
 

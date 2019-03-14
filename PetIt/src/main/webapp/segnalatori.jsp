@@ -78,7 +78,7 @@
 					<th scope="col">Online</th>
 					<th scope="col">Ban</th>
 					<th scope="col">Admin</th>
-					<th scope="col">Account Attivi</th>
+					<th scope="col">Account Attivo</th>
 					
 					
 				</tr>
@@ -111,8 +111,7 @@
 		</table>
 			<jsp:include page="frammenti/html/RegistrazioneAdmin.html"></jsp:include>
 	</div>
-						
-	
+							
 <script type="text/javascript">
 $(() =>{
 		$('.bottoneModificaUtenti').click((e) => {
@@ -129,6 +128,9 @@ $(() =>{
 function banUtenti() {
 	document.form['form_modifica_ban'].submit();
 }
+function addUtente() {
+	document.forms['form_add'].submit();
+	}	
 </script>
 	<jsp:include page="frammenti/utility/script.html"></jsp:include>
 	
