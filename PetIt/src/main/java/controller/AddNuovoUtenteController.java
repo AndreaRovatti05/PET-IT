@@ -37,10 +37,8 @@ public class AddNuovoUtenteController extends HttpServlet {
 		se.setCodiceFiscale(request.getParameter("cfUtente"));
 		se.setCognome(request.getParameter("cognomeUtente"));
 		se.setNome(request.getParameter("nomeUtente"));
-		se.setEmail(request.getParameter("nomeUtente"));
 		se.setNomeUtente(request.getParameter("usernameUtente"));
 		se.setPassword(request.getParameter("passwordUtente"));
-		se.setStatoUtente("Admin");
 		SegnalatoreManager.aggiungiSegnalatore(se);
 	}
 

@@ -54,7 +54,8 @@
   <div class="dropdown-menu dropdown-menu-right">
     <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori">Tutti</a>
     <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori?stato=ban">Bloccati</a>
-    <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori?stato=online">Attivi</a>
+    <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori?stato=online">Online</a>
+    <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori?stato=attivi">Attivi</a>
     <a class="dropdown-item" href="http://localhost:8080/PetIt/elencoSegnalatori?stato=admin">Amministratori</a>
     </div>
 </div> 
@@ -74,17 +75,23 @@
 					<th scope="col">Data di nascita</th>
 					<th scope="col">Email</th>
 					<th scope="col">Username</th>
-					<th scope="col">Stato Utente</th>
+					<th scope="col">Online</th>
+					<th scope="col">Ban</th>
+					<th scope="col">Admin</th>
+					<th scope="col">Account Attivi</th>
+					
+					
 				</tr>
 			</thead>
 					  
 			<tbody>
 				<c:forEach var="s" items="${elencoSegnalatori}" >
-					<tr>
+					<tr data-id="${ s.idUtente }">
 						<td> 
 							<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">	
-	
 								<jsp:include page="frammenti/html/ban.html"></jsp:include>
+								<jsp:include page="frammenti/html/tastoadmin.html"></jsp:include>
+								
 							</div>
   						</td>
 							    
@@ -92,9 +99,12 @@
 						<td>${s.nome}</td>
 						<td>${s.cognome}</td>
 						<td>${s.dataNascita}</td>
-						<td> ${s.email}</td>
+						<td> ${s.idUtente}</td>
 						<td> ${s.nomeUtente}</td>
 						<td> ${s.statoUtente}</td>
+						<td> ${s.ban}</td>
+						<td> ${s.admin}</td>
+						<td> ${s.attivo}</td>				
 					</tr> 
 				</c:forEach>						    
 			</tbody>
@@ -104,8 +114,20 @@
 						
 	
 <script type="text/javascript">
-function banna() {
-	document.invisibile.submit();
+$(() =>{
+		$('.bottoneModificaUtenti').click((e) => {
+			let id = $(e.currentTarget).closest('tr').data('id');
+			$.ajax({
+				url: 'utentiPerId?idUtente=' + id,
+				method: 'get'
+			})
+		.done((se) => {
+			$('#idUtente').val(se.idUtente);
+		})
+	});
+});
+function banUtenti() {
+	document.form['form_modifica_ban'].submit();
 }
 </script>
 	<jsp:include page="frammenti/utility/script.html"></jsp:include>

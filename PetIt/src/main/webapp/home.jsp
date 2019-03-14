@@ -89,9 +89,8 @@ background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107,
 		<body>
 	<% 
 		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-		if(session.getAttribute("email")==null)
-		{
-		response.sendRedirect("login.jsp");
+		if(session.getAttribute("email")==null) {
+			response.sendRedirect("login.jsp");
 		}
 	%>
 		

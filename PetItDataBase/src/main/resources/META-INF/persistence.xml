@@ -8,6 +8,8 @@
 		<class>modello.Segnalazione</class>
 		<class>modello.Specie</class>
 		<class>modello.UtenteRegistrato</class>
+		<class>modello.CommentoSegnalazione</class>
+		<class>modello.Indirizzo</class>
 		<properties>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>

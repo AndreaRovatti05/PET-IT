@@ -46,6 +46,20 @@ private static Logger log = Logger.getLogger("petit-business");
 		}
 		return null;
 	}
+
+
+	public static void modificaBan(String idDaModificare) {
+		Boolean ban=false;
+		EntityManager em = Programma.getEm();
+		UtenteRegistrato modificaUt = em.find(UtenteRegistrato.class, idDaModificare);
+		if(modificaUt.getBan()==ban) {
+			ban=true;
+		} 
+		em.getTransaction().begin();
+		modificaUt.setBan(ban);
+		em.getTransaction().commit();
+		
+	}
 	
 	
 }

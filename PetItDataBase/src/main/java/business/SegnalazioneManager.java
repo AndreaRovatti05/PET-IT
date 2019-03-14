@@ -52,7 +52,7 @@ public class SegnalazioneManager {
 		}
 	}
 
-	public static Object perId(String parameter) {
+	public static Segnalazione perId(Integer parameter) {
 		if (parameter != null) {
 			EntityManager em = Programma.getEm();
 			return em.find(Segnalazione.class, parameter);
