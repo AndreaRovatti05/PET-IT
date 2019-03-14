@@ -15,21 +15,11 @@ public class UtenteRegistrato {
 
 	@Id
 	@Column(length=50)
-	private String idUtente;
 	private String email;
 	private String nomeUtente;
 	private String password;
 	private String statoUtente;
-	
 	private Boolean attivo = true;
-
-	public String getIdUtente() {
-		return idUtente;
-	}
-
-	public void setIdUtente(String idUtente) {
-		this.idUtente = idUtente;
-	}
 
 	public String getEmail() {
 		return email;

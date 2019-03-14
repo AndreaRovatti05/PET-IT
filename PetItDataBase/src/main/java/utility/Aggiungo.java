@@ -53,7 +53,7 @@ public class Aggiungo {
 		sp1.addRazza(ra2);
 		
 		Segnalatore se = new Segnalatore();
-		se.setIdUtente("mario@rossi.it");
+		//se.setIdUtente("mario@rossi.it");
 		se.setEmail("mario@rossi.it");
 		se.setPassword("pass");
 		se.setNomeUtente("mario");
@@ -64,7 +64,7 @@ public class Aggiungo {
 
 		
 		Segnalatore se1 = new Segnalatore();
-		se1.setIdUtente("paolo@verdi.it");
+		//se1.setIdUtente("paolo@verdi.it");
 		se1.setEmail("paolo@verdi.it");
 		se1.setPassword("pass");
 		se1.setNomeUtente("paolo");
@@ -74,7 +74,7 @@ public class Aggiungo {
 		se1.setNome("Paolo");
 		
 		Segnalatore se2 = new Segnalatore();
-		se2.setIdUtente("giovanni@verdi.it");
+		//se2.setIdUtente("giovanni@verdi.it");
 		se2.setEmail("giovanni@verdi.it");
 		se2.setPassword("pass");
 		se2.setNomeUtente("giovanni");
