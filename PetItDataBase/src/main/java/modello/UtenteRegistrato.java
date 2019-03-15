@@ -21,7 +21,6 @@ public class UtenteRegistrato {
 	@Id
 	@Column(length=50)
 	private String idUtente;
-	
 	private String nomeUtente;
 	private String password;
 	private Integer numeroTel;

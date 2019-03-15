@@ -3,12 +3,14 @@ package utility;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
 import modello.AnimaleSegnalato;
 import modello.Indirizzo;
 import modello.Razza;
 import modello.Segnalatore;
 import modello.Segnalazione;
 import modello.Specie;
+import modello.UtenteRegistrato;
 
 public class Aggiungo {
 	public static void main(String[] args) {
@@ -23,7 +25,6 @@ public class Aggiungo {
 		sp.setNomeSpecie("Cane");
 		ra.setNomeRazza("Labrador");
 		sp.addRazza(ra);
-		
 		
 		Razza ra1 = new Razza();
 		ra1.setNomeRazza("Pincer");
@@ -49,7 +50,6 @@ public class Aggiungo {
 		se.setNome("Mario");
 		se.setAdmin(true);
 		se.setAttivo(true);
-
 		i.setVia("Manzoni");
 		i.setProvincia("Roma");
 		i.setCivico("100");
@@ -93,7 +93,6 @@ public class Aggiungo {
 		i2.setCitta("Roma");
 		i2.setCap(10010);
 		i2.addUtenti(se2);
-		
 		
 		AnimaleSegnalato an =new AnimaleSegnalato();
 		Segnalazione sg = new Segnalazione();

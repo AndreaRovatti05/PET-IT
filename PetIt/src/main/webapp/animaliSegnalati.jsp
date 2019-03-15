@@ -138,7 +138,7 @@
 				$('#selFisico').val(an.statoFisico);
 				$('#selStatoMentale').val(an.statoMentale);
 				$('#selColorePelo').val(an.colorePelo)
-				$('#hddIdAnimale').val(an.idAnimale);
+				
 				$('#selRazza').attr('value',''+an.razza.id)
 				$('#selSpecie').attr('value',''+an.razza.specie.idSpecie)
 				$('#selTaglia').attr('value',''+an.taglia)
@@ -149,7 +149,6 @@
 				$('#selColorePelo').attr('value',''+an.colorePelo)
 				$('#modalmodifica').modal();
 
-				$('#modalmodifica').modal();
 				
 			})
 		});
