@@ -22,8 +22,7 @@ public class Aggiungo {
 		
 		sp.setNomeSpecie("Cane");
 		ra.setNomeRazza("Labrador");
-		sp.addRazza(ra);
-		
+		sp.addRazza(ra);	
 		
 		Razza ra1 = new Razza();
 		ra1.setNomeRazza("Pincer");
@@ -49,7 +48,7 @@ public class Aggiungo {
 		se.setNome("Mario");
 		se.setAdmin(true);
 		se.setAttivo(true);
-
+		se.setNumeroTel("+393289999999");
 		i.setVia("Manzoni");
 		i.setProvincia("Roma");
 		i.setCivico("100");
@@ -68,6 +67,7 @@ public class Aggiungo {
 		se1.setNome("Paolo");
 		se1.setAdmin(false);
 		se1.setAttivo(true);
+		se1.setNumeroTel("+393289999999");
 		i1.setVia("Manzoni");
 		i1.setProvincia("Roma");
 		i1.setCivico("100");
@@ -86,6 +86,7 @@ public class Aggiungo {
 		se2.setNome("giovanni");
 		se2.setAdmin(false);
 		se2.setAttivo(false);
+		se2.setNumeroTel("+393289999999");
 		i2.setVia("Manzoni");
 		i2.setProvincia("Roma");
 		i2.setCivico("100");
@@ -93,7 +94,6 @@ public class Aggiungo {
 		i2.setCitta("Roma");
 		i2.setCap(10010);
 		i2.addUtenti(se2);
-		
 		
 		AnimaleSegnalato an =new AnimaleSegnalato();
 		Segnalazione sg = new Segnalazione();

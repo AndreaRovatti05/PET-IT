@@ -1,18 +1,11 @@
 package modello;
 
-
-import java.util.ArrayList;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
-
-import org.hibernate.annotations.Type;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 
 @Entity
 @Inheritance(strategy =InheritanceType.JOINED)
@@ -24,13 +17,12 @@ public class UtenteRegistrato {
 	
 	private String nomeUtente;
 	private String password;
-	private Integer numeroTel;
+	private String numeroTel;
 	private Boolean statoUtente = false;
 	private Boolean attivo = true;
 	private Boolean ban = false;
 	private Boolean admin = false;
 	
-
 	@ManyToOne
 	private Indirizzo indirizzo;
 	
@@ -40,14 +32,6 @@ public class UtenteRegistrato {
 
 	public void setIndirizzo(Indirizzo indirizzo) {
 		this.indirizzo = indirizzo;
-	}
-
-	public Integer getNumeroTel() {
-		return numeroTel;
-	}
-
-	public void setNumeroTel(Integer numeroTel) {
-		this.numeroTel = numeroTel;
 	}
 
 	public void setAttivo(Boolean attivo) {
@@ -77,7 +61,6 @@ public class UtenteRegistrato {
 	public void setIdUtente(String idUtente) {
 		this.idUtente = idUtente;
 	}
-
 
 	public String getNomeUtente() {
 		return nomeUtente;
@@ -111,6 +94,13 @@ public class UtenteRegistrato {
 	public void setAttivo(boolean attivo) {
 		this.attivo = attivo;
 	}
-	
+
+	public String getNumeroTel() {
+		return numeroTel;
+	}
+
+	public void setNumeroTel(String numeroTel) {
+		this.numeroTel = numeroTel;
+	}
 	
 }
