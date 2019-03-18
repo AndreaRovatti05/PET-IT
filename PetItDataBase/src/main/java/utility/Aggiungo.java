@@ -24,11 +24,8 @@ public class Aggiungo {
 		
 		sp.setNomeSpecie("Cane");
 		ra.setNomeRazza("Labrador");
-<<<<<<< HEAD
-		sp.addRazza(ra);	
-=======
+
 		sp.addRazza(ra);
->>>>>>> branch 'master' of https://github.com/AndreaRovatti05/PET-IT.git
 		
 		Razza ra1 = new Razza();
 		ra1.setNomeRazza("Pincer");
@@ -54,10 +51,9 @@ public class Aggiungo {
 		se.setNome("Mario");
 		se.setAdmin(true);
 		se.setAttivo(true);
-<<<<<<< HEAD
+
 		se.setNumeroTel("+393289999999");
-=======
->>>>>>> branch 'master' of https://github.com/AndreaRovatti05/PET-IT.git
+
 		i.setVia("Manzoni");
 		i.setProvincia("Roma");
 		i.setCivico("100");
