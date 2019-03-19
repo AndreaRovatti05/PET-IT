@@ -29,6 +29,7 @@ public class ModificaAnimaleController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("application/json");
+		//fare un nuovo animale che implementa tutto e poi mandare l'animale già fatto 
 		Integer idDaModificare = new Integer(request.getParameter("idAnimale"));
 		String colorePelo = new String(  request.getParameter("colorePelo"));
 		//String razza= request.getParameter("razza");

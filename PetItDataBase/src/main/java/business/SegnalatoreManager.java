@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.EntityManager;
+
+import modello.Indirizzo;
 import modello.Segnalatore;
 import utility.Programma;
 
@@ -20,6 +22,7 @@ private static Logger log = Logger.getLogger("petit-business");
 			log.log(Level.WARNING, "segnalatore esiste già");
 		} else {
 			Segnalatore sDb = new Segnalatore();
+			Indirizzo i=new Indirizzo();
 			sDb.setIdUtente(email);
 			sDb.setCodiceFiscale(cf);
 			sDb.setCognome(cognome);
@@ -30,10 +33,13 @@ private static Logger log = Logger.getLogger("petit-business");
 			sDb.setAttivo(true);
 			sDb.setStatoUtente(false);
 			sDb.setBan(false);
+			i.addUtenti(sDb);
 			
 			em.getTransaction().begin();
-			em.persist(sDb); 
+			em.persist(sDb);
+			em.persist(i);
 			em.getTransaction().commit();
+			
 			log.log(Level.INFO, "aggiunta segnalatore");
 			
 		}
@@ -86,6 +92,10 @@ private static Logger log = Logger.getLogger("petit-business");
 		return em.createQuery("select s from Segnalatore s where s.statoUtente <> :stato", Segnalatore.class)
 				.setParameter("stato", stato)
 				.getResultList();
+	}
+
+	public static void modificaSegnalatore(Segnalatore s) {
+		// metodo che cerca l'utente e se c'è lo modifica		
 	}
 	
 }
