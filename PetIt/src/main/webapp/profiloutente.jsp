@@ -51,6 +51,7 @@ margin-top:1.8rem
 				<td id="nome" class="list-group-item"></td>
 	  			<td id="cognome" class="list-group-item"></td>
 	  			<td id="email" class="list-group-item">E-mail:&emsp;${email}</td>
+	  			<td id="user" class="list-group-item"></td>
 	  			<td id="num" class="list-group-item"></td>
 	  			<td id="ind" class="list-group-item"></td>
  			</tr>
@@ -73,6 +74,7 @@ $(()=>{
 		console.log(u);
 		$('#nome').text('Nome:  '+u.nome);
 		$('#cognome').text('Cognome:  '+u.cognome);
+		$('#user').text('Username: ' + u.nomeUtente);
 		$('#num').text('Numero di telefono:' + u.numeroTel);
 		$('#ind').text('Indirizzo: Via ' + u.indirizzo.via + " " + u.indirizzo.civico + "," + u.indirizzo.citta + " ("  + u.indirizzo.provincia + ") "  + u.indirizzo.cap );
 	});
@@ -86,7 +88,7 @@ $(()=>{
 			$('#hddIdUtente').val(sessionStorage.getItem('email'));
 			$('#selNome').val(u.nome);
 			$('#selCognome').val(u.cognome);
-			$('#selUserName').val(u.nomeUtente);
+			$('#selUsername').val(u.nomeUtente);
 			$('#selNumero').val(u.numeroTel);
 			$('#selVia').val(u.indirizzo.via);
 			$('#selCap').val(u.indirizzo.cap);
@@ -94,7 +96,7 @@ $(()=>{
 			$('#selInterno').val(u.indirizzo.interno);
 			$('#selComune').val(u.indirizzo.citta);
 			$('#selProvincia').val(u.indirizzo.provincia);
-			//$('#selPassword').val(u.password);
+			$('#selPass').val(u.password);
 			$('#modalmodificaProfilo').modal();
 		})
 	});
