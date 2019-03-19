@@ -11,19 +11,31 @@ import utility.Programma;
 public class SegnalatoreManager {
 private static Logger log = Logger.getLogger("petit-business");
 	
-	public static void aggiungiSegnalatore(Segnalatore s) {
+
+	public static void aggiungiSegnalatore(String email, String nome, String cognome, String username, String password, String cf  ) {
 		EntityManager em = Programma.getEm();
-		Segnalatore sDb = null;
-		if(s.getCodiceFiscale() != null) {
-			sDb = em.find(Segnalatore.class, s.getCodiceFiscale());
-		}
-		if (sDb == null) {
+		Segnalatore s = null;
+			s = em.find(Segnalatore.class, email);
+		if (s != null) {
+			log.log(Level.WARNING, "segnalatore esiste già");
+		} else {
+			Segnalatore sDb = new Segnalatore();
+			sDb.setIdUtente(email);
+			sDb.setCodiceFiscale(cf);
+			sDb.setCognome(cognome);
+			sDb.setNome(nome);
+			sDb.setNomeUtente(username);
+			sDb.setPassword(password);
+			sDb.setAdmin(true);
+			sDb.setAttivo(true);
+			sDb.setStatoUtente(false);
+			sDb.setBan(false);
+			
 			em.getTransaction().begin();
-			em.persist(s); 
+			em.persist(sDb); 
 			em.getTransaction().commit();
 			log.log(Level.INFO, "aggiunta segnalatore");
-		} else {
-			log.log(Level.WARNING, "segnalatore esiste già");
+			
 		}
 	}
 	

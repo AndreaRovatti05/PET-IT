@@ -10,7 +10,6 @@ import modello.Razza;
 import modello.Segnalatore;
 import modello.Segnalazione;
 import modello.Specie;
-import modello.UtenteRegistrato;
 
 public class Aggiungo {
 	public static void main(String[] args) {

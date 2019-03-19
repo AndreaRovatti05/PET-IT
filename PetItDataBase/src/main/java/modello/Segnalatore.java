@@ -23,8 +23,6 @@ public class Segnalatore extends UtenteRegistrato {
 	@OneToMany(mappedBy="segnalatore")
 	private List<CommentoSegnalazione> commenti;
 	
-	@OneToOne()
-	private UtenteRegistrato utente;
 	
 	@OneToMany(mappedBy= "segnalatore")
 	private List<Segnalazione> segnalazioni;
@@ -66,14 +64,6 @@ public class Segnalatore extends UtenteRegistrato {
 
 	public void setDataNascita(Date dataNascita) {
 		this.dataNascita = dataNascita;
-	}
-
-	public UtenteRegistrato getUtente() {
-		return utente;
-	}
-
-	public void setUtente(UtenteRegistrato utente) {
-		this.utente = utente;
 	}
 
 	public List<Segnalazione> getSegnalazioni() {

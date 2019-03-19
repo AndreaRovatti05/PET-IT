@@ -86,7 +86,7 @@ $(()=>{
 			$('#hddIdUtente').val(sessionStorage.getItem('email'));
 			$('#selNome').val(u.nome);
 			$('#selCognome').val(u.cognome);
-			$('#selUserName').val(u.userName);
+			$('#selUserName').val(u.nomeUtente);
 			$('#selNumero').val(u.numeroTel);
 			$('#selVia').val(u.indirizzo.via);
 			$('#selCap').val(u.indirizzo.cap);
@@ -102,6 +102,9 @@ $(()=>{
 	
 	function mandaUtente() {
 		document.forms['form_modifica_profilo'].submit();
+		}	
+	function addUtente() {
+		document.forms['form_add'].submit();
 		}	
 </script>
 

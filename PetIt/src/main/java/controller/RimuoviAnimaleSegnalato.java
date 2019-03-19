@@ -17,22 +17,15 @@ import business.AnimaleSegnalatoManager;
 public class RimuoviAnimaleSegnalato extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public RimuoviAnimaleSegnalato() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String idDaEliminare = request.getParameter("idAnimale");
 
 		AnimaleSegnalatoManager.eliminaAnimaleSegnalato(idDaEliminare);
 		response.sendRedirect("elencoAnimaliSegnalati");
 	}
-
 }

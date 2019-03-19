@@ -184,6 +184,10 @@ background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107,
     </div>
     	
 	<jsp:include page="frammenti/utility/script.html"></jsp:include>
-
+<script type="text/javascript">
+function addUtente() {
+	document.forms['form_add'].submit();
+	}	
+	</script>
 </body>
 </html>

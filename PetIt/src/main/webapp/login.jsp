@@ -162,22 +162,18 @@ float:right!important;
 								sign in</h1>
 							<div>
 								<label for="inputEmail" class="sr-only">Email address</label> 
-								<input name="username" type="email" id="inputEmail" class="form-control" 
-								placeholder="Email address" style="margin-bottom: 2px;">
+									<input name="username" type="email" id="inputEmail" class="form-control"  placeholder="Email address" style="margin-bottom: 2px;">
 								<label for="inputPassword" class="sr-only">Password</label> 
-								<input name="password" type="password" id="inputPassword" class="form-control"
-									placeholder="Password">
-								</br> 
-								<button class="btn btn-lg btn-outline-success btn-block"
-									type="submit" value="Login">Sign in</button>
+									<input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password">
+								<button class="btn btn-lg btn-outline-success btn-block" type="submit" value="Login">Sign in</button>
 									<div style="color:#FF0000">${messaggio}</div>
 								<p class="mt-5 mb-3 text-muted">© 2018-2019</p>
 							</div>
-							</div>
-							</div>
-							</div>
-							</div>
-							</div>		
-							</form>	
+						</form>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>								
 </body>
 </html>

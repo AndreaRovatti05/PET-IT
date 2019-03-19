@@ -38,6 +38,19 @@ private static Logger log = Logger.getLogger("petit-business");
 		EntityManager em = Programma.getEm();
 	}
 
+	public static void modificaStato(String idUtente) {
+		EntityManager em = Programma.getEm();
+		UtenteRegistrato nuovoutente = em.find(UtenteRegistrato.class, idUtente);
+		em.getTransaction().begin();
+		if(nuovoutente.getStatoUtente() == false) {
+			nuovoutente.setStatoUtente(true);
+		}else {
+			nuovoutente.setStatoUtente(false);
+
+		}
+		
+		em.getTransaction().commit();
+	}
 
 	public static Object perId(String parameter) {
 		if (parameter != null) {
@@ -60,7 +73,18 @@ private static Logger log = Logger.getLogger("petit-business");
 		em.getTransaction().commit();
 		
 	}
-	
+
+	public static void modificaAdmin(String idDaModificare) {
+		Boolean admin=false;
+		EntityManager em = Programma.getEm();
+		UtenteRegistrato modificaUt = em.find(UtenteRegistrato.class, idDaModificare);
+		if(modificaUt.getBan()==admin) {
+			admin=true;
+		} 
+		em.getTransaction().begin();
+		modificaUt.setAdmin(admin);
+		em.getTransaction().commit();
+	}
 	
 }
 

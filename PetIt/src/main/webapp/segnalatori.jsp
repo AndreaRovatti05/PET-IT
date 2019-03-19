@@ -89,7 +89,6 @@
 							<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">	
 								<jsp:include page="frammenti/html/ban.html"></jsp:include>
 								<jsp:include page="frammenti/html/tastoadmin.html"></jsp:include>
-								
 							</div>
   						</td>
 							    
@@ -109,10 +108,10 @@
 		</table>
 			<jsp:include page="frammenti/html/RegistrazioneAdmin.html"></jsp:include>
 	</div>
-							
+			<jsp:include page="frammenti/utility/script.html"></jsp:include>					
 <script type="text/javascript">
 $(() =>{
-		$('.bottoneModificaUtenti').click((e) => {
+		/* $('.bottoneModificaUtenti').click((e) => {
 			let id = $(e.currentTarget).closest('tr').data('id');
 			$.ajax({
 				url: 'utentiPerId?idUtente=' + id,
@@ -121,16 +120,29 @@ $(() =>{
 		.done((se) => {
 			$('#idUtente').val(se.idUtente);
 		})
-	});
+		}); */
+		$('.bottoneModificaBanUtenti').click((e) => {
+			let id = $(e.currentTarget).closest('tr').data('id');
+			var ok = confirm('Sei sicuro di voler modificare lo stato ban di ' + id + '?');
+			if (ok) {
+				location.href = 'modificaBanUtente?idUtente=' + id;
+			}
+		});
+		
+		$('.bottoneAdmin').click((e) => {
+			let id = $(e.currentTarget).closest('tr').data('id');
+			var ok = confirm('Sei sicuro di voler modificare lo stato admin di ' + id + '?');
+			if (ok) {
+				location.href = 'modificaAdminController?idUtente=' + id;
+			}
+		});
 });
-function banUtenti() {
-	document.form['form_modifica_ban'].submit();
-}
+
 function addUtente() {
 	document.forms['form_add'].submit();
 	}	
 </script>
-	<jsp:include page="frammenti/utility/script.html"></jsp:include>
+
 	
 </body>
 </html>

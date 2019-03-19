@@ -41,7 +41,6 @@ public class AccessoApplicazione {
 				if (!u.getPassword().equals(password)) {
 					log.warning("accesso con password errata");
 				}
-				
 				result = u.getAdmin() && u.getAttivo() && u.getPassword().equals(password);
 			} else {
 				log.warning("l'utente " + id + " non esiste");
@@ -51,20 +50,6 @@ public class AccessoApplicazione {
 		log.info("accesso di " + id + ": " + result);
 		return result;
 		
-	}
-
-	private static void modificaStato(String idUtente) {
-		EntityManager em = Programma.getEm();
-		UtenteRegistrato nuovoutente = em.find(UtenteRegistrato.class, idUtente);
-		em.getTransaction().begin();
-		if(nuovoutente.getStatoUtente() == false) {
-			nuovoutente.setStatoUtente(true);
-		}else {
-			nuovoutente.setStatoUtente(false);
-
-		}
-		
-		em.getTransaction().commit();
 	}
 
 	public static void logout(String id) {

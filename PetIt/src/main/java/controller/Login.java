@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import business.AccessoApplicazione;
+import business.UtenteRegistratoManager;
 
 
 @WebServlet("/Login")
@@ -21,15 +22,12 @@ public class Login extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("username");
-		String password = request.getParameter("password");				
+		String password = request.getParameter("password");	
 		if(AccessoApplicazione.login(username, password)){
 			request.getSession().setAttribute("email", username);
-			
+			UtenteRegistratoManager.modificaStato(username);
 			response.sendRedirect(response.encodeRedirectURL("home.jsp"));
 		} else {
 			request.setAttribute("messaggio", "l' username o la password sono errati!");
