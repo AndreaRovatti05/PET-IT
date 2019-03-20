@@ -85,6 +85,26 @@ private static Logger log = Logger.getLogger("petit-business");
 		modificaUt.setAdmin(admin);
 		em.getTransaction().commit();
 	}
+
+	public static boolean checkUsernameExists(String email) {
+		// TODO Auto-generated method stub
+		return Programma.getEm().find(UtenteRegistrato.class, email) != null;
+	}
+
+	public static UtenteRegistrato signUpAndroid(String email, String password, String username) {
+		UtenteRegistrato ut = new UtenteRegistrato();
+		EntityManager em = Programma.getEm();
+		ut.setAdmin(false);
+		ut.setAttivo(true);
+		ut.setIdUtente(email);
+		ut.setNomeUtente(username);
+		ut.setPassword(password);
+		em.getTransaction().begin();
+		em.persist(ut);
+		em.getTransaction().commit();
+		return ut;
+		
+	}
 	
 }
 
