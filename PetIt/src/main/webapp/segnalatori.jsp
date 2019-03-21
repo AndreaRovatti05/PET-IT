@@ -70,8 +70,10 @@
 					<th scope="col">Codice Fiscale</th>
 					<th scope="col">Nome</th>
 					<th scope="col">Cognome</th>
+<!-- 					
 					<th scope="col">Data di nascita</th>
-					<th scope="col">Email</th>
+ -->					
+ 					<th scope="col">Email</th>
 					<th scope="col">Username</th>
 					<th scope="col">Online</th>
 					<th scope="col">Ban</th>
@@ -95,7 +97,9 @@
 						<td>${s.codiceFiscale}</td>
 						<td>${s.nome}</td>
 						<td>${s.cognome}</td>
-						<td>${s.dataNascita}</td>
+						<%-- 
+						<td>${s.dataNascita}</td> 
+						--%>
 						<td> ${s.idUtente}</td>
 						<td> ${s.nomeUtente}</td>
 						<td> ${s.statoUtente}</td>

@@ -7,6 +7,8 @@ import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 
 import modello.AnimaleSegnalato;
+import modello.Razza;
+import modello.Specie;
 import utility.Programma;
 
 public class AnimaleSegnalatoManager {
@@ -22,9 +24,9 @@ public class AnimaleSegnalatoManager {
 			em.getTransaction().begin();
 			em.persist(a);
 			em.getTransaction().commit();
-			log.log(Level.INFO, "aggiunta presenza");
+			log.log(Level.INFO, "aggiunto animale");
 		} else {
-			log.log(Level.WARNING, "presenza esiste già");
+			log.log(Level.WARNING, "animale già esistente");
 		}
 	}
 
@@ -62,24 +64,25 @@ public class AnimaleSegnalatoManager {
 		return null;
 	}
 
-
-
-	public static void modificaAnimaleSegnalato(Integer idDaModificare, String colorePelo,
-			String statoFisico, String statoMentale, String taglia, String tipoPelo) {
+	public static void modificaAnimaleSegnalato(AnimaleSegnalato a, Integer id, Specie s, Razza r) {
 		EntityManager em = Programma.getEm();
-		//Razza findrazza = em.find(Razza.class, razza);
-		AnimaleSegnalato nuovoanimale = em.find(AnimaleSegnalato.class, idDaModificare);
-		em.getTransaction().begin();
-		nuovoanimale.setColorePelo(colorePelo);
-		//nuovoanimale.setRazza(findrazza);
-		nuovoanimale.setStatoFisico(statoFisico);
-		nuovoanimale.setStatoMentale(statoMentale);
-		nuovoanimale.setTaglia(taglia);
-		nuovoanimale.setTipoPelo(tipoPelo);
-//		nuovoanimale = em.merge(nuovoanimale);
-//	    em.flush();
-//	    em.clear();
-		em.getTransaction().commit();
+		AnimaleSegnalato aDb = em.find(AnimaleSegnalato.class, id);
+		
+		if (aDb != null) {
 
+			em.getTransaction().begin();
+			aDb.setColorePelo(a.getColorePelo());
+			aDb.setRazza(a.getRazza());
+			aDb.setStatoFisico(a.getStatoFisico());
+			aDb.setStatoMentale(a.getStatoMentale());
+			aDb.setTaglia(a.getTaglia());
+			aDb.setTipoPelo(a.getTipoPelo());
+			s.addRazza(r);
+			r.addAnimale(aDb);
+			em.getTransaction().commit();
+			log.log(Level.INFO, "aggiunto animale");
+		} else {
+			log.log(Level.WARNING, "animale inesistente");
+		}
 	}
 }

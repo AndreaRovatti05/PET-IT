@@ -2,12 +2,18 @@ package controller;
 
 import java.io.IOException;
 
+import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import business.AnimaleSegnalatoManager;
+import modello.AnimaleSegnalato;
+import modello.Razza;
+import modello.Specie;
+import utility.Programma;
 
 /**
  * Servlet implementation class ModificaAnimaleController
@@ -29,15 +35,23 @@ public class ModificaAnimaleController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("application/json");
-		//fare un nuovo animale che implementa tutto e poi mandare l'animale già fatto 
-		Integer idDaModificare = new Integer(request.getParameter("idAnimale"));
-		String colorePelo = new String(  request.getParameter("colorePelo"));
-		//String razza= request.getParameter("razza");
-		String statoFisico = request.getParameter("statoFisico");
-		String statoMentale=new String( request.getParameter("statoMentale"));
-		String taglia=new String( request.getParameter("taglia"));
-		String tipoPelo= new String(request.getParameter("tipoPelo"));
-		AnimaleSegnalatoManager.modificaAnimaleSegnalato(idDaModificare, colorePelo, statoFisico, statoMentale, taglia, tipoPelo);
+		EntityManager em = Programma.getEm();
+		Integer id = Integer.valueOf(request.getParameter("idAnimale"));
+		AnimaleSegnalato a =new AnimaleSegnalato();
+		Integer ids = Integer.valueOf(request.getParameter("specieSel"));
+		Specie s = em.find(Specie.class,ids);
+		Integer idr = Integer.valueOf(request.getParameter("razzaSel"));
+		
+		Razza r = em.find(Razza.class, idr);
+		a.setRazza(r);
+		
+		a.setStatoFisico(request.getParameter("statoFisico"));
+		a.setColorePelo(request.getParameter("colorePelo"));
+		a.setTipoPelo(request.getParameter("tipoPelo"));
+		a.setTaglia(request.getParameter("taglia"));
+		a.setStatoMentale(request.getParameter("statoMentale"));
+		
+		AnimaleSegnalatoManager.modificaAnimaleSegnalato(a, id, s, r);
 		response.sendRedirect(response.encodeRedirectURL("elencoAnimaliSegnalati"));
 }
 

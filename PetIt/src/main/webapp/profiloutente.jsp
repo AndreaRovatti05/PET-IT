@@ -76,7 +76,7 @@ $(()=>{
 		$('#cognome').text('Cognome:  '+u.cognome);
 		$('#user').text('Username: ' + u.nomeUtente);
 		$('#num').text('Numero di telefono:' + u.numeroTel);
-		$('#ind').text('Indirizzo: Via ' + u.indirizzo.via + " " + u.indirizzo.civico + "," + u.indirizzo.citta + " ("  + u.indirizzo.provincia + ") "  + u.indirizzo.cap );
+		$('#ind').text('Indirizzo: ' +  u.indirizzo.via + " " + u.indirizzo.civico + "," + u.indirizzo.citta + " ("  + u.indirizzo.provincia + ") "  + u.indirizzo.cap );
 	});
 	$('.bottoneModificaProfilo').click((e) => {
 		let id = sessionStorage.getItem('email');

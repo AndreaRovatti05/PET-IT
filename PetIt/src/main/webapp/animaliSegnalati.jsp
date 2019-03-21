@@ -85,7 +85,7 @@
 		})
 		.done((species) => {
 			species.forEach((s) => {
-				$('#selSpecie').append('<option value="' + s.idSpecie + '">' + s.nomeSpecie + '</option>')
+				$('#selSpecie').append('<option value="' + s.idSpecie + '" >' + s.nomeSpecie + '</option>')
 			});
 		});
 		$.ajax({
