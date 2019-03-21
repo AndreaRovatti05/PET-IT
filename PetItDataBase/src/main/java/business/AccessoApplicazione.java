@@ -2,10 +2,7 @@ package business;
 
 import java.util.List;
 import java.util.logging.Logger;
-
 import javax.persistence.EntityManager;
-
-import modello.AnimaleSegnalato;
 import modello.UtenteRegistrato;
 import utility.Programma;
 
@@ -51,7 +48,17 @@ public class AccessoApplicazione {
 		return result;
 		
 	}
+	public static UtenteRegistrato loginAndroid(String email, String password) {
+		EntityManager em = Programma.getEm();
+		UtenteRegistrato result = em.find(UtenteRegistrato.class, email);
+		if (result != null && result.getPassword().equals(password)) {
+			return result;
+		} else {
+			return null;
+		}
+	}
 
+	
 	public static void logout(String id) {
 		EntityManager em = Programma.getEm();
 		UtenteRegistrato ut = new UtenteRegistrato();

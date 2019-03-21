@@ -24,9 +24,9 @@ public class SegnalazioneManager {
 			em.getTransaction().begin();
 			em.persist(s);
 			em.getTransaction().commit();
-			log.log(Level.INFO, "aggiunta presenza");
+			log.log(Level.INFO, "aggiunta segnalazione");
 		} else {
-			log.log(Level.WARNING, "presenza esiste già");
+			log.log(Level.WARNING, "segnalazone esiste già");
 		}
 	}
 
@@ -58,6 +58,24 @@ public class SegnalazioneManager {
 			return em.find(Segnalazione.class, parameter);
 		}
 		return null;
+	}
+
+	public static void AggiungiSegnalazioneAndroid(Segnalazione s, AnimaleSegnalato a) {
+		EntityManager em = Programma.getEm();
+		Segnalazione sDb = null;
+		if (s.getIdSegnalazione() != null) {
+			sDb = em.find(Segnalazione.class, s.getIdSegnalazione());
+		}
+		if (sDb == null) {
+			em.getTransaction().begin();
+			em.persist(s);
+			em.persist(a);
+			em.getTransaction().commit();
+			log.log(Level.INFO, "aggiunta segnalazione");
+		} else {
+			log.log(Level.WARNING, "segnalazone esiste già");
+		}
+		
 	}
 
 }
