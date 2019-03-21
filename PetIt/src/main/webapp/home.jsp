@@ -142,7 +142,7 @@ background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107,
 			        </button>
 			      </div>
 			      <div class="modal-body">
-			       <form action ="addNuovoUtente" method="get">
+			       <form  action="addNuovoUtente" method="post" id="form_add">
 			  <div class="form-group">
 			    <label for="Nome">Nome</label>
 			    <input class="form-control" name="nomeUtente"  aria-describedby="emailHelp" placeholder="Inserisci Nome Utente">
@@ -172,7 +172,7 @@ background-image:  linear-gradient(top left, rgba(0,34,34,  0.1),  rgba(75, 107,
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			        <button type="button" id="addAdmin" value="addNuovoUtente" class="btn btn-success">Add</button>
+			        <button type="button" id="addAdmin" value="addNuovoUtente" onClick="addUtente()" class="btn btn-success">Add</button>
 			      </div>
 			    </div>
 			  </div>

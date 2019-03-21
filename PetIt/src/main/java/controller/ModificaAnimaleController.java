@@ -43,8 +43,6 @@ public class ModificaAnimaleController extends HttpServlet {
 		Integer idr = Integer.valueOf(request.getParameter("razzaSel"));
 		
 		Razza r = em.find(Razza.class, idr);
-		a.setRazza(r);
-		
 		a.setStatoFisico(request.getParameter("statoFisico"));
 		a.setColorePelo(request.getParameter("colorePelo"));
 		a.setTipoPelo(request.getParameter("tipoPelo"));

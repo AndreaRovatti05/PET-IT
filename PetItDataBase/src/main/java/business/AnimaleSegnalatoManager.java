@@ -45,7 +45,7 @@ public class AnimaleSegnalatoManager {
 		 */
 	}
 
-	public static void eliminaAnimaleSegnalato(String idDaEliminare) {
+	public static void eliminaAnimaleSegnalato(Integer idDaEliminare) {
 		EntityManager em = Programma.getEm();
 		AnimaleSegnalato as = em.find(AnimaleSegnalato.class, idDaEliminare);
 		if (as != null) {
@@ -67,18 +67,21 @@ public class AnimaleSegnalatoManager {
 	public static void modificaAnimaleSegnalato(AnimaleSegnalato a, Integer id, Specie s, Razza r) {
 		EntityManager em = Programma.getEm();
 		AnimaleSegnalato aDb = em.find(AnimaleSegnalato.class, id);
-		
+		Razza rDb = em.find(Razza.class, aDb.getRazza().getId());
+	
 		if (aDb != null) {
 
 			em.getTransaction().begin();
+			
 			aDb.setColorePelo(a.getColorePelo());
-			aDb.setRazza(a.getRazza());
 			aDb.setStatoFisico(a.getStatoFisico());
 			aDb.setStatoMentale(a.getStatoMentale());
 			aDb.setTaglia(a.getTaglia());
 			aDb.setTipoPelo(a.getTipoPelo());
-			s.addRazza(r);
+			if(rDb!=r) {
 			r.addAnimale(aDb);
+			aDb.setRazza(r);
+			}
 			em.getTransaction().commit();
 			log.log(Level.INFO, "aggiunto animale");
 		} else {

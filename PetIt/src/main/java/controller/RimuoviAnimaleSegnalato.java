@@ -23,7 +23,7 @@ public class RimuoviAnimaleSegnalato extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String idDaEliminare = request.getParameter("idAnimale");
+		Integer idDaEliminare = Integer.valueOf(request.getParameter("idAnimale"));
 
 		AnimaleSegnalatoManager.eliminaAnimaleSegnalato(idDaEliminare);
 		response.sendRedirect("elencoAnimaliSegnalati");

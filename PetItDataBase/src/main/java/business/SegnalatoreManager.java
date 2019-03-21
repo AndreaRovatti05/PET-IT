@@ -114,6 +114,7 @@ public class SegnalatoreManager {
 				iDb.setInterno(i.getInterno());
 				iDb.setProvincia(i.getProvincia());
 				iDb.setVia(i.getVia());
+				
 			} else {
 				sDb.setIndirizzo(i);
 				i.addUtenti(sDb);		

@@ -29,7 +29,7 @@ public class RimuoviSegnalazioneController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String idDaEliminare = request.getParameter("idSegnalazione");
+		Integer idDaEliminare = Integer.valueOf(request.getParameter("idSegnalazione"));
 		SegnalazioneManager.eliminaSegnalazione(idDaEliminare);
 		response.sendRedirect("elencoSegnalazioni");
 	}

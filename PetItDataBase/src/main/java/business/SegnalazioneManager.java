@@ -35,7 +35,7 @@ public class SegnalazioneManager {
 		return em.createQuery("select s from Segnalazione s", Segnalazione.class).getResultList();
 	}
 
-	public static void eliminaSegnalazione(String idDaEliminare) {
+	public static void eliminaSegnalazione(Integer idDaEliminare) {
 		EntityManager em = Programma.getEm();
 		Segnalazione se = em.find(Segnalazione.class, idDaEliminare);
 		if (se != null) {
